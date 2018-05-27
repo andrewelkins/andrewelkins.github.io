@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Command Line, Linux</title><link href="https://andrewelkins.com/" rel="alternate"></link><link href="https://andrewelkins.com/feeds/command-line-linux.atom.xml" rel="self"></link><id>https://andrewelkins.com/</id><updated>2016-11-01T11:26:00-07:00</updated><entry><title>grep without filenames</title><link href="https://andrewelkins.com/grep-without-filenames.html" rel="alternate"></link><published>2016-11-01T11:26:00-07:00</published><updated>2016-11-01T11:26:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2016-11-01:/grep-without-filenames.html</id><summary type="html">&lt;p&gt;I needed to grep a directory, and sub directories, and not displaying
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Command Line, Linux</title><link href="https://blog.andrewelkins.com/" rel="alternate"></link><link href="https://blog.andrewelkins.com/feeds/command-line-linux.atom.xml" rel="self"></link><id>https://blog.andrewelkins.com/</id><updated>2016-11-01T11:26:00-07:00</updated><entry><title>grep without filenames</title><link href="https://blog.andrewelkins.com/grep-without-filenames.html" rel="alternate"></link><published>2016-11-01T11:26:00-07:00</published><updated>2016-11-01T11:26:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2016-11-01:/grep-without-filenames.html</id><summary type="html">&lt;p&gt;I needed to grep a directory, and sub directories, and not displaying
 the filenames in the output. This is when the man page came to the
 rescue.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;man grep | grep filename  
@@ -29,7 +29,7 @@ rescue.&lt;/p&gt;
 &lt;p&gt;There we go, &lt;strong&gt;-h, --no-filename&lt;/strong&gt;, is what I needed.&lt;/p&gt;
 &lt;p&gt;Example with output to a file:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;grep -r &amp;quot;searching-for-this&amp;quot; . --no-filename &amp;amp;gt; /tmp/test.txt  
-&lt;/pre&gt;&lt;/div&gt;</content><category term="cli"></category><category term="command"></category><category term="file"></category><category term="grep"></category><category term="linux"></category></entry><entry><title>How to check cp progress after cp has started</title><link href="https://andrewelkins.com/how-to-check-cp-progress-after-cp-has-started.html" rel="alternate"></link><published>2015-11-02T11:02:00-08:00</published><updated>2015-11-02T11:02:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2015-11-02:/how-to-check-cp-progress-after-cp-has-started.html</id><summary type="html">&lt;p&gt;First, the easier way to do this is to use rsync in the first place.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="cli"></category><category term="command"></category><category term="file"></category><category term="grep"></category><category term="linux"></category></entry><entry><title>How to check cp progress after cp has started</title><link href="https://blog.andrewelkins.com/how-to-check-cp-progress-after-cp-has-started.html" rel="alternate"></link><published>2015-11-02T11:02:00-08:00</published><updated>2015-11-02T11:02:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-11-02:/how-to-check-cp-progress-after-cp-has-started.html</id><summary type="html">&lt;p&gt;First, the easier way to do this is to use rsync in the first place.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;rsync -avh --progress sourceDirectory destinationDirectory&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -52,7 +52,7 @@ copy comand.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://unix.stackexchange.com/questions/66795/how-to-check-progress-of-running-cp"&gt;Check
 progress&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://unix.stackexchange.com/questions/65077/is-it-possible-to-see-cp-speed-and-copied"&gt;CP Command
-Help&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Ubuntu Command line Display Driver Change</title><link href="https://andrewelkins.com/ubuntu-command-line-display-driver-change.html" rel="alternate"></link><published>2015-10-30T08:24:00-07:00</published><updated>2015-10-30T08:24:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2015-10-30:/ubuntu-command-line-display-driver-change.html</id><summary type="html">&lt;p&gt;Recently upgraded to 15.10 and that looked okay at first. However, the
+Help&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Ubuntu Command line Display Driver Change</title><link href="https://blog.andrewelkins.com/ubuntu-command-line-display-driver-change.html" rel="alternate"></link><published>2015-10-30T08:24:00-07:00</published><updated>2015-10-30T08:24:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-10-30:/ubuntu-command-line-display-driver-change.html</id><summary type="html">&lt;p&gt;Recently upgraded to 15.10 and that looked okay at first. However, the
 displa driver that it installed, NVIDIA, was causing issues. So I
 defaulted back to the open source driver and reboot. MISTAKE! Ended up
 causing the system to crash and couldn't do anything about it.&lt;/p&gt;
@@ -69,7 +69,7 @@ available drivers.&lt;/p&gt;
 nvidia driver.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;apt-get install nvidia-352-updates&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>How to find large volumes on linux</title><link href="https://andrewelkins.com/how-to-find-large-volumes-on-linux.html" rel="alternate"></link><published>2015-04-26T12:16:00-07:00</published><updated>2015-04-26T12:16:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2015-04-26:/how-to-find-large-volumes-on-linux.html</id><summary type="html">&lt;p&gt;Running linux machines sometimes it's needed to figure out what is
+&lt;/blockquote&gt;</content></entry><entry><title>How to find large volumes on linux</title><link href="https://blog.andrewelkins.com/how-to-find-large-volumes-on-linux.html" rel="alternate"></link><published>2015-04-26T12:16:00-07:00</published><updated>2015-04-26T12:16:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-04-26:/how-to-find-large-volumes-on-linux.html</id><summary type="html">&lt;p&gt;Running linux machines sometimes it's needed to figure out what is
 taking up a large amount of room on a server. Here's an easy way to
 investigate large directories.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;du -h &amp;amp;lt;dir&amp;amp;gt; | grep &amp;#39;\[0-9:::.\]+G&amp;#39;  
@@ -77,7 +77,7 @@ investigate large directories.&lt;/p&gt;
 taking up a large amount of room on a server. Here's an easy way to
 investigate large directories.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;du -h &amp;amp;lt;dir&amp;amp;gt; | grep &amp;#39;\[0-9:::.\]+G&amp;#39;  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>7z file encryption with password</title><link href="https://andrewelkins.com/7z-file-encryption-with-password.html" rel="alternate"></link><published>2015-04-19T16:47:00-07:00</published><updated>2015-04-19T16:47:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2015-04-19:/7z-file-encryption-with-password.html</id><summary type="html">&lt;p&gt;Previously I've transferred file with a pgp key, but this is an ok
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>7z file encryption with password</title><link href="https://blog.andrewelkins.com/7z-file-encryption-with-password.html" rel="alternate"></link><published>2015-04-19T16:47:00-07:00</published><updated>2015-04-19T16:47:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-04-19:/7z-file-encryption-with-password.html</id><summary type="html">&lt;p&gt;Previously I've transferred file with a pgp key, but this is an ok
 alternative.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;7za a -tzip -psuperSecurePassword -mem=AES256 filename.zip file.doc
 file1.doc file2.doc  
@@ -93,7 +93,7 @@ file1.doc file2.doc
 
 
 &lt;p&gt;You can also checkout the easier and more supported &lt;a href="http://andrewelkins.com/linux/password-protect-a-zip-file/" title="Password protect a zip file"&gt;zip
-method&lt;/a&gt;.&lt;/p&gt;</content></entry><entry><title>Password protect a zip file</title><link href="https://andrewelkins.com/password-protect-a-zip-file.html" rel="alternate"></link><published>2015-04-19T16:42:00-07:00</published><updated>2015-04-19T16:42:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2015-04-19:/password-protect-a-zip-file.html</id><summary type="html">&lt;p&gt;Sometime a simple encrypt with a password is needed. This isn't the
+method&lt;/a&gt;.&lt;/p&gt;</content></entry><entry><title>Password protect a zip file</title><link href="https://blog.andrewelkins.com/password-protect-a-zip-file.html" rel="alternate"></link><published>2015-04-19T16:42:00-07:00</published><updated>2015-04-19T16:42:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-04-19:/password-protect-a-zip-file.html</id><summary type="html">&lt;p&gt;Sometime a simple encrypt with a password is needed. This isn't the
 &lt;a href="http://andrewelkins.com/linux/7z-file-encryption-with-password/" title="7z file encryption with password"&gt;most secure method (7z provides more secure
 methods)&lt;/a&gt;,
 but is better than nothing. I simple way to do it is to create a zip
@@ -109,7 +109,7 @@ password protected with all the files.&lt;/p&gt;
 
 &lt;p&gt;Often it's easier to just zip a whole directory.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;zip --password yourpassword -r filename.zip files-to-be-zipped/  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to set a password on pdf in Ubuntu</title><link href="https://andrewelkins.com/how-to-set-a-password-on-pdf-in-ubuntu.html" rel="alternate"></link><published>2015-04-10T14:32:00-07:00</published><updated>2015-04-10T14:32:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2015-04-10:/how-to-set-a-password-on-pdf-in-ubuntu.html</id><summary type="html">&lt;p&gt;This one is super simple.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to set a password on pdf in Ubuntu</title><link href="https://blog.andrewelkins.com/how-to-set-a-password-on-pdf-in-ubuntu.html" rel="alternate"></link><published>2015-04-10T14:32:00-07:00</published><updated>2015-04-10T14:32:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-04-10:/how-to-set-a-password-on-pdf-in-ubuntu.html</id><summary type="html">&lt;p&gt;This one is super simple.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install pdftk  
 pdftk input-file.pdf output output-file.pdf userpw
 mysupersecretpassword  
@@ -117,7 +117,7 @@ mysupersecretpassword
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install pdftk  
 pdftk input-file.pdf output output-file.pdf userpw
 mysupersecretpassword  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Move files while preserving timestamps</title><link href="https://andrewelkins.com/move-files-while-preserving-timestamps.html" rel="alternate"></link><published>2015-04-02T16:30:00-07:00</published><updated>2015-04-02T16:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2015-04-02:/move-files-while-preserving-timestamps.html</id><summary type="html">&lt;p&gt;A quick way to move files in linux while keeping their timestamps. In
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Move files while preserving timestamps</title><link href="https://blog.andrewelkins.com/move-files-while-preserving-timestamps.html" rel="alternate"></link><published>2015-04-02T16:30:00-07:00</published><updated>2015-04-02T16:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-04-02:/move-files-while-preserving-timestamps.html</id><summary type="html">&lt;p&gt;A quick way to move files in linux while keeping their timestamps. In
 short mv doesn't support this. The work around is to copy instead.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cp -p -r -l source/date target/  
 rm -rf source/data  
@@ -125,7 +125,7 @@ rm -rf source/data
 short mv doesn't support this. The work around is to copy instead.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cp -p -r -l source/date target/  
 rm -rf source/data  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Convert pdf to png easily</title><link href="https://andrewelkins.com/convert-pdf-to-png-easily.html" rel="alternate"></link><published>2014-11-23T12:29:00-08:00</published><updated>2014-11-23T12:29:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2014-11-23:/convert-pdf-to-png-easily.html</id><summary type="html">&lt;p&gt;I need to quickly convert odfs to image for both online processing and
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Convert pdf to png easily</title><link href="https://blog.andrewelkins.com/convert-pdf-to-png-easily.html" rel="alternate"></link><published>2014-11-23T12:29:00-08:00</published><updated>2014-11-23T12:29:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-11-23:/convert-pdf-to-png-easily.html</id><summary type="html">&lt;p&gt;I need to quickly convert odfs to image for both online processing and
 one off processing. Luckily imagemagick had me covered for both.&lt;/p&gt;
 &lt;p&gt;First install imagemagick:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install imagemagick  
@@ -151,7 +151,7 @@ one off processing. Luckily imagemagick had me covered for both.&lt;/p&gt;
 
 &lt;p&gt;This will append ## to the file name if the pdf is multiple pages.
 convert also has a few options that effect the quality, size, trimming,
-etc.&lt;/p&gt;</content></entry><entry><title>How to do decrypt a pgp message</title><link href="https://andrewelkins.com/how-to-do-decrypt-a-pgp-message.html" rel="alternate"></link><published>2014-04-25T08:59:00-07:00</published><updated>2014-04-25T08:59:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2014-04-25:/how-to-do-decrypt-a-pgp-message.html</id><summary type="html">&lt;p&gt;After sending my public pgp key and getting an encoded message back. I
+etc.&lt;/p&gt;</content></entry><entry><title>How to do decrypt a pgp message</title><link href="https://blog.andrewelkins.com/how-to-do-decrypt-a-pgp-message.html" rel="alternate"></link><published>2014-04-25T08:59:00-07:00</published><updated>2014-04-25T08:59:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-04-25:/how-to-do-decrypt-a-pgp-message.html</id><summary type="html">&lt;p&gt;After sending my public pgp key and getting an encoded message back. I
 need to decrypt a pgp message.&lt;/p&gt;
 &lt;p&gt;I made a pgp file by opening a text editor and saving it as
 "mypgpfile.pgp"&lt;/p&gt;
@@ -173,7 +173,7 @@ gpg - the command to encode/decode pgp on linux. Package may need to be
 installed.&lt;br&gt;
 -o - specifies the output file&lt;br&gt;
 output.txt - the output filename&lt;br&gt;
-mypgpfile.pgp - the input encoded message&lt;/p&gt;</content></entry><entry><title>How to create a PGP key on linux</title><link href="https://andrewelkins.com/how-to-create-a-pgp-key-on-linux.html" rel="alternate"></link><published>2014-04-23T08:26:00-07:00</published><updated>2014-04-23T08:26:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2014-04-23:/how-to-create-a-pgp-key-on-linux.html</id><summary type="html">&lt;p&gt;First you'll want to create your key.&lt;/p&gt;
+mypgpfile.pgp - the input encoded message&lt;/p&gt;</content></entry><entry><title>How to create a PGP key on linux</title><link href="https://blog.andrewelkins.com/how-to-create-a-pgp-key-on-linux.html" rel="alternate"></link><published>2014-04-23T08:26:00-07:00</published><updated>2014-04-23T08:26:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-04-23:/how-to-create-a-pgp-key-on-linux.html</id><summary type="html">&lt;p&gt;First you'll want to create your key.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gpg --gen-key  
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -197,7 +197,7 @@ mypgpfile.pgp - the input encoded message&lt;/p&gt;</content></entry><entry><tit
 
 &lt;p&gt;You can view your keys by using the list command.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gpg --list-keys  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to check number of mysql connections on linux</title><link href="https://andrewelkins.com/how-to-check-number-of-mysql-connections-on-linux.html" rel="alternate"></link><published>2014-04-14T08:54:00-07:00</published><updated>2014-04-14T08:54:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2014-04-14:/how-to-check-number-of-mysql-connections-on-linux.html</id><summary type="html">&lt;p&gt;I needed to check how many mysql connections my application currently
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to check number of mysql connections on linux</title><link href="https://blog.andrewelkins.com/how-to-check-number-of-mysql-connections-on-linux.html" rel="alternate"></link><published>2014-04-14T08:54:00-07:00</published><updated>2014-04-14T08:54:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-04-14:/how-to-check-number-of-mysql-connections-on-linux.html</id><summary type="html">&lt;p&gt;I needed to check how many mysql connections my application currently
 had. Not from the mysql side but from the application linux server. To
 do so I checked how many connections where on the mysql port (3306).&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;netstat -antp | grep :3306 | wc -l  
@@ -205,7 +205,7 @@ do so I checked how many connections where on the mysql port (3306).&lt;/p&gt;
 had. Not from the mysql side but from the application linux server. To
 do so I checked how many connections where on the mysql port (3306).&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;netstat -antp | grep :3306 | wc -l  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Asus boot usb</title><link href="https://andrewelkins.com/asus-boot-usb.html" rel="alternate"></link><published>2014-04-10T09:50:00-07:00</published><updated>2014-04-10T09:50:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2014-04-10:/asus-boot-usb.html</id><summary type="html">&lt;p&gt;I needed to reinstall Lint Mint on my Asus Laptop. I couldn't figure out
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Asus boot usb</title><link href="https://blog.andrewelkins.com/asus-boot-usb.html" rel="alternate"></link><published>2014-04-10T09:50:00-07:00</published><updated>2014-04-10T09:50:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-04-10:/asus-boot-usb.html</id><summary type="html">&lt;p&gt;I needed to reinstall Lint Mint on my Asus Laptop. I couldn't figure out
 how to boot to usb. Turns out it's a tricky procedure.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Have your USB drive plugged in&lt;/li&gt;
@@ -223,7 +223,7 @@ how to boot to usb. Turns out it's a tricky procedure.&lt;/p&gt;
 &lt;li&gt;Arrow over to the "Boot" tab. USB drive should be listed. Switch
     order if needed.&lt;/li&gt;
 &lt;li&gt;Press F10, choose "save &amp;amp; exit"&lt;/li&gt;
-&lt;/ul&gt;</content></entry><entry><title>How to run ghost in the background</title><link href="https://andrewelkins.com/how-to-run-ghost-in-the-background.html" rel="alternate"></link><published>2014-04-03T17:21:00-07:00</published><updated>2014-04-03T17:21:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2014-04-03:/how-to-run-ghost-in-the-background.html</id><summary type="html">&lt;p&gt;For running ghost blog in the background manually, execute the following
+&lt;/ul&gt;</content></entry><entry><title>How to run ghost in the background</title><link href="https://blog.andrewelkins.com/how-to-run-ghost-in-the-background.html" rel="alternate"></link><published>2014-04-03T17:21:00-07:00</published><updated>2014-04-03T17:21:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-04-03:/how-to-run-ghost-in-the-background.html</id><summary type="html">&lt;p&gt;For running ghost blog in the background manually, execute the following
 within your blog directory.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd /path/to/your/install/  
 nohup npm start &amp;amp;lt;/dev/null 1&amp;amp;gt;/path/to/your/install/logs/stdout.log
@@ -284,13 +284,13 @@ To check if Ghost is currently running type&lt;br&gt;
 :::forever list&lt;/p&gt;
 &lt;p&gt;Sources:&lt;br&gt;
 Supervisor information from &lt;a href="http://docs.ghost.org/installation/deploy/"&gt;ghost
-documentation&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>How to change a users shell to bash</title><link href="https://andrewelkins.com/how-to-change-a-users-shell-to-bash.html" rel="alternate"></link><published>2014-03-29T20:42:00-07:00</published><updated>2014-03-29T20:42:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2014-03-29:/how-to-change-a-users-shell-to-bash.html</id><summary type="html">&lt;p&gt;How to change a user's shell to bash is a simple one liner. This is how
+documentation&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>How to change a users shell to bash</title><link href="https://blog.andrewelkins.com/how-to-change-a-users-shell-to-bash.html" rel="alternate"></link><published>2014-03-29T20:42:00-07:00</published><updated>2014-03-29T20:42:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-03-29:/how-to-change-a-users-shell-to-bash.html</id><summary type="html">&lt;p&gt;How to change a user's shell to bash is a simple one liner. This is how
 you can do it in debian or ubuntu.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;chsh -s /bin/bash username  
 &lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;How to change a user's shell to bash is a simple one liner. This is how
 you can do it in debian or ubuntu.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;chsh -s /bin/bash username  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Add swap file in linux on debian</title><link href="https://andrewelkins.com/add-swap-file-in-linux-on-debian.html" rel="alternate"></link><published>2014-03-11T09:02:00-07:00</published><updated>2014-03-11T09:02:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2014-03-11:/add-swap-file-in-linux-on-debian.html</id><summary type="html">&lt;p&gt;How to add a swap file to an existing file system is almost trivial.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Add swap file in linux on debian</title><link href="https://blog.andrewelkins.com/add-swap-file-in-linux-on-debian.html" rel="alternate"></link><published>2014-03-11T09:02:00-07:00</published><updated>2014-03-11T09:02:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-03-11:/add-swap-file-in-linux-on-debian.html</id><summary type="html">&lt;p&gt;How to add a swap file to an existing file system is almost trivial.&lt;/p&gt;
 &lt;p&gt;First decide how big you want it. I choose 1GB w/ a 1GB RAM machine.&lt;/p&gt;
 &lt;p&gt;Second create the file.  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;dd if=/dev/zero of=/swapfile bs=1024 count=1048576  
@@ -327,7 +327,7 @@ you can do it in debian or ubuntu.&lt;/p&gt;
 
 &lt;p&gt;Save and verify output  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/swapfile none swap sw 0 0  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Install VirtualBox Guest Additions Command Line</title><link href="https://andrewelkins.com/install-virtualbox-guest-additions-command-line.html" rel="alternate"></link><published>2014-03-08T13:46:00-08:00</published><updated>2014-03-08T13:46:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2014-03-08:/install-virtualbox-guest-additions-command-line.html</id><summary type="html">&lt;p&gt;I was digging around searching on how to install the VirtualBox Guest
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Install VirtualBox Guest Additions Command Line</title><link href="https://blog.andrewelkins.com/install-virtualbox-guest-additions-command-line.html" rel="alternate"></link><published>2014-03-08T13:46:00-08:00</published><updated>2014-03-08T13:46:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-03-08:/install-virtualbox-guest-additions-command-line.html</id><summary type="html">&lt;p&gt;I was digging around searching on how to install the VirtualBox Guest
 additions without the GUI using the command line. Most of the tutorials
 out there were of no help. Either with bad or outdated information. I
 found one article on
@@ -366,7 +366,7 @@ cd /mnt
 
 &lt;p&gt;Visit the
 &lt;a href="http://xmodulo.com/2013/07/how-to-install-virtualbox-guest-additions-for-linux.html"&gt;Source&lt;/a&gt;
-for additional information and how to on other distros.&lt;/p&gt;</content></entry><entry><title>How to specify a different git port</title><link href="https://andrewelkins.com/how-to-specify-a-different-git-port.html" rel="alternate"></link><published>2014-01-03T11:09:00-08:00</published><updated>2014-01-03T11:09:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2014-01-03:/how-to-specify-a-different-git-port.html</id><summary type="html">&lt;p&gt;I needed to figure out how to specify a different ssh port for git.
+for additional information and how to on other distros.&lt;/p&gt;</content></entry><entry><title>How to specify a different git port</title><link href="https://blog.andrewelkins.com/how-to-specify-a-different-git-port.html" rel="alternate"></link><published>2014-01-03T11:09:00-08:00</published><updated>2014-01-03T11:09:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-01-03:/how-to-specify-a-different-git-port.html</id><summary type="html">&lt;p&gt;I needed to figure out how to specify a different ssh port for git.
 Turns out it's very easy.&lt;/p&gt;
 &lt;p&gt;Open up your ssh config file.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vim /home/your-user-name/.ssh/config  
@@ -395,7 +395,7 @@ Port 22222
 
 
 &lt;p&gt;Save the new config and try that git clone again. It should work this
-time.&lt;/p&gt;</content></entry><entry><title>How to install Tomcat7 on Linux Mint</title><link href="https://andrewelkins.com/how-to-install-tomcat7-on-linux-mint.html" rel="alternate"></link><published>2013-10-24T17:36:00-07:00</published><updated>2013-10-24T17:36:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-10-24:/how-to-install-tomcat7-on-linux-mint.html</id><summary type="html">&lt;p&gt;How to install tomcat7 on linux mint is simple.&lt;/p&gt;
+time.&lt;/p&gt;</content></entry><entry><title>How to install Tomcat7 on Linux Mint</title><link href="https://blog.andrewelkins.com/how-to-install-tomcat7-on-linux-mint.html" rel="alternate"></link><published>2013-10-24T17:36:00-07:00</published><updated>2013-10-24T17:36:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-10-24:/how-to-install-tomcat7-on-linux-mint.html</id><summary type="html">&lt;p&gt;How to install tomcat7 on linux mint is simple.&lt;/p&gt;
 &lt;p&gt;Run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install tomcat7 tomcat7-admin tomcat7-common  
 &lt;/pre&gt;&lt;/div&gt;
@@ -443,7 +443,7 @@ roles=&amp;quot;manager-gui,admin-gui,manager,admin,manager-script,admin-script&
 
 &lt;p&gt;Then restart tomcat&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo service tomcat7 restart  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Error starting Tomcat7 “no JDK found – please set JAVA_HOME”</title><link href="https://andrewelkins.com/error-starting-tomcat7-no-jdk-found-please-set-java_home.html" rel="alternate"></link><published>2013-08-26T17:30:00-07:00</published><updated>2013-08-26T17:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-08-26:/error-starting-tomcat7-no-jdk-found-please-set-java_home.html</id><summary type="html">&lt;p&gt;After I had set JAVA_HOME in the /etc/profile&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Error starting Tomcat7 “no JDK found – please set JAVA_HOME”</title><link href="https://blog.andrewelkins.com/error-starting-tomcat7-no-jdk-found-please-set-java_home.html" rel="alternate"></link><published>2013-08-26T17:30:00-07:00</published><updated>2013-08-26T17:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-08-26:/error-starting-tomcat7-no-jdk-found-please-set-java_home.html</id><summary type="html">&lt;p&gt;After I had set JAVA_HOME in the /etc/profile&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;export JAVA\_HOME=/usr/lib/jvm/java-7-oracle/bin/java  
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -478,7 +478,7 @@ for
 JAVA\_HOME=/usr/lib/jvm/java-7-oracle
 
 ...  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to install cacti on Debian 7</title><link href="https://andrewelkins.com/how-to-install-cacti-on-debian-7.html" rel="alternate"></link><published>2013-07-30T10:10:00-07:00</published><updated>2013-07-30T10:10:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-07-30:/how-to-install-cacti-on-debian-7.html</id><summary type="html">&lt;p&gt;Installing cacti on Debian 7 is very easy.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to install cacti on Debian 7</title><link href="https://blog.andrewelkins.com/how-to-install-cacti-on-debian-7.html" rel="alternate"></link><published>2013-07-30T10:10:00-07:00</published><updated>2013-07-30T10:10:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-07-30:/how-to-install-cacti-on-debian-7.html</id><summary type="html">&lt;p&gt;Installing cacti on Debian 7 is very easy.&lt;/p&gt;
 &lt;p&gt;Issue an apt-get install cacti&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt-get install cacti  
 &lt;/pre&gt;&lt;/div&gt;
@@ -500,7 +500,7 @@ It will …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Installing cacti on
 &lt;p&gt;Then go to http://localhost/cacti&lt;/p&gt;
 &lt;p&gt;Click next and confirm a few options.&lt;/p&gt;
 &lt;p&gt;Login with admin/admin&lt;br&gt;
-It will then ask you to change the default password.&lt;/p&gt;</content></entry><entry><title>Install Jenkins on Debian 7</title><link href="https://andrewelkins.com/install-jenkins-on-debian-7.html" rel="alternate"></link><published>2013-07-29T21:42:00-07:00</published><updated>2013-07-29T21:42:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-07-29:/install-jenkins-on-debian-7.html</id><summary type="html">&lt;p&gt;Here's how I installed Jenkins on Debian 7.  &lt;/p&gt;
+It will then ask you to change the default password.&lt;/p&gt;</content></entry><entry><title>Install Jenkins on Debian 7</title><link href="https://blog.andrewelkins.com/install-jenkins-on-debian-7.html" rel="alternate"></link><published>2013-07-29T21:42:00-07:00</published><updated>2013-07-29T21:42:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-07-29:/install-jenkins-on-debian-7.html</id><summary type="html">&lt;p&gt;Here's how I installed Jenkins on Debian 7.  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;wget&lt;/span&gt; &lt;span class="nt"&gt;-q&lt;/span&gt; &lt;span class="nt"&gt;-O&lt;/span&gt; &lt;span class="nt"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;http&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="nt"&gt;pkg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;jenkins-ci&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;debian&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;jenkins-ci&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;org&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;key&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;
 &lt;span class="nt"&gt;sudo&lt;/span&gt; &lt;span class="nt"&gt;apt-key&lt;/span&gt; &lt;span class="nt"&gt;add&lt;/span&gt; &lt;span class="nt"&gt;-&lt;/span&gt;  
 &lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;sudo&lt;/span&gt; &lt;span class="nt"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;deb http://pkg.jenkins-ci.org/debian binary/&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;gt&lt;/span&gt;&lt;span class="o"&gt;;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;gt&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
@@ -514,7 +514,7 @@ It will then ask you to change the default password.&lt;/p&gt;</content></entry>
 &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;sources&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;list&lt;/span&gt;  
 &lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;sudo&lt;/span&gt; &lt;span class="nt"&gt;apt-get&lt;/span&gt; &lt;span class="nt"&gt;update&lt;/span&gt;  
 &lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;sudo&lt;/span&gt; &lt;span class="nt"&gt;apt-get&lt;/span&gt; &lt;span class="nt"&gt;install&lt;/span&gt; &lt;span class="nt"&gt;jenkins&lt;/span&gt;  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Depends: libssl0.9.8 (&gt;= 0.9.8m-1) but it is not installable</title><link href="https://andrewelkins.com/depends-libssl0-9-8-0-9-8m-1-but-it-is-not-installable.html" rel="alternate"></link><published>2013-07-03T08:48:00-07:00</published><updated>2013-07-03T08:48:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-07-03:/depends-libssl0-9-8-0-9-8m-1-but-it-is-not-installable.html</id><summary type="html">&lt;p&gt;I was setting up a webserver on Debian 7 but ran in to a dependency
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Depends: libssl0.9.8 (&gt;= 0.9.8m-1) but it is not installable</title><link href="https://blog.andrewelkins.com/depends-libssl0-9-8-0-9-8m-1-but-it-is-not-installable.html" rel="alternate"></link><published>2013-07-03T08:48:00-07:00</published><updated>2013-07-03T08:48:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-07-03:/depends-libssl0-9-8-0-9-8m-1-but-it-is-not-installable.html</id><summary type="html">&lt;p&gt;I was setting up a webserver on Debian 7 but ran in to a dependency
 issue for nginx. It said I needed libssl0.9.8. Well I had libssl1.0.x
 which left me wondering was it in compatible. Yes it is. I needed to
 download the deb and install …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was setting up a webserver on Debian 7 but ran in to a dependency
@@ -549,7 +549,7 @@ http://snapshot.debian.org/archive/debian/20110406T213352Z/pool/main/o/openssl09
 
 &lt;p&gt;Then install it.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo dpkg -i libssl0.9.8\_0.9.8o-7\_i386.deb  
-&lt;/pre&gt;&lt;/div&gt;</content><category term="debian"></category><category term="server"></category></entry><entry><title>How to checkout a remote branch in git</title><link href="https://andrewelkins.com/how-to-checkout-a-remote-branch-in-git.html" rel="alternate"></link><published>2013-07-02T07:58:00-07:00</published><updated>2013-07-02T07:58:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-07-02:/how-to-checkout-a-remote-branch-in-git.html</id><summary type="html">&lt;p&gt;In order to avoid conflicts when checking out a branch from a remote
+&lt;/pre&gt;&lt;/div&gt;</content><category term="debian"></category><category term="server"></category></entry><entry><title>How to checkout a remote branch in git</title><link href="https://blog.andrewelkins.com/how-to-checkout-a-remote-branch-in-git.html" rel="alternate"></link><published>2013-07-02T07:58:00-07:00</published><updated>2013-07-02T07:58:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-07-02:/how-to-checkout-a-remote-branch-in-git.html</id><summary type="html">&lt;p&gt;In order to avoid conflicts when checking out a branch from a remote
 repo you need to check it out directly.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git fetch origin  
 git branch -f remote\_branch\_name origin/remote\_branch\_name  
@@ -573,7 +573,7 @@ git checkout remote\_branch name
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Simple.&lt;/p&gt;</content></entry><entry><title>How to get logitech m705 working in linux mint</title><link href="https://andrewelkins.com/how-to-get-logitech-m705-working-in-linux-mint.html" rel="alternate"></link><published>2013-05-28T17:29:00-07:00</published><updated>2013-05-28T17:29:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-05-28:/how-to-get-logitech-m705-working-in-linux-mint.html</id><summary type="html">&lt;p&gt;I am using a new laptop, ASUS Zenbook, running linux mint cinnamon. My
+&lt;p&gt;Simple.&lt;/p&gt;</content></entry><entry><title>How to get logitech m705 working in linux mint</title><link href="https://blog.andrewelkins.com/how-to-get-logitech-m705-working-in-linux-mint.html" rel="alternate"></link><published>2013-05-28T17:29:00-07:00</published><updated>2013-05-28T17:29:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-05-28:/how-to-get-logitech-m705-working-in-linux-mint.html</id><summary type="html">&lt;p&gt;I am using a new laptop, ASUS Zenbook, running linux mint cinnamon. My
 preferred mouse is a logitech m705 for use on the go. I needed to get it
 working since it wasn't out of the box. There's several ways to get the
 unifying receiver working. The easiest for me …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am using a new laptop, ASUS Zenbook, running linux mint cinnamon. My
@@ -595,7 +595,7 @@ cd logitech\_unifier-master
 
 
 &lt;p&gt;Then followed the prompts, turned it on and it worked. Much simpler than
-the other options I considered.&lt;/p&gt;</content></entry><entry><title>Using xargs to parallel a process in the command line</title><link href="https://andrewelkins.com/using-xargs-to-parallel-a-process-in-the-command-line.html" rel="alternate"></link><published>2013-04-15T09:38:00-07:00</published><updated>2013-04-15T09:38:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-04-15:/using-xargs-to-parallel-a-process-in-the-command-line.html</id><summary type="html">&lt;p&gt;Most of us have multiple CPUs in our personal machines. I would also
+the other options I considered.&lt;/p&gt;</content></entry><entry><title>Using xargs to parallel a process in the command line</title><link href="https://blog.andrewelkins.com/using-xargs-to-parallel-a-process-in-the-command-line.html" rel="alternate"></link><published>2013-04-15T09:38:00-07:00</published><updated>2013-04-15T09:38:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-04-15:/using-xargs-to-parallel-a-process-in-the-command-line.html</id><summary type="html">&lt;p&gt;Most of us have multiple CPUs in our personal machines. I would also
 hope that your servers do too. If you're running an intensive command
 line process, running them in parallel will speed it up by paralleling
 the process.&lt;/p&gt;
