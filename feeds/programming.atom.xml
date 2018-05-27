@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Programming</title><link href="https://andrewelkins.com/" rel="alternate"></link><link href="https://andrewelkins.com/feeds/programming.atom.xml" rel="self"></link><id>https://andrewelkins.com/</id><updated>2014-11-23T12:31:00-08:00</updated><entry><title>Mozilla Developer Edition</title><link href="https://andrewelkins.com/mozilla-developer-edition.html" rel="alternate"></link><published>2014-11-23T12:31:00-08:00</published><updated>2014-11-23T12:31:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2014-11-23:/mozilla-developer-edition.html</id><summary type="html">&lt;p&gt;I recently discovered &lt;a href="https://www.mozilla.org/en-US/firefox/developer/?utm_source=firefox-com&amp;amp;utm_medium=referral&amp;amp;utm_campaign=FX10&amp;amp;utm_content=fxdev-stackoverflow"&gt;Mozilla Developer
+Edition&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://mozorg.cdn.mozilla.net/media/img/firefox/developer/screenshot.jpg"&gt;{.alignnone
+width="832" height="456"}&lt;/p&gt;
+&lt;p&gt;So far I've love it's inline ability to edit css. It's an entirely
+natural way to tweak the css on the fly.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I recently discovered &lt;a href="https://www.mozilla.org/en-US/firefox/developer/?utm_source=firefox-com&amp;amp;utm_medium=referral&amp;amp;utm_campaign=FX10&amp;amp;utm_content=fxdev-stackoverflow"&gt;Mozilla Developer
+Edition&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://mozorg.cdn.mozilla.net/media/img/firefox/developer/screenshot.jpg"&gt;{.alignnone
+width="832" height="456"}&lt;/p&gt;
+&lt;p&gt;So far I've love it's inline ability to edit css. It's an entirely
+natural way to tweak the css on the fly.&lt;/p&gt;</content></entry><entry><title>LessPHP</title><link href="https://andrewelkins.com/lessphp.html" rel="alternate"></link><published>2012-12-09T19:59:00-08:00</published><updated>2012-12-09T19:59:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2012-12-09:/lessphp.html</id><summary type="html">&lt;p&gt;Why would I want to use the php version of a native node.js project?
+Well, for starters not all projects are deployed on servers that have
+node.js installed. Second, well, the first one is pretty much the only
+reason.&lt;/p&gt;
+&lt;p&gt;So with that out of the way, I ran …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Why would I want to use the php version of a native node.js project?
+Well, for starters not all projects are deployed on servers that have
+node.js installed. Second, well, the first one is pretty much the only
+reason.&lt;/p&gt;
+&lt;p&gt;So with that out of the way, I ran in an issue with bootstrap and
+lessphp. LessPHP doesn't allow the js parsing that less allows. In my
+case, it was with bootstrap and mixins.less.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;parse error: failed at `@props:
+\~`"@{arguments}".replace(/[:::[]]|:::,sX/g, '')`&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here's the code that is causing the error.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;// Drop shadows&lt;br&gt;
+.box-shadow(@shadowA, @shadowB:X, ...){&lt;br&gt;
+// Multiple shadow solution from
+http://toekneestuck.com/blog/2012/05/15/less-css-arguments-variable/&lt;br&gt;
+@props: \~`"@{arguments}".replace(/[:::[]]|:::,sX/g, '')`;&lt;br&gt;
+-webkit-box-shadow: @props;&lt;br&gt;
+-moz-box-shadow: @props;&lt;br&gt;
+box-shadow: @props;&lt;br&gt;
+}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There's a way around it.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;.box-shadow(@shadow) {&lt;br&gt;
+-webkit-box-shadow: @shadow;&lt;br&gt;
+-moz-box-shadow: @shadow;&lt;br&gt;
+box-shadow: @shadow;&lt;br&gt;
+}&lt;br&gt;
+// Aliases for up to 5 shadows to avoid the need for passing in
+escaped strings&lt;br&gt;
+.box-shadow(@a, @b) { @join: @a, @b; .box-shadow(@join); }&lt;br&gt;
+.box-shadow(@a, @b, @c) { @join: @a, @b, @c; .box-shadow(@join); }&lt;br&gt;
+.box-shadow(@a, @b, @c, @d) { @join: @a, @b, @c, @d;
+.box-shadow(@join); }&lt;br&gt;
+.box-shadow(@a, @b, @c, @d, @e) { @join: @a, @b, @c, @d, @e;
+.box-shadow(@join); }&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Which basically hard codes 5 gradient positions. Which could be bad if
+your code uses more than that. However, I don't believe bootstrap does
+so it should be fine.&lt;/p&gt;</content></entry><entry><title>Using Zend to retrive wikipedia api content</title><link href="https://andrewelkins.com/using-zend-to-retrive-wikipedia-api-content.html" rel="alternate"></link><published>2012-05-22T08:15:00-07:00</published><updated>2012-05-22T08:15:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2012-05-22:/using-zend-to-retrive-wikipedia-api-content.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;function getWikipediaContent( \$wikiUrl )&lt;/p&gt;
+&lt;p&gt;{&lt;/p&gt;
+&lt;p&gt;// initialize HTTP client&lt;br&gt;
+\$client = new Zend_Http_Client();&lt;br&gt;
+// Set it for wikipedia&lt;br&gt;
+\$client-&amp;gt;setUri( \$wikiUrl );&lt;br&gt;
+// Set url params for get request&lt;br&gt;
+\$client-&amp;gt;setParameterGet('action','query');&lt;br&gt;
+\$client-&amp;gt;setParameterGet('prop','revisions');&lt;br&gt;
+\$client-&amp;gt;setParameterGet('rvprop','content');&lt;br&gt;
+\$client-&amp;gt;setParameterGet('format','xml');&lt;br&gt;
+\$client-&amp;gt;setParameterGet('titles', \$urlSlug);&lt;br&gt;
+// Get the wiki page via a get request …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;function getWikipediaContent( \$wikiUrl )&lt;/p&gt;
+&lt;p&gt;{&lt;/p&gt;
+&lt;p&gt;// initialize HTTP client&lt;br&gt;
+\$client = new Zend_Http_Client();&lt;br&gt;
+// Set it for wikipedia&lt;br&gt;
+\$client-&amp;gt;setUri( \$wikiUrl );&lt;br&gt;
+// Set url params for get request&lt;br&gt;
+\$client-&amp;gt;setParameterGet('action','query');&lt;br&gt;
+\$client-&amp;gt;setParameterGet('prop','revisions');&lt;br&gt;
+\$client-&amp;gt;setParameterGet('rvprop','content');&lt;br&gt;
+\$client-&amp;gt;setParameterGet('format','xml');&lt;br&gt;
+\$client-&amp;gt;setParameterGet('titles', \$urlSlug);&lt;br&gt;
+// Get the wiki page via a get request&lt;br&gt;
+\$result = \$client-&amp;gt;request('GET');&lt;/p&gt;
+&lt;p&gt;// Make sure actual data was returned. If not, return false&lt;br&gt;
+if( \$result-&amp;gt;isError() )&lt;br&gt;
+{&lt;br&gt;
+return false;&lt;br&gt;
+}&lt;/p&gt;
+&lt;p&gt;// Put response body in to variable&lt;br&gt;
+\$body = \$result-&amp;gt;getBody();&lt;/p&gt;
+&lt;p&gt;// Transform string in to xml feed so it can be parsed.&lt;br&gt;
+\$wikiXml = new SimpleXMLElement( \$body );&lt;br&gt;
+// Get body and transform back to string.&lt;br&gt;
+return (string)
+\$wikiXml-&amp;gt;query-&amp;gt;pages-&amp;gt;page-&amp;gt;revisions-&amp;gt;rev;&lt;/p&gt;
+&lt;p&gt;}&lt;/p&gt;
+&lt;/blockquote&gt;</content></entry><entry><title>JS logging</title><link href="https://andrewelkins.com/js-logging.html" rel="alternate"></link><published>2012-05-14T11:27:00-07:00</published><updated>2012-05-14T11:27:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2012-05-14:/js-logging.html</id><summary type="html">&lt;p&gt;I've been doing a fair about of js development lately and console.log
+has been my friend. However, writing console.log() is a bit heavy. So
+instead I've been adding this to my files as  a quick way to log in
+javascipt.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;function log() {&lt;br&gt;
+if (window.console &amp;amp;&amp;amp; console.log)&lt;br&gt;
+console …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;I've been doing a fair about of js development lately and console.log
+has been my friend. However, writing console.log() is a bit heavy. So
+instead I've been adding this to my files as  a quick way to log in
+javascipt.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;function log() {&lt;br&gt;
+if (window.console &amp;amp;&amp;amp; console.log)&lt;br&gt;
+console.log('{product or sitename} ::  ' +
+Array.prototype.join.call(arguments,' '));&lt;br&gt;
+}&lt;/p&gt;
+&lt;/blockquote&gt;</content></entry><entry><title>Remove empty values from an array.</title><link href="https://andrewelkins.com/remove-empty-values-from-an-array.html" rel="alternate"></link><published>2012-04-04T08:01:00-07:00</published><updated>2012-04-04T08:01:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2012-04-04:/remove-empty-values-from-an-array.html</id><summary type="html">&lt;p&gt;I developed this little one liner to remove empty values from an array
+in php.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;\$tags = array( 'testtag', 'testtag2', ' ' );&lt;/p&gt;
+&lt;p&gt;\$tagsCleaned = array_filter( array_map( 'trim', \$tags ),&lt;br&gt;
+create_function( '\$a', 'return \$a!="";' ) );&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Breaking that down inside out.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;array_map( 'trim', \$tags )&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="http://www.php.net/manual/en/function.array-map.php"&gt;Array map&lt;/a&gt; the
+trim function to all of the values within the array, removing …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I developed this little one liner to remove empty values from an array
+in php.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;\$tags = array( 'testtag', 'testtag2', ' ' );&lt;/p&gt;
+&lt;p&gt;\$tagsCleaned = array_filter( array_map( 'trim', \$tags ),&lt;br&gt;
+create_function( '\$a', 'return \$a!="";' ) );&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Breaking that down inside out.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;array_map( 'trim', \$tags )&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="http://www.php.net/manual/en/function.array-map.php"&gt;Array map&lt;/a&gt; the
+trim function to all of the values within the array, removing removing
+pre/post spaces. In this case it removes the space in the third item.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;array_filter( array_map( 'trim', \$tags ),&lt;br&gt;
+create_function( '\$a', 'return \$a!="";' ) )&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="http://php.net/manual/en/function.array-filter.php"&gt;Array filter&lt;/a&gt;
+allows us to remove the elements that do not match the function. In this
+case, I've created a function to test if the value is an empty string.
+If it is, the function returns true if it is not blank and false if it
+is. The false return removes the value from the array.&lt;/p&gt;
+&lt;p&gt;The result will be an array of two items.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;\$tags = array( 'testtag', 'testtag2', ' ' );&lt;br&gt;
+\$tagsCleaned = array_filter( array_map( 'trim', \$tags ),
+create_function( '\$a', 'return \$a!="";' ) );&lt;br&gt;
+print_r(\$tagsCleaned);&lt;/p&gt;
+&lt;p&gt;Array&lt;br&gt;
+(&lt;br&gt;
+[0] =&amp;gt; testtag&lt;br&gt;
+[1] =&amp;gt; testtag2&lt;br&gt;
+)&lt;/p&gt;
+&lt;/blockquote&gt;</content></entry><entry><title>Using the + sign to merge arrays in php</title><link href="https://andrewelkins.com/using-the-sign-to-merge-arrays-in-php.html" rel="alternate"></link><published>2012-02-13T17:15:00-08:00</published><updated>2012-02-13T17:15:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2012-02-13:/using-the-sign-to-merge-arrays-in-php.html</id><summary type="html">&lt;p&gt;Today came across code that used the + sign to merge two associative php
+arrays. At first I thought it was broken but turns out you can indeed
+merge two arrays with the + sign.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;\$album = array(&lt;br&gt;
+'title' =&amp;gt; 'King of Limbs',&lt;br&gt;
+'band' =&amp;gt; 'Radiohead',&lt;br&gt;
+);&lt;br&gt;
+\$album_meta_data = array(&lt;br&gt;
+'upc' =&amp;gt; '486898161589',&lt;br&gt;
+'price' = '11.98'&lt;br&gt;
+);&lt;/p&gt;
+&lt;p&gt;\$output = \$album …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Today came across code that used the + sign to merge two associative php
+arrays. At first I thought it was broken but turns out you can indeed
+merge two arrays with the + sign.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;\$album = array(&lt;br&gt;
+'title' =&amp;gt; 'King of Limbs',&lt;br&gt;
+'band' =&amp;gt; 'Radiohead',&lt;br&gt;
+);&lt;br&gt;
+\$album_meta_data = array(&lt;br&gt;
+'upc' =&amp;gt; '486898161589',&lt;br&gt;
+'price' = '11.98'&lt;br&gt;
+);&lt;/p&gt;
+&lt;p&gt;\$output = \$album + \$album_meta_data;&lt;/p&gt;
+&lt;p&gt;--------OUTPUT--------&lt;br&gt;
+array(&lt;br&gt;
+'title' =&amp;gt; 'King of Limbs',&lt;br&gt;
+'band' =&amp;gt; 'Radiohead',&lt;br&gt;
+'upc' =&amp;gt; '486898161589',&lt;br&gt;
+'price' = '11.98'&lt;br&gt;
+)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Another way to use it would be to add the album meta data directly to
+the album array.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;\$album = array(&lt;br&gt;
+'title' =&amp;gt; 'King of Limbs',&lt;br&gt;
+'band' =&amp;gt; 'Radiohead',&lt;br&gt;
+);&lt;br&gt;
+\$album_meta_data = array(&lt;br&gt;
+'upc' =&amp;gt; '486898161589',&lt;br&gt;
+'price' = '11.98'&lt;br&gt;
+);&lt;/p&gt;
+&lt;p&gt;\$album += \$album_meta_data;&lt;/p&gt;
+&lt;p&gt;--------OUTPUT--------&lt;br&gt;
+array(&lt;br&gt;
+'title' =&amp;gt; 'King of Limbs',&lt;br&gt;
+'band' =&amp;gt; 'Radiohead',&lt;br&gt;
+'upc' =&amp;gt; '486898161589',&lt;br&gt;
+'price' = '11.98'&lt;br&gt;
+)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If the key exists in both arrays then the first if used and the second
+is discarded, same as with
+&lt;a href="http://php.net/manual/en/function.array-merge.php"&gt;array_merge&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;\$album = array(&lt;br&gt;
+'title' =&amp;gt; 'King of Limbs',&lt;br&gt;
+'band' =&amp;gt; 'Radiohead',&lt;br&gt;
+);&lt;br&gt;
+\$album_meta_data = array(&lt;br&gt;
+'title' =&amp;gt; 'Coldplay',&lt;br&gt;
+'upc' =&amp;gt; '486898161589',&lt;br&gt;
+'price' = '11.98'&lt;br&gt;
+);&lt;/p&gt;
+&lt;p&gt;\$album += \$album_meta_data;&lt;/p&gt;
+&lt;p&gt;--------OUTPUT--------&lt;br&gt;
+array(&lt;br&gt;
+'title' =&amp;gt; 'King of Limbs',&lt;br&gt;
+'band' =&amp;gt; 'Radiohead',&lt;br&gt;
+'upc' =&amp;gt; '486898161589',&lt;br&gt;
+'price' = '11.98'&lt;br&gt;
+)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;the reverse&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;\$album = array(&lt;br&gt;
+'title' =&amp;gt; 'King of Limbs',&lt;br&gt;
+'band' =&amp;gt; 'Radiohead',&lt;br&gt;
+);&lt;br&gt;
+\$album_meta_data = array(&lt;br&gt;
+'title' =&amp;gt; 'Coldplay',&lt;br&gt;
+'upc' =&amp;gt; '486898161589',&lt;br&gt;
+'price' = '11.98'&lt;br&gt;
+);&lt;/p&gt;
+&lt;p&gt;\$album_meta_data += \$album;&lt;/p&gt;
+&lt;p&gt;--------OUTPUT--------&lt;br&gt;
+array(&lt;br&gt;
+'title' =&amp;gt; 'King of Limbs',&lt;br&gt;
+'band' =&amp;gt; 'Coldplay',&lt;br&gt;
+'upc' =&amp;gt; '486898161589',&lt;br&gt;
+'price' = '11.98'&lt;br&gt;
+)&lt;/p&gt;
+&lt;/blockquote&gt;</content></entry></feed>

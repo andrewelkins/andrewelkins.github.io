@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Linux, PHP</title><link href="https://andrewelkins.com/" rel="alternate"></link><link href="https://andrewelkins.com/feeds/linux-php.atom.xml" rel="self"></link><id>https://andrewelkins.com/</id><updated>2013-01-21T21:02:00-08:00</updated><entry><title>Clear Laravel 4 Autoload</title><link href="https://andrewelkins.com/clear-laravel-4-autoload.html" rel="alternate"></link><published>2013-01-21T21:02:00-08:00</published><updated>2013-01-21T21:02:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-01-21:/clear-laravel-4-autoload.html</id><summary type="html">&lt;p&gt;Laravel 4 currently has a very frustrating issue. If you add a model it
+will not know of it until you clear the autoload.&lt;/p&gt;
+&lt;p&gt;[ps]composer dump-autoload[/ps]&lt;/p&gt;
+&lt;p&gt;Make sure you have &lt;a href="http://andrewelkins.com/programming/php/setting-up-composer-globally-for-laravel-4/"&gt;setup composer to be accessed
+globally&lt;/a&gt;.
+Otherwise you'll need to do this command.&lt;/p&gt;
+&lt;p&gt;[ps]/usr/local/bin/composer …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Laravel 4 currently has a very frustrating issue. If you add a model it
+will not know of it until you clear the autoload.&lt;/p&gt;
+&lt;p&gt;[ps]composer dump-autoload[/ps]&lt;/p&gt;
+&lt;p&gt;Make sure you have &lt;a href="http://andrewelkins.com/programming/php/setting-up-composer-globally-for-laravel-4/"&gt;setup composer to be accessed
+globally&lt;/a&gt;.
+Otherwise you'll need to do this command.&lt;/p&gt;
+&lt;p&gt;[ps]/usr/local/bin/composer.phar composer dump-autoload[/ps]&lt;/p&gt;
+&lt;p&gt;Further you may want to optimize your autoload. According to Taylor this
+can speed up your application by 30%.&lt;br&gt;
+[ps]composer dump-autoload --optimize[/ps]&lt;/p&gt;
+&lt;p&gt;Edit: Another option noted
+by &lt;a href="http://www.livefyre.com/profile/11398455/"&gt;luviyo&lt;/a&gt; is to do the
+following.&lt;/p&gt;
+&lt;p&gt;Open &lt;em&gt;app/starts/global.php&lt;/em&gt; and add:&lt;/p&gt;
+&lt;p&gt;[ps]ClassLoader::addDirectories(array( app_path().'/libraries',
+));[/ps]&lt;/p&gt;
+&lt;p&gt;Thanks for the tip!&lt;/p&gt;</content><category term="composer"></category><category term="lavarel"></category><category term="php"></category></entry><entry><title>Setting up Composer globally for Laravel 4</title><link href="https://andrewelkins.com/setting-up-composer-globally-for-laravel-4.html" rel="alternate"></link><published>2013-01-06T18:03:00-08:00</published><updated>2013-01-06T18:03:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-01-06:/setting-up-composer-globally-for-laravel-4.html</id><summary type="html">&lt;p&gt;An easy way to set up composer globally is to follow the instructions on
+getcomposer.org site:&lt;/p&gt;
+&lt;p&gt;[ps]&lt;br&gt;
+\$ curl -s http://getcomposer.org/installer | php&lt;br&gt;
+\$ sudo mv composer.phar /usr/local/bin/composer&lt;br&gt;
+[/ps]&lt;/p&gt;
+&lt;p&gt;Now I can use composer by invoking just the &lt;strong&gt;composer&lt;/strong&gt; command.&lt;/p&gt;
+&lt;p&gt;Optional way to do it …&lt;/p&gt;</summary><content type="html">&lt;p&gt;An easy way to set up composer globally is to follow the instructions on
+getcomposer.org site:&lt;/p&gt;
+&lt;p&gt;[ps]&lt;br&gt;
+\$ curl -s http://getcomposer.org/installer | php&lt;br&gt;
+\$ sudo mv composer.phar /usr/local/bin/composer&lt;br&gt;
+[/ps]&lt;/p&gt;
+&lt;p&gt;Now I can use composer by invoking just the &lt;strong&gt;composer&lt;/strong&gt; command.&lt;/p&gt;
+&lt;p&gt;Optional way to do it, is to set up an alias:&lt;/p&gt;
+&lt;p&gt;[ps]&lt;br&gt;
+alias composer='/location/of/the/composer.phar'&lt;br&gt;
+[/ps]&lt;/p&gt;</content><category term="composer"></category><category term="laravel"></category><category term="php"></category></entry></feed>

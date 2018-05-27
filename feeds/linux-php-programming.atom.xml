@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Linux, PHP, Programming</title><link href="https://andrewelkins.com/" rel="alternate"></link><link href="https://andrewelkins.com/feeds/linux-php-programming.atom.xml" rel="self"></link><id>https://andrewelkins.com/</id><updated>2013-02-26T13:15:00-08:00</updated><entry><title>Add a command file to Laravel artisan</title><link href="https://andrewelkins.com/add-a-command-file-to-laravel-artisan.html" rel="alternate"></link><published>2013-02-26T13:15:00-08:00</published><updated>2013-02-26T13:15:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-02-26:/add-a-command-file-to-laravel-artisan.html</id><summary type="html">&lt;p&gt;In order to run a custom command from the command line utility called
+artisan you need to do two things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a new CustomCommand file&lt;/li&gt;
+&lt;li&gt;Register that command with artisan&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here's a sample Command file called &lt;em&gt;FooCommand.php&lt;/em&gt; which should be
+placed in &lt;em&gt;app/commands/ &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;[php]&amp;lt;?php&lt;/p&gt;
+&lt;p&gt;use Illuminate:::ConsoleCommand …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In order to run a custom command from the command line utility called
+artisan you need to do two things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a new CustomCommand file&lt;/li&gt;
+&lt;li&gt;Register that command with artisan&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here's a sample Command file called &lt;em&gt;FooCommand.php&lt;/em&gt; which should be
+placed in &lt;em&gt;app/commands/ &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;[php]&amp;lt;?php&lt;/p&gt;
+&lt;p&gt;use Illuminate:::ConsoleCommand;&lt;br&gt;
+use Symfony:::ComponentConsole:::InputInputOption;&lt;br&gt;
+use Symfony:::ComponentConsole:::InputInputArgument;&lt;/p&gt;
+&lt;p&gt;class FooCommand extends Command {&lt;/p&gt;
+&lt;p&gt;/**&lt;br&gt;
+* The console command name.&lt;br&gt;
+*&lt;br&gt;
+* @var string&lt;br&gt;
+*/&lt;br&gt;
+protected \$name = 'foo:migrate';&lt;/p&gt;
+&lt;p&gt;/**&lt;br&gt;
+* The console command description.&lt;br&gt;
+*&lt;br&gt;
+* @var string&lt;br&gt;
+*/&lt;br&gt;
+protected \$description = '';&lt;/p&gt;
+&lt;p&gt;/**&lt;br&gt;
+* Create a new command instance.&lt;br&gt;
+*&lt;br&gt;
+* @return void&lt;br&gt;
+*/&lt;br&gt;
+public function __construct()&lt;br&gt;
+{&lt;br&gt;
+parent::__construct();&lt;br&gt;
+}&lt;/p&gt;
+&lt;p&gt;/**&lt;br&gt;
+* Execute the console command.&lt;br&gt;
+*&lt;br&gt;
+* @return void&lt;br&gt;
+*/&lt;br&gt;
+public function fire()&lt;br&gt;
+{&lt;br&gt;
+\$this-&amp;gt;info(' Step: 1');&lt;br&gt;
+\$this-&amp;gt;info(' Cool Stuff Here');&lt;/p&gt;
+&lt;p&gt;}&lt;/p&gt;
+&lt;p&gt;}[/php]&lt;/p&gt;
+&lt;p&gt;Then you'll need to register that in &lt;em&gt;app/start/artisan.php&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;[php]&lt;/p&gt;
+&lt;p&gt;&amp;lt;?php&lt;br&gt;
+/*&lt;br&gt;
+|--------------------------------------------------------------------------&lt;br&gt;
+| Register The Artisan Commands&lt;br&gt;
+|--------------------------------------------------------------------------&lt;br&gt;
+|&lt;br&gt;
+| Each available Artisan command must be registered with the console so&lt;br&gt;
+| that it is available to be called. We'll register every command so&lt;br&gt;
+| the console gets access to each of the command object instances.&lt;br&gt;
+|&lt;br&gt;
+*/&lt;/p&gt;
+&lt;p&gt;Artisan::add(new FooCommand);&lt;br&gt;
+[/php]&lt;/p&gt;
+&lt;p&gt;Now you can run your command&lt;/p&gt;
+&lt;p&gt;[ps]php artisan foo:migrate[/ps]&lt;/p&gt;</content><category term="artisan"></category><category term="cli"></category><category term="command line"></category><category term="l4"></category><category term="laravel"></category></entry><entry><title>How to set local environment as default in command line (CLI) for Larvel 4 artisan</title><link href="https://andrewelkins.com/how-to-set-local-environment-as-default-in-cli.html" rel="alternate"></link><published>2013-02-25T10:36:00-08:00</published><updated>2013-02-25T10:36:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-02-25:/how-to-set-local-environment-as-default-in-cli.html</id><summary type="html">&lt;p&gt;Typically when Laravel 4 artisan is run from the command line (cli) it
+uses the production configuration files. This can be changed by using a
+flag when running the command.&lt;/p&gt;
+&lt;p&gt;[ps]php artisan migrate --env=local[/ps]&lt;/p&gt;
+&lt;p&gt;However, adding &lt;em&gt;--env-=local&lt;/em&gt; each time while running a script can slow
+down …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Typically when Laravel 4 artisan is run from the command line (cli) it
+uses the production configuration files. This can be changed by using a
+flag when running the command.&lt;/p&gt;
+&lt;p&gt;[ps]php artisan migrate --env=local[/ps]&lt;/p&gt;
+&lt;p&gt;However, adding &lt;em&gt;--env-=local&lt;/em&gt; each time while running a script can slow
+down development. I would recommend adding your development environment
+hostname to the config file.&lt;/p&gt;
+&lt;p&gt;To do this Laravel 4 needs the hostname for your &lt;a href="http://four.laravel.com/docs/configuration"&gt;development
+environment&lt;/a&gt;. I recommended
+using a new file called &lt;strong&gt;check.php&lt;/strong&gt; with the following contents:&lt;/p&gt;
+&lt;p&gt;[php]#!/usr/bin/env php&lt;br&gt;
+&amp;lt;?php&lt;br&gt;
+var_dump(gethostname());&lt;br&gt;
+[/php]&lt;/p&gt;
+&lt;p&gt;Run it from the command line:&lt;/p&gt;
+&lt;p&gt;[php]php check.php[/php]&lt;/p&gt;
+&lt;p&gt;This will output something like:&lt;/p&gt;
+&lt;p&gt;[ps]string(6) "ubuntu"[/ps]&lt;/p&gt;
+&lt;p&gt;In this case &lt;em&gt;ubuntu&lt;/em&gt; is what is needed. We'll need to add it to the
+environment array in &lt;strong&gt;bootstrap/start.php&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[php]\$env = \$app-&amp;gt;detectEnvironment(array(&lt;/p&gt;
+&lt;p&gt;'local' =&amp;gt; array('*.local','ubuntu'),&lt;/p&gt;
+&lt;p&gt;));&lt;br&gt;
+[/php]&lt;/p&gt;
+&lt;p&gt;Now artisan should run with the local environment as default when run on
+that machine.&lt;/p&gt;</content><category term="cli"></category><category term="framework"></category><category term="l4"></category><category term="laravel"></category></entry></feed>

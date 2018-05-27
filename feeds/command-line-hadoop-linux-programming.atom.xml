@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Command Line, hadoop, Linux, Programming</title><link href="https://andrewelkins.com/" rel="alternate"></link><link href="https://andrewelkins.com/feeds/command-line-hadoop-linux-programming.atom.xml" rel="self"></link><id>https://andrewelkins.com/</id><updated>2014-07-08T07:57:00-07:00</updated><entry><title>How to format hdfs in AWS Elastic Map Reduce</title><link href="https://andrewelkins.com/how-to-format-hdfs-in-aws-elastic-map-reduce.html" rel="alternate"></link><published>2014-07-08T07:57:00-07:00</published><updated>2014-07-08T07:57:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2014-07-08:/how-to-format-hdfs-in-aws-elastic-map-reduce.html</id><summary type="html">&lt;p&gt;It's insanely simple. Connect to your master node within AWS Elastic Map
+Reduce. Then you'll want to connect to the hadoop cluster and reset the
+NameNode file handlers.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hadoop namenode -format  
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;That's it. That's how you format the hdfs file system.&lt;/p&gt;</summary><content type="html">&lt;p&gt;It's insanely simple. Connect to your master node within AWS Elastic Map
+Reduce. Then you'll want to connect to the hadoop cluster and reset the
+NameNode file handlers.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hadoop namenode -format  
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;That's it. That's how you format the hdfs file system.&lt;/p&gt;</content></entry></feed>

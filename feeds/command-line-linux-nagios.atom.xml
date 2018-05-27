@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Command Line, Linux, nagios</title><link href="https://andrewelkins.com/" rel="alternate"></link><link href="https://andrewelkins.com/feeds/command-line-linux-nagios.atom.xml" rel="self"></link><id>https://andrewelkins.com/</id><updated>2013-08-28T07:59:00-07:00</updated><entry><title>Nagios ping fails</title><link href="https://andrewelkins.com/nagios-ping-fails.html" rel="alternate"></link><published>2013-08-28T07:59:00-07:00</published><updated>2013-08-28T07:59:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-08-28:/nagios-ping-fails.html</id><summary type="html">&lt;p&gt;I recently setup NagiosXI with their provided amazon ami. It was very
+simple to setup and everything looked good. Added a couple servers and
+they all could not be pinged from Nagios. I couldn't ping them from
+Nagios' ping tool. I could ping them from the command line so I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I recently setup NagiosXI with their provided amazon ami. It was very
+simple to setup and everything looked good. Added a couple servers and
+they all could not be pinged from Nagios. I couldn't ping them from
+Nagios' ping tool. I could ping them from the command line so I knew it
+was a configuration error.&lt;/p&gt;
+&lt;p&gt;First I tried:  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\$ /usr/local/nagios/libexec/check\_ping -H www.google.com -c 100,90% -w
+100,90%  
+CRITICAL - Network Unreachable (www.google.com)  
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then I &lt;a href="http://serverfault.com/questions/278196/nagios-bizare-ping-behaviour"&gt;saw I needed to add the
+-4&lt;/a&gt;
+to the command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\$ sudo vim /usr/local/nagios/etc/commands.cfg  
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Go to line 221 and add the "-4"&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;define command {  
+command\_name check\_ping  
+command\_line \$USER1\$/check\_ping -4 -H \$HOSTADDRESS\$ -w \$ARG1\$ -c
+\$ARG2\$ -p 5  
+}  
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then you'll need to restart Nagios.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\$ sudo service nagios restart  
+&lt;/pre&gt;&lt;/div&gt;</content></entry></feed>

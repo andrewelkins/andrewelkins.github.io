@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - mysql, Programming</title><link href="https://andrewelkins.com/" rel="alternate"></link><link href="https://andrewelkins.com/feeds/mysql-programming.atom.xml" rel="self"></link><id>https://andrewelkins.com/</id><updated>2013-04-29T10:32:00-07:00</updated><entry><title>Find the collation of all tables within a mysql database</title><link href="https://andrewelkins.com/find-the-collation-all-tables-mysql.html" rel="alternate"></link><published>2013-04-29T10:32:00-07:00</published><updated>2013-04-29T10:32:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-04-29:/find-the-collation-all-tables-mysql.html</id><summary type="html">&lt;p&gt;Needing to find a collation of a mysql database for a migration I went
+to google. Found several options, but the best was one from &lt;a href="http://stackoverflow.com/questions/4948356/query-to-show-all-tables-and-their-collation"&gt;stack
+overflow&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;SELECT TABLE\_CATALOG, TABLE\_SCHEMA, TABLE\_NAME, COLUMN\_NAME,
+COLLATION\_NAME
+
+FROM INFORMATION\_SCHEMA.COLUMNS;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will output something like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mysql&amp;amp;gt; SELECT …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Needing to find a collation of a mysql database for a migration I went
+to google. Found several options, but the best was one from &lt;a href="http://stackoverflow.com/questions/4948356/query-to-show-all-tables-and-their-collation"&gt;stack
+overflow&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;SELECT TABLE\_CATALOG, TABLE\_SCHEMA, TABLE\_NAME, COLUMN\_NAME,
+COLLATION\_NAME
+
+FROM INFORMATION\_SCHEMA.COLUMNS;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will output something like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mysql&amp;amp;gt; SELECT TABLE\_CATALOG, TABLE\_SCHEMA, TABLE\_NAME,
+COLUMN\_NAME, COLLATION\_NAME  
+-&amp;amp;gt; FROM INFORMATION\_SCHEMA.COLUMNS;  
++---------------+--------------------+---------------------------------------+-------------------------------+-------------------+  
+| TABLE\_CATALOG | TABLE\_SCHEMA | TABLE\_NAME | COLUMN\_NAME |
+COLLATION\_NAME |  
++---------------+--------------------+---------------------------------------+-------------------------------+-------------------+  
+| NULL | information\_schema | CHARACTER\_SETS | CHARACTER\_SET\_NAME |
+utf8\_general\_ci |  
+| NULL | information\_schema | CHARACTER\_SETS | DEFAULT\_COLLATE\_NAME
+| utf8\_general\_ci |  
+| NULL | information\_schema | CHARACTER\_SETS | DESCRIPTION |
+utf8\_general\_ci |  
+| NULL | information\_schema | CHARACTER\_SETS | MAXLEN | NULL |  
+| NULL | information\_schema | COLLATIONS | COLLATION\_NAME |
+utf8\_general\_ci |  
+| NULL | information\_schema | COLLATIONS | CHARACTER\_SET\_NAME |
+utf8\_general\_ci |  
+| NULL | information\_schema | COLLATIONS | ID | NULL |  
+| NULL | information\_schema | COLLATIONS | IS\_DEFAULT |
+utf8\_general\_ci |  
+| NULL | information\_schema | COLLATIONS | IS\_COMPILED |
+utf8\_general\_ci |  
+| NULL | information\_schema | COLLATIONS | SORTLEN | NULL |  
+| NULL | information\_schema | COLLATION\_CHARACTER\_SET\_APPLICABILITY
+| COLLATION\_NAME | utf8\_general\_ci |  
+| NULL | information\_schema | COLLATION\_CHARACTER\_SET\_APPLICABILITY
+| CHARACTER\_SET\_NAME | utf8\_general\_ci |  
+| NULL | information\_schema | COLUMNS | TABLE\_CATALOG |
+utf8\_general\_ci |  
+| NULL | information\_schema | COLUMNS | TABLE\_SCHEMA |
+utf8\_general\_ci |
+
+\[...\]
+
+| NULL | information\_schema | VIEWS | SECURITY\_TYPE |
+utf8\_general\_ci |  
+| NULL | information\_schema | VIEWS | CHARACTER\_SET\_CLIENT |
+utf8\_general\_ci |  
+| NULL | information\_schema | VIEWS | COLLATION\_CONNECTION |
+utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_commentmeta | meta\_id | NULL |  
+| NULL | test\_db\_wp | wp\_commentmeta | comment\_id | NULL |  
+| NULL | test\_db\_wp | wp\_commentmeta | meta\_key | utf8\_general\_ci
+|  
+| NULL | test\_db\_wp | wp\_commentmeta | meta\_value |
+utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_comments | comment\_ID | NULL |  
+| NULL | test\_db\_wp | wp\_comments | comment\_post\_ID | NULL |  
+| NULL | test\_db\_wp | wp\_comments | comment\_author |
+utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_comments | comment\_author\_email |
+utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_comments | comment\_author\_url |
+utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_comments | comment\_author\_IP |
+utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_comments | comment\_date | NULL |  
+| NULL | test\_db\_wp | wp\_comments | comment\_date\_gmt | NULL |  
+| NULL | test\_db\_wp | wp\_comments | comment\_content |
+utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_comments | comment\_karma | NULL |  
+| NULL | test\_db\_wp | wp\_comments | comment\_approved |
+utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_comments | comment\_agent |
+utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_comments | comment\_type | utf8\_general\_ci
+|  
+| NULL | test\_db\_wp | wp\_comments | comment\_parent | NULL |  
+| NULL | test\_db\_wp | wp\_comments | user\_id | NULL |  
+| NULL | test\_db\_wp | wp\_links | link\_id | NULL |  
+| NULL | test\_db\_wp | wp\_links | link\_url | utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_links | link\_name | utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_links | link\_image | utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_links | link\_target | utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_links | link\_category | NULL |  
+| NULL | test\_db\_wp | wp\_links | link\_description |
+utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_links | link\_visible | utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_links | link\_owner | NULL |  
+| NULL | test\_db\_wp | wp\_links | link\_rating | NULL |  
+| NULL | test\_db\_wp | wp\_links | link\_updated | NULL |  
+| NULL | test\_db\_wp | wp\_links | link\_rel | utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_links | link\_notes | utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_links | link\_rss | utf8\_general\_ci |  
+| NULL | test\_db\_wp | wp\_options | option\_id | NULL |  
+| NULL | test\_db\_wp | wp\_options | option\_name | utf8\_general\_ci
+|  
+| NULL | test\_db\_wp | wp\_options | option\_value | utf8\_general\_ci
+|
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The first part of this shows the overall database collation. In this
+case, it is utf8_general_ci.&lt;/p&gt;
+&lt;p&gt;Then the second part shows the collation per column with each table
+within the database. In this case they are all the same as the default.
+However, it should be noted that this isn't always the case. It can be
+different then the default.&lt;/p&gt;</content></entry><entry><title>Query to insert all countries into database</title><link href="https://andrewelkins.com/query-to-insert-all-countries-into-database.html" rel="alternate"></link><published>2013-01-17T11:07:00-08:00</published><updated>2013-01-17T11:07:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-01-17:/query-to-insert-all-countries-into-database.html</id><summary type="html">&lt;p&gt;I needed to insert all of the countries in the world into a database. I
+couldn't find the query to run, so I created my own. Here it is.
+'country' is the table name and 'name' is the column name.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;INSERT INTO country&lt;/p&gt;
+&lt;p&gt;(name)&lt;/p&gt;
+&lt;p&gt;VALUES&lt;/p&gt;
+&lt;p&gt;('Afghanistan'),&lt;br&gt;
+('Albania'),&lt;br&gt;
+('Algeria'),&lt;br&gt;
+('Andorra'),&lt;br&gt;
+('Angola' …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;I needed to insert all of the countries in the world into a database. I
+couldn't find the query to run, so I created my own. Here it is.
+'country' is the table name and 'name' is the column name.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;INSERT INTO country&lt;/p&gt;
+&lt;p&gt;(name)&lt;/p&gt;
+&lt;p&gt;VALUES&lt;/p&gt;
+&lt;p&gt;('Afghanistan'),&lt;br&gt;
+('Albania'),&lt;br&gt;
+('Algeria'),&lt;br&gt;
+('Andorra'),&lt;br&gt;
+('Angola'),&lt;br&gt;
+('Antigua and Barbuda'),&lt;br&gt;
+('Argentina'),&lt;br&gt;
+('Armenia'),&lt;br&gt;
+('Australia'),&lt;br&gt;
+('Austria'),&lt;br&gt;
+('Azerbaijan'),&lt;br&gt;
+('Bahamas, The'),&lt;br&gt;
+('Bahrain'),&lt;br&gt;
+('Bangladesh'),&lt;br&gt;
+('Barbados'),&lt;br&gt;
+('Belarus'),&lt;br&gt;
+('Belgium'),&lt;br&gt;
+('Belize'),&lt;br&gt;
+('Benin'),&lt;br&gt;
+('Bhutan'),&lt;br&gt;
+('Bolivia'),&lt;br&gt;
+('Bosnia and Herzegovina'),&lt;br&gt;
+('Botswana'),&lt;br&gt;
+('Brazil'),&lt;br&gt;
+('Brunei'),&lt;br&gt;
+('Bulgaria'),&lt;br&gt;
+('Burkina Faso'),&lt;br&gt;
+('Burma'),&lt;br&gt;
+('Burundi'),&lt;br&gt;
+('Cambodia'),&lt;br&gt;
+('Cameroon'),&lt;br&gt;
+('Canada'),&lt;br&gt;
+('Cape Verde'),&lt;br&gt;
+('Central Africa'),&lt;br&gt;
+('Chad'),&lt;br&gt;
+('Chile'),&lt;br&gt;
+('China'),&lt;br&gt;
+('Colombia'),&lt;br&gt;
+('Comoros'),&lt;br&gt;
+('Congo, Democratic Republic of the'),&lt;br&gt;
+('Costa Rica'),&lt;br&gt;
+('Cote dIvoire'),&lt;br&gt;
+('Crete'),&lt;br&gt;
+('Croatia'),&lt;br&gt;
+('Cuba'),&lt;br&gt;
+('Cyprus'),&lt;br&gt;
+('Czech Republic'),&lt;br&gt;
+('Denmark'),&lt;br&gt;
+('Djibouti'),&lt;br&gt;
+('Dominican Republic'),&lt;br&gt;
+('East Timor'),&lt;br&gt;
+('Ecuador'),&lt;br&gt;
+('Egypt'),&lt;br&gt;
+('El Salvador'),&lt;br&gt;
+('Equatorial Guinea'),&lt;br&gt;
+('Eritrea'),&lt;br&gt;
+('Estonia'),&lt;br&gt;
+('Ethiopia'),&lt;br&gt;
+('Fiji'),&lt;br&gt;
+('Finland'),&lt;br&gt;
+('France'),&lt;br&gt;
+('Gabon'),&lt;br&gt;
+('Gambia, The'),&lt;br&gt;
+('Georgia'),&lt;br&gt;
+('Germany'),&lt;br&gt;
+('Ghana'),&lt;br&gt;
+('Greece'),&lt;br&gt;
+('Grenada'),&lt;br&gt;
+('Guadeloupe'),&lt;br&gt;
+('Guatemala'),&lt;br&gt;
+('Guinea'),&lt;br&gt;
+('Guinea-Bissau'),&lt;br&gt;
+('Guyana'),&lt;br&gt;
+('Haiti'),&lt;br&gt;
+('Holy See'),&lt;br&gt;
+('Honduras'),&lt;br&gt;
+('Hong Kong'),&lt;br&gt;
+('Hungary'),&lt;br&gt;
+('Iceland'),&lt;br&gt;
+('India'),&lt;br&gt;
+('Indonesia'),&lt;br&gt;
+('Iran'),&lt;br&gt;
+('Iraq'),&lt;br&gt;
+('Ireland'),&lt;br&gt;
+('Israel'),&lt;br&gt;
+('Italy'),&lt;br&gt;
+('Ivory Coast'),&lt;br&gt;
+('Jamaica'),&lt;br&gt;
+('Japan'),&lt;br&gt;
+('Jordan'),&lt;br&gt;
+('Kazakhstan'),&lt;br&gt;
+('Kenya'),&lt;br&gt;
+('Kiribati'),&lt;br&gt;
+('Korea, North'),&lt;br&gt;
+('Korea, South'),&lt;br&gt;
+('Kosovo'),&lt;br&gt;
+('Kuwait'),&lt;br&gt;
+('Kyrgyzstan'),&lt;br&gt;
+('Laos'),&lt;br&gt;
+('Latvia'),&lt;br&gt;
+('Lebanon'),&lt;br&gt;
+('Lesotho'),&lt;br&gt;
+('Liberia'),&lt;br&gt;
+('Libya'),&lt;br&gt;
+('Liechtenstein'),&lt;br&gt;
+('Lithuania'),&lt;br&gt;
+('Macau'),&lt;br&gt;
+('Macedonia'),&lt;br&gt;
+('Madagascar'),&lt;br&gt;
+('Malawi'),&lt;br&gt;
+('Malaysia'),&lt;br&gt;
+('Maldives'),&lt;br&gt;
+('Mali'),&lt;br&gt;
+('Malta'),&lt;br&gt;
+('Marshall Islands'),&lt;br&gt;
+('Mauritania'),&lt;br&gt;
+('Mauritius'),&lt;br&gt;
+('Mexico'),&lt;br&gt;
+('Micronesia'),&lt;br&gt;
+('Moldova'),&lt;br&gt;
+('Monaco'),&lt;br&gt;
+('Mongolia'),&lt;br&gt;
+('Montenegro'),&lt;br&gt;
+('Morocco'),&lt;br&gt;
+('Mozambique'),&lt;br&gt;
+('Namibia'),&lt;br&gt;
+('Nauru'),&lt;br&gt;
+('Nepal'),&lt;br&gt;
+('Netherlands'),&lt;br&gt;
+('New Zealand'),&lt;br&gt;
+('Nicaragua'),&lt;br&gt;
+('Niger'),&lt;br&gt;
+('Nigeria'),&lt;br&gt;
+('North Korea'),&lt;br&gt;
+('Norway'),&lt;br&gt;
+('Oman'),&lt;br&gt;
+('Pakistan'),&lt;br&gt;
+('Palau'),&lt;br&gt;
+('Panama'),&lt;br&gt;
+('Papua New Guinea'),&lt;br&gt;
+('Paraguay'),&lt;br&gt;
+('Peru'),&lt;br&gt;
+('Philippines'),&lt;br&gt;
+('Poland'),&lt;br&gt;
+('Portugal'),&lt;br&gt;
+('Qatar'),&lt;br&gt;
+('Romania'),&lt;br&gt;
+('Russia'),&lt;br&gt;
+('Rwanda'),&lt;br&gt;
+('Saint Lucia'),&lt;br&gt;
+('Saint Vincent and the Grenadines'),&lt;br&gt;
+('Samoa'),&lt;br&gt;
+('San Marino'),&lt;br&gt;
+('Sao Tome and Principe'),&lt;br&gt;
+('Saudi Arabia'),&lt;br&gt;
+('Scotland'),&lt;br&gt;
+('Senegal'),&lt;br&gt;
+('Serbia'),&lt;br&gt;
+('Seychelles'),&lt;br&gt;
+('Sierra Leone'),&lt;br&gt;
+('Singapore'),&lt;br&gt;
+('Slovakia'),&lt;br&gt;
+('Slovenia'),&lt;br&gt;
+('Solomon Islands'),&lt;br&gt;
+('Somalia'),&lt;br&gt;
+('South Africa'),&lt;br&gt;
+('South Korea'),&lt;br&gt;
+('Spain'),&lt;br&gt;
+('Sri Lanka'),&lt;br&gt;
+('Sudan'),&lt;br&gt;
+('Suriname'),&lt;br&gt;
+('Swaziland'),&lt;br&gt;
+('Sweden'),&lt;br&gt;
+('Switzerland'),&lt;br&gt;
+('Syria'),&lt;br&gt;
+('Taiwan'),&lt;br&gt;
+('Tajikistan'),&lt;br&gt;
+('Tanzania'),&lt;br&gt;
+('Thailand'),&lt;br&gt;
+('Tibet'),&lt;br&gt;
+('Timor-Leste'),&lt;br&gt;
+('Togo'),&lt;br&gt;
+('Tonga'),&lt;br&gt;
+('Trinidad and Tobago'),&lt;br&gt;
+('Tunisia'),&lt;br&gt;
+('Turkey'),&lt;br&gt;
+('Turkmenistan'),&lt;br&gt;
+('Tuvalu'),&lt;br&gt;
+('Uganda'),&lt;br&gt;
+('Ukraine'),&lt;br&gt;
+('United Arab Emirates'),&lt;br&gt;
+('United Kingdom'),&lt;br&gt;
+('United States'),&lt;br&gt;
+('Uruguay'),&lt;br&gt;
+('Uzbekistan'),&lt;br&gt;
+('Vanuatu'),&lt;br&gt;
+('Venezuela'),&lt;br&gt;
+('Vietnam'),&lt;br&gt;
+('Yemen'),&lt;br&gt;
+('Zambia'),&lt;br&gt;
+('Zimbabwe');&lt;/p&gt;
+&lt;/blockquote&gt;</content></entry></feed>

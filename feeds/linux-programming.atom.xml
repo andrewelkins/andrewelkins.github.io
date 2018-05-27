@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Linux, Programming</title><link href="https://andrewelkins.com/" rel="alternate"></link><link href="https://andrewelkins.com/feeds/linux-programming.atom.xml" rel="self"></link><id>https://andrewelkins.com/</id><updated>2013-01-20T18:52:00-08:00</updated><entry><title>Linux rename a bunch of file's extensions</title><link href="https://andrewelkins.com/linux-rename-a-bunch-of-files-extensions.html" rel="alternate"></link><published>2013-01-20T18:52:00-08:00</published><updated>2013-01-20T18:52:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-01-20:/linux-rename-a-bunch-of-files-extensions.html</id><summary type="html">&lt;p&gt;In order to rename a whole folders file extensions from jpeg to jpg I
+wrote this script called rename.sh in bash.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;#!/bin/bash&lt;/p&gt;
+&lt;p&gt;for filename in *.jpeg&lt;br&gt;
+do&lt;br&gt;
+echo \$filename;&lt;br&gt;
+cleaned=`basename \$filename .jpeg`;&lt;br&gt;
+echo \$cleaned;&lt;br&gt;
+mv \$filename \$cleaned.jpg;&lt;br&gt;
+done&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Then I made is executable from the command …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In order to rename a whole folders file extensions from jpeg to jpg I
+wrote this script called rename.sh in bash.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;#!/bin/bash&lt;/p&gt;
+&lt;p&gt;for filename in *.jpeg&lt;br&gt;
+do&lt;br&gt;
+echo \$filename;&lt;br&gt;
+cleaned=`basename \$filename .jpeg`;&lt;br&gt;
+echo \$cleaned;&lt;br&gt;
+mv \$filename \$cleaned.jpg;&lt;br&gt;
+done&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Then I made is executable from the command line.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;chmod +x rename.sh&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Then ran it in the directory I needed to rename files in.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;./rename.sh&lt;/p&gt;
+&lt;/blockquote&gt;</content></entry></feed>
