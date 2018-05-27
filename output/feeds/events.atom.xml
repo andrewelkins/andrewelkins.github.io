@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Events</title><link href="https://andrewelkins.com/" rel="alternate"></link><link href="https://andrewelkins.com/feeds/events.atom.xml" rel="self"></link><id>https://andrewelkins.com/</id><updated>2011-11-24T12:00:00-08:00</updated><entry><title>Scaling PHP Applications with Redis</title><link href="https://andrewelkins.com/scaling-php-applications-with-redis.html" rel="alternate"></link><published>2011-11-24T12:00:00-08:00</published><updated>2011-11-24T12:00:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2011-11-24:/scaling-php-applications-with-redis.html</id><summary type="html">&lt;p&gt;Redis is an important technology when dealing with caching. This was one
+of the talks that I really wanted to attend at ZendCon. It was given by
+&lt;a href="http://twitter.com/#!/jimbojsb"&gt;Josh Butts&lt;/a&gt; of Vertive LLC.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Redis is a NoSQL technology that rides a fine line between database
+and in-memory cache. Redis also offers …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Redis is an important technology when dealing with caching. This was one
+of the talks that I really wanted to attend at ZendCon. It was given by
+&lt;a href="http://twitter.com/#!/jimbojsb"&gt;Josh Butts&lt;/a&gt; of Vertive LLC.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Redis is a NoSQL technology that rides a fine line between database
+and in-memory cache. Redis also offers "remote data structures", which
+gives it a significant advantage over other in-memory databases. This
+session will cover several PHP clients for Redis, and how to use them
+for caching, data modeling and generally improving application
+throughput.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="http://redis.io/"&gt;Redis&lt;/a&gt; is an open source in memory key value store
+with optional persistance. The current version is 2.4.2 as of this
+writing. The latest stable version is 2.2.15 which what Josh recommended
+as the minimum version you would want to use. He noted that 2.4 was
+pretty stable in it's own right. Hoever, I have notice that since 2.4.0
+release 10 days ago they have already release 2 patches (now at 2.4.2).
+Thus, personally, unless a feature of 2.4 is necessary I'd say go with
+2.2 latest or 2.3 latest.&lt;/p&gt;
+&lt;p&gt;Once Redis is installed how to connect to it becomes an issue. According
+to Josh, there's not a good GUI tool to use with Redis. Instead it's
+best to use the command line interface.&lt;/p&gt;
+&lt;p&gt;On the actual functioning of Redis, it functions on hash keys. Think of
+it like associative arrays in PHP. However, there's a huge difference.
+There is NO nesting. The array is only one level deep.&lt;/p&gt;
+&lt;p&gt;As far as connecting PHP to Redis there's two options that Josh
+mentioned. Rediska and Predis.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://rediska.geometria-lab.net/"&gt;Rediska&lt;/a&gt; is compatible with PHP 5.2+
+and Zend Framework 1.x. A huge feature is the profiler. It allows you to
+understand how your application is using Redis and optimize it from
+there. Another positive is Rediska has native session handling.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/nrk/predis/wiki"&gt;Predis&lt;/a&gt; is built for PHP 5.3+
+giving it  the ability to being developed for the future and not being
+locked in to older technology. It has profiling and lazy connections to
+the redis server.&lt;/p&gt;
+&lt;p&gt;Josh's recommendation between the two was use Predis if you have 5.3
+available to you, but Rediska was okay too. It seemed that one of his
+main reason behind this was Predis has been seeing more recent activity
+and was thus more likely to be maintained in the future.&lt;/p&gt;
+&lt;p&gt;My take, at the moment, is also to go with Predis since it seems like a
+more active project. It also looks as if it is looking forward and being
+developed for feature redis improvements. I haven't had an opportunity
+to actively  test between the two, so my decision is temporary until I
+have the opportunity to factually compare instead of going on hunches.&lt;/p&gt;</content></entry><entry><title>HTML5 WebSockets - Presented by Scott Mattocks</title><link href="https://andrewelkins.com/html5-websockets-presented-by-scott-mattocks.html" rel="alternate"></link><published>2011-11-09T06:19:00-08:00</published><updated>2011-11-09T06:19:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2011-11-09:/html5-websockets-presented-by-scott-mattocks.html</id><summary type="html">&lt;p&gt;This was the first talk I went to at ZendCon. The provided description:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The emergence of HTML 5 and related technologies opens up a new world
+of possibilities for web applications. Among those new technologies
+are WebSockets, which allow for bi-directional communication between
+the browser and the server. This session …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;This was the first talk I went to at ZendCon. The provided description:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The emergence of HTML 5 and related technologies opens up a new world
+of possibilities for web applications. Among those new technologies
+are WebSockets, which allow for bi-directional communication between
+the browser and the server. This session will introduce WebSockets by
+exploring a few practical applications before diving into the
+JavaScript API and the WebSocket communication protocol.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What I gained most from the talk was when he talked about websockets. In
+a gross generalization, they can be used to replace some common
+applications of ajax communication between the server and the client.
+Instead of using long polling in a web application, which
+has unnecessary overhead when sending small bits of data, using a web
+socket connection for the communication is a better solution.&lt;/p&gt;
+&lt;p&gt;Web socket communication requires work on both the server side and
+client side to enable the two way communication.&lt;/p&gt;
+&lt;p&gt;On the client side, like ajax, it relies heavily on javascript.
+Processes information in a similar fashion to AJAX. Web sockets at it's
+heart is about the communication of data between the server and client.
+There's some work on the client side to allow the setting up and
+maintaining of the connection, but really less than with a long polling
+ajax setup.&lt;/p&gt;
+&lt;p&gt;On the server side it's a little bit more work. The original request for
+a connection is sent over the standard http port for the site. Then the
+web socket server will respond with the port to set the connection up
+with the web socket server.&lt;/p&gt;
+&lt;p&gt;More Information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://websocket.org/echo.html"&gt;Web Socket Browser Test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://net.tutsplus.com/tutorials/javascript-ajax/start-using-html5-websockets-today/"&gt;Web Socket
+    Tutorial &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/remy/html5demos/tree/master/server/"&gt;Nodejs Websocket Server
+    Test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://spoutserver.com/talks/websockets.html#slide1"&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content></entry><entry><title>Overview of Zend Framework 2</title><link href="https://andrewelkins.com/overview-of-zend-framework-2.html" rel="alternate"></link><published>2011-11-07T06:20:00-08:00</published><updated>2011-11-07T06:20:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2011-11-07:/overview-of-zend-framework-2.html</id><summary type="html">&lt;p&gt;The second talk that I attended of the conference was on an overview of
+Zend Framework 2 (ZF2). Although I thought it was going to go over the
+Event Driven Actions in ZF2, they changed it due to popular demand.&lt;/p&gt;
+&lt;p&gt;The ZendCon website gave this description:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;One of the most …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;The second talk that I attended of the conference was on an overview of
+Zend Framework 2 (ZF2). Although I thought it was going to go over the
+Event Driven Actions in ZF2, they changed it due to popular demand.&lt;/p&gt;
+&lt;p&gt;The ZendCon website gave this description:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;One of the most anticipated topics of this year's ZendCon is what is
+new in ZF2. Learn about the core features now available, the
+development approaches they enable, and get a preview of the new MVC
+layer of Zend Framework 2 in action&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h6&gt;Since it was an overview there wasn't a ton of information presented that I hadn't read already. What was reinforced for me was the use of namespaces. ZF2 relies heavily on namespaces which is a good thing.&lt;/h6&gt;
+&lt;p&gt;Another key item that was brought up was dependency injection which is a
+key addition to ZF2. It allows the OO code to reduce the amount of
+coupling and reliance on other code to function. See this very
+good &lt;a href="http://www.slideshare.net/fabpot/dependency-injection-with-php-and-php-53"&gt;slideshare&lt;/a&gt;
+on the advantages on dependency injection if you're not quite sure what
+it is.&lt;/p&gt;
+&lt;p&gt;In general, this was an overview of the ZF2 functionality. It was really
+nothing more than a brief summary of the topics on the &lt;a href="http://framework.zend.com/wiki/pages/viewpage.action?pageId=42303506"&gt;"How to
+start"&lt;/a&gt;
+page.&lt;/p&gt;
+&lt;p&gt;Overall it was a good overall presentation if you wanted an overview. If
+you were looking for a more in depth presentation, like I was, it
+wouldn't fit your needs.&lt;/p&gt;</content></entry><entry><title>MySQL 5.5+</title><link href="https://andrewelkins.com/mysql-5-5.html" rel="alternate"></link><published>2011-11-03T22:27:00-07:00</published><updated>2011-11-03T22:27:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2011-11-03:/mysql-5-5.html</id><summary type="html">&lt;p&gt;The MySQL talk was given by Dave Stokes of Oracle. He's the MySQL
+community manager. The ZendCon summary:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MySQL had been evolving since the Oracle take over in 2010. This
+session will cover how new features like multi-threaded replication,
+InnoDB-Memcached plugin for NoSQL data access, or having InnoDB as the …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;The MySQL talk was given by Dave Stokes of Oracle. He's the MySQL
+community manager. The ZendCon summary:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MySQL had been evolving since the Oracle take over in 2010. This
+session will cover how new features like multi-threaded replication,
+InnoDB-Memcached plugin for NoSQL data access, or having InnoDB as the
+default storage engine will change life for PHP developers. Learn how
+partitioning and new performance metrics will allow allow better
+access speed and more control over your MySQL instances.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This talk was about the improvements with MySQL since the take over by
+Oracle. Many in the community feared the Oracle take over, but in
+reality it has been good for MySQL.&lt;/p&gt;
+&lt;p&gt;They are adding huge features to MySQL&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Massive improvements for MySQL on Windows&lt;/li&gt;
+&lt;li&gt;RTMF method to setup replication&lt;/li&gt;
+&lt;li&gt;More secure&lt;/li&gt;
+&lt;li&gt;Innodb improvements&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;
+
+The key feature I was concern/interested in was the InnoDB improvements.
+Something I ws unaware of since Oracle bought MySQL they brought
+together the InnoDB team and MySQL Team leading to much tighter
+integration and quicker bug fixes. It's also leading to adding features
+to speed it up.
+
+&lt;/div&gt;
+
+&lt;div&gt;
+
+&lt;/div&gt;
+
+&lt;div&gt;
+
+The new feature I was unaware of was the creation of nosql-style
+memcached api access of the data. I haven't had a chance to use it in
+practice but in theory this seems like an awesome step for MySQL.
+
+&lt;/div&gt;
+
+&lt;div&gt;
+
+&lt;/div&gt;
+
+&lt;div&gt;
+
+On security, MySQL is doing more to protect/ensure data durability.
+Meaning that the data will store correctly and be retrived each time.
+Hoever, this does not replace developers escaping input. He restated
+again and again, "Escape your data", "Escape your data", "Escape your
+data". As a developer, do not trust users. Simple as that.
+
+&lt;/div&gt;
+
+&lt;p&gt;I was able to connect with Dave and get the slides. You can download
+them below.&lt;/p&gt;
+&lt;p&gt;Download slides -&amp;gt; &lt;a href="http://localhost/andrewelkins/wp-content/uploads/2011/11/MySQLupdateZendcon.ppt"&gt;MySQL update
+Zendcon&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>The Contextual Experience of the Mobile Web</title><link href="https://andrewelkins.com/the-contextual-experience-of-the-mobile-web.html" rel="alternate"></link><published>2011-10-29T22:29:00-07:00</published><updated>2011-10-29T22:29:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2011-10-29:/the-contextual-experience-of-the-mobile-web.html</id><summary type="html">&lt;p&gt;The contextual experience on the web was a talk by Jeff Carouth of Texas
+A&amp;amp;M University. The ZendCon summary:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The great native apps vs mobile web debate will live on for a little
+while longer, but more and more we are realizing that we can get the
+best of …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;The contextual experience on the web was a talk by Jeff Carouth of Texas
+A&amp;amp;M University. The ZendCon summary:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The great native apps vs mobile web debate will live on for a little
+while longer, but more and more we are realizing that we can get the
+best of both worlds with mobile web apps. However, there is an
+expectation of context on mobile devices, and ignoring that experience
+expectation is a mistake. Let's look at the contextual experience of
+the mobile web.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;My summary would be history of developing for a mobile client and
+the emergence of adaptive design as a solution.&lt;/p&gt;
+&lt;p&gt;One of the interesting points that he brought up was something that had
+been going around my office lately as well.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What determines a mobile client?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Meaning an iPad and netbook have the same resolution, which one is
+mobile? Both? iPad only?&lt;/p&gt;
+&lt;p&gt;Within CSS3 theres specification for media queries. One of these queries
+that we use is to base the design on resolution. In doing so you are
+basing the display on the size of screen. At the outset this seems like
+a great idea. However, there is a drawback. The design to fit the size
+doesn't account for data size. You could design a photo heavy site to
+fit in a 600 wide window but if you don't compensate for data size
+performance on a 3G network user experience will still suck. So while
+media queries are part of the answer they are not all of the answer.&lt;/p&gt;
+&lt;p&gt;To fix the second part, one option discussed was image compression or
+replacement. For compression there's JS resizing. It works but it is
+ugly. You look at that code and the processing overhead and cringe.&lt;/p&gt;
+&lt;p&gt;Then there's responsive images, downloading a small image and replacing
+it with a higher quality one. This adds overhead and bandwidth. You're
+download two images for every image on your page. Not ideal.&lt;/p&gt;
+&lt;p&gt;Ideally this should be done on the server side. The technology and/or
+programs haven't been written for this yet. You'd need to inspect the
+client agent and then respond with the appropriate image size and
+resolution. According to him, there's not a good implementation of this
+at the moment. However, I think there's vast opportunity for someone to
+develop such a tool.&lt;/p&gt;</content></entry></feed>

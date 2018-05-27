@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Linux, Programming, python</title><link href="https://andrewelkins.com/" rel="alternate"></link><link href="https://andrewelkins.com/feeds/linux-programming-python.atom.xml" rel="self"></link><id>https://andrewelkins.com/</id><updated>2015-01-23T11:07:00-08:00</updated><entry><title>How to call a python function by using a variable python</title><link href="https://andrewelkins.com/how-to-call-a-python-function-by-using-a-variable-python.html" rel="alternate"></link><published>2015-01-23T11:07:00-08:00</published><updated>2015-01-23T11:07:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2015-01-23:/how-to-call-a-python-function-by-using-a-variable-python.html</id><summary type="html">&lt;p&gt;I needed to, in a programmatic way, determine the function name and then
+call the function.&lt;/p&gt;
+&lt;p&gt;Here's an example use case. I have a bunch of functions called,
+["function1", "function2", "function3", "function4", etc] Then I have
+a function that takes a number as a param. Then should return the proper …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I needed to, in a programmatic way, determine the function name and then
+call the function.&lt;/p&gt;
+&lt;p&gt;Here's an example use case. I have a bunch of functions called,
+["function1", "function2", "function3", "function4", etc] Then I have
+a function that takes a number as a param. Then should return the proper
+function.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;my&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;_awesome&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;_class&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  
+&lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;function1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;number&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  
+&lt;span class="err"&gt;\#&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="nx"&gt;something&lt;/span&gt; &lt;span class="nx"&gt;cool&lt;/span&gt;  
+&lt;span class="nx"&gt;pass&lt;/span&gt;
+
+&lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;function2&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;number&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  
+&lt;span class="err"&gt;\#&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="nx"&gt;something&lt;/span&gt; &lt;span class="nx"&gt;cool&lt;/span&gt;  
+&lt;span class="nx"&gt;pass&lt;/span&gt;
+
+&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;[...&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;test&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;_function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;number&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  
+&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;_string&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;function&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;number&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;  
+&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  
+&lt;span class="nx"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;getattr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;my&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;_awesome&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;_class&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;_string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;t&lt;/span&gt;  
+&lt;span class="nx"&gt;except&lt;/span&gt; &lt;span class="nx"&gt;AttributeError&lt;/span&gt;:  
+&lt;span class="kt"&gt;print&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;function not found &amp;quot;%s&amp;quot; (%s)&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;_string&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+&lt;/pre&gt;&lt;/div&gt;</content></entry></feed>

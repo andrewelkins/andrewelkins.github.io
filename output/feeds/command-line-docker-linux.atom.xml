@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Command Line, Docker, Linux</title><link href="https://andrewelkins.com/" rel="alternate"></link><link href="https://andrewelkins.com/feeds/command-line-docker-linux.atom.xml" rel="self"></link><id>https://andrewelkins.com/</id><updated>2016-11-15T12:51:00-08:00</updated><entry><title>Docker remove ALL volumes not attached</title><link href="https://andrewelkins.com/docker-remove-volumes-not-attached.html" rel="alternate"></link><published>2016-11-15T12:51:00-08:00</published><updated>2016-11-15T12:51:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2016-11-15:/docker-remove-volumes-not-attached.html</id><summary type="html">&lt;p&gt;Docker can be tricky to debug. There's instances where after upgrading a
+container the volume that was previously attached fails to work.&lt;/p&gt;
+&lt;p&gt;In this case it was a dev image and the quickest, and dirtiest, option
+was to clear out and rebuild. I could go one by one to delete …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Docker can be tricky to debug. There's instances where after upgrading a
+container the volume that was previously attached fails to work.&lt;/p&gt;
+&lt;p&gt;In this case it was a dev image and the quickest, and dirtiest, option
+was to clear out and rebuild. I could go one by one to delete the
+specific volumes.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker volume ls  
+docker volume rm {specific\_docker\_container}  
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Instead I chose to delete all volumes not currently in use. This worked
+for my use case as I only have two dockers setups, left the one I wanted
+to keep running while executing the following commands.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker volume rm \`docker volume ls -q -f dangling=true\`  
+&lt;/pre&gt;&lt;/div&gt;</content></entry></feed>

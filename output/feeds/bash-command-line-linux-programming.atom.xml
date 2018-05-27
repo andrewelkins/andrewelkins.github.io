@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Bash, Command Line, Linux, Programming</title><link href="https://andrewelkins.com/" rel="alternate"></link><link href="https://andrewelkins.com/feeds/bash-command-line-linux-programming.atom.xml" rel="self"></link><id>https://andrewelkins.com/</id><updated>2016-06-06T13:30:00-07:00</updated><entry><title>Head all files in directory</title><link href="https://andrewelkins.com/head-all-files-in-directory.html" rel="alternate"></link><published>2016-06-06T13:30:00-07:00</published><updated>2016-06-06T13:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2016-06-06:/head-all-files-in-directory.html</id><summary type="html">&lt;p&gt;Needed to head all files in a directory.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\#!/usr/bin/env bash  
+DEST=/tmp  
+for i in /files/to/head/\*  
+do  
+head -10 &amp;quot;\&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;&amp;quot; &lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt; \&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;DEST&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;/\$(basename \&lt;span class="nv"&gt;$i&lt;/span&gt;)  
+done  
+&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Needed to head all files in a directory.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\#!/usr/bin/env bash  
+DEST=/tmp  
+for i in /files/to/head/\*  
+do  
+head -10 &amp;quot;\&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;&amp;quot; &lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt; \&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;DEST&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;/\$(basename \&lt;span class="nv"&gt;$i&lt;/span&gt;)  
+done  
+&lt;/pre&gt;&lt;/div&gt;</content><category term="bash"></category><category term="head"></category><category term="loop"></category></entry></feed>
