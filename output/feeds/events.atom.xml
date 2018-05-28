@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Events</title><link href="https://www.andrewelkins.com/blog/" rel="alternate"></link><link href="https://www.andrewelkins.com/blog/feeds/events.atom.xml" rel="self"></link><id>https://www.andrewelkins.com/blog/</id><updated>2011-11-24T12:00:00-08:00</updated><entry><title>Scaling PHP Applications with Redis</title><link href="https://www.andrewelkins.com/blog/scaling-php-applications-with-redis.html" rel="alternate"></link><published>2011-11-24T12:00:00-08:00</published><updated>2011-11-24T12:00:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2011-11-24:/blog/scaling-php-applications-with-redis.html</id><summary type="html">&lt;p&gt;Redis is an important technology when dealing with caching. This was one
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Events</title><link href="https://blog.andrewelkins.com/" rel="alternate"></link><link href="https://blog.andrewelkins.com/feeds/events.atom.xml" rel="self"></link><id>https://blog.andrewelkins.com/</id><updated>2011-11-24T12:00:00-08:00</updated><entry><title>Scaling PHP Applications with Redis</title><link href="https://blog.andrewelkins.com/scaling-php-applications-with-redis.html" rel="alternate"></link><published>2011-11-24T12:00:00-08:00</published><updated>2011-11-24T12:00:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2011-11-24:/scaling-php-applications-with-redis.html</id><summary type="html">&lt;p&gt;Redis is an important technology when dealing with caching. This was one
 of the talks that I really wanted to attend at ZendCon. It was given by
 &lt;a href="http://twitter.com/#!/jimbojsb"&gt;Josh Butts&lt;/a&gt; of Vertive LLC.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -47,7 +47,7 @@ and was thus more likely to be maintained in the future.&lt;/p&gt;
 more active project. It also looks as if it is looking forward and being
 developed for feature redis improvements. I haven't had an opportunity
 to actively  test between the two, so my decision is temporary until I
-have the opportunity to factually compare instead of going on hunches.&lt;/p&gt;</content></entry><entry><title>HTML5 WebSockets - Presented by Scott Mattocks</title><link href="https://www.andrewelkins.com/blog/html5-websockets-presented-by-scott-mattocks.html" rel="alternate"></link><published>2011-11-09T06:19:00-08:00</published><updated>2011-11-09T06:19:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2011-11-09:/blog/html5-websockets-presented-by-scott-mattocks.html</id><summary type="html">&lt;p&gt;This was the first talk I went to at ZendCon. The provided description:&lt;/p&gt;
+have the opportunity to factually compare instead of going on hunches.&lt;/p&gt;</content></entry><entry><title>HTML5 WebSockets - Presented by Scott Mattocks</title><link href="https://blog.andrewelkins.com/html5-websockets-presented-by-scott-mattocks.html" rel="alternate"></link><published>2011-11-09T06:19:00-08:00</published><updated>2011-11-09T06:19:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2011-11-09:/html5-websockets-presented-by-scott-mattocks.html</id><summary type="html">&lt;p&gt;This was the first talk I went to at ZendCon. The provided description:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The emergence of HTML 5 and related technologies opens up a new world
 of possibilities for web applications. Among those new technologies
@@ -87,7 +87,7 @@ with the web socket server.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://github.com/remy/html5demos/tree/master/server/"&gt;Nodejs Websocket Server
     Test&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://spoutserver.com/talks/websockets.html#slide1"&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content></entry><entry><title>Overview of Zend Framework 2</title><link href="https://www.andrewelkins.com/blog/overview-of-zend-framework-2.html" rel="alternate"></link><published>2011-11-07T06:20:00-08:00</published><updated>2011-11-07T06:20:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2011-11-07:/blog/overview-of-zend-framework-2.html</id><summary type="html">&lt;p&gt;The second talk that I attended of the conference was on an overview of
+&lt;/ul&gt;</content></entry><entry><title>Overview of Zend Framework 2</title><link href="https://blog.andrewelkins.com/overview-of-zend-framework-2.html" rel="alternate"></link><published>2011-11-07T06:20:00-08:00</published><updated>2011-11-07T06:20:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2011-11-07:/overview-of-zend-framework-2.html</id><summary type="html">&lt;p&gt;The second talk that I attended of the conference was on an overview of
 Zend Framework 2 (ZF2). Although I thought it was going to go over the
 Event Driven Actions in ZF2, they changed it due to popular demand.&lt;/p&gt;
 &lt;p&gt;The ZendCon website gave this description:&lt;/p&gt;
@@ -115,7 +115,7 @@ start"&lt;/a&gt;
 page.&lt;/p&gt;
 &lt;p&gt;Overall it was a good overall presentation if you wanted an overview. If
 you were looking for a more in depth presentation, like I was, it
-wouldn't fit your needs.&lt;/p&gt;</content></entry><entry><title>MySQL 5.5+</title><link href="https://www.andrewelkins.com/blog/mysql-5-5.html" rel="alternate"></link><published>2011-11-03T22:27:00-07:00</published><updated>2011-11-03T22:27:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2011-11-03:/blog/mysql-5-5.html</id><summary type="html">&lt;p&gt;The MySQL talk was given by Dave Stokes of Oracle. He's the MySQL
+wouldn't fit your needs.&lt;/p&gt;</content></entry><entry><title>MySQL 5.5+</title><link href="https://blog.andrewelkins.com/mysql-5-5.html" rel="alternate"></link><published>2011-11-03T22:27:00-07:00</published><updated>2011-11-03T22:27:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2011-11-03:/mysql-5-5.html</id><summary type="html">&lt;p&gt;The MySQL talk was given by Dave Stokes of Oracle. He's the MySQL
 community manager. The ZendCon summary:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;MySQL had been evolving since the Oracle take over in 2010. This
@@ -179,7 +179,7 @@ data". As a developer, do not trust users. Simple as that.
 &lt;p&gt;I was able to connect with Dave and get the slides. You can download
 them below.&lt;/p&gt;
 &lt;p&gt;Download slides -&amp;gt; &lt;a href="http://localhost/andrewelkins/wp-content/uploads/2011/11/MySQLupdateZendcon.ppt"&gt;MySQL update
-Zendcon&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>The Contextual Experience of the Mobile Web</title><link href="https://www.andrewelkins.com/blog/the-contextual-experience-of-the-mobile-web.html" rel="alternate"></link><published>2011-10-29T22:29:00-07:00</published><updated>2011-10-29T22:29:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2011-10-29:/blog/the-contextual-experience-of-the-mobile-web.html</id><summary type="html">&lt;p&gt;The contextual experience on the web was a talk by Jeff Carouth of Texas
+Zendcon&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>The Contextual Experience of the Mobile Web</title><link href="https://blog.andrewelkins.com/the-contextual-experience-of-the-mobile-web.html" rel="alternate"></link><published>2011-10-29T22:29:00-07:00</published><updated>2011-10-29T22:29:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2011-10-29:/the-contextual-experience-of-the-mobile-web.html</id><summary type="html">&lt;p&gt;The contextual experience on the web was a talk by Jeff Carouth of Texas
 A&amp;amp;M University. The ZendCon summary:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The great native apps vs mobile web debate will live on for a little
