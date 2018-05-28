@@ -39,7 +39,6 @@ DEFAULT_PAGINATION = 10
 THEME = '/home/andrew/Sites/andrew/andrewelkins.github.io/themes/MinimalXY'
 
 # Theme customizations
-MINIMALXY_CUSTOM_CSS = 'static/custom.css'
 MINIMALXY_FAVICON = 'favicon.ico'
 MINIMALXY_START_YEAR = 2008
 MINIMALXY_CURRENT_YEAR = datetime.datetime.now().year
@@ -48,7 +47,7 @@ DISPLAY_CATEGORIES_ON_MENU = 0
 # Author
 AUTHOR_INTRO = u'Andrew Elkins'
 AUTHOR_DESCRIPTION = u'Exploring data engineering'
-AUTHOR_AVATAR = 'http://www.gravatar.com/avatar/9ce362310261da087478fb439d9002c2?s=240'
+AUTHOR_AVATAR = 'https://www.gravatar.com/avatar/9ce362310261da087478fb439d9002c2?s=240'
 AUTHOR_WEB = 'https://andrewelkins.com'
 
 # Services
