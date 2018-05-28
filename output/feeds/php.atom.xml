@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - PHP</title><link href="https://andrewelkins.com/" rel="alternate"></link><link href="https://andrewelkins.com/feeds/php.atom.xml" rel="self"></link><id>https://andrewelkins.com/</id><updated>2017-03-23T07:30:00-07:00</updated><entry><title>Laravel queue environment</title><link href="https://andrewelkins.com/laravel-queue-environment.html" rel="alternate"></link><published>2017-03-23T07:30:00-07:00</published><updated>2017-03-23T07:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2017-03-23:/laravel-queue-environment.html</id><summary type="html">&lt;p&gt;Ran in to an issue running queue through supervisor. I'll give a quick
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - PHP</title><link href="https://www.andrewelkins.com/blog/" rel="alternate"></link><link href="https://www.andrewelkins.com/blog/feeds/php.atom.xml" rel="self"></link><id>https://www.andrewelkins.com/blog/</id><updated>2017-03-23T07:30:00-07:00</updated><entry><title>Laravel queue environment</title><link href="https://www.andrewelkins.com/blog/laravel-queue-environment.html" rel="alternate"></link><published>2017-03-23T07:30:00-07:00</published><updated>2017-03-23T07:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2017-03-23:/blog/laravel-queue-environment.html</id><summary type="html">&lt;p&gt;Ran in to an issue running queue through supervisor. I'll give a quick
 rundown of my setup, the issue and solution.&lt;/p&gt;
 &lt;p&gt;I have supervisor running the queue daemon.  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\[program:laravel\_queue\]  
@@ -30,7 +30,7 @@ stdout\_logfile=/var/log/laraqueue.out.log
 
 
 &lt;p&gt;That's what I was missing. Once I `sudo supervisorctl restart
-laravel_queue` all was well with the queue.&lt;/p&gt;</content></entry><entry><title>GIT push from one repo to another</title><link href="https://andrewelkins.com/git-push-from-one-repo-to-another.html" rel="alternate"></link><published>2015-10-15T11:05:00-07:00</published><updated>2015-10-15T11:05:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2015-10-15:/git-push-from-one-repo-to-another.html</id><summary type="html">&lt;p&gt;Splitting off from a branch to another git repo seems like it would
+laravel_queue` all was well with the queue.&lt;/p&gt;</content></entry><entry><title>GIT push from one repo to another</title><link href="https://www.andrewelkins.com/blog/git-push-from-one-repo-to-another.html" rel="alternate"></link><published>2015-10-15T11:05:00-07:00</published><updated>2015-10-15T11:05:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-10-15:/blog/git-push-from-one-repo-to-another.html</id><summary type="html">&lt;p&gt;Splitting off from a branch to another git repo seems like it would
 suck. In reality it's simple. Two lines and you're set.&lt;/p&gt;
 &lt;p&gt;Things you'll need:&lt;/p&gt;
 &lt;ul&gt;
@@ -58,7 +58,7 @@ targetrepo git@bitbucket.org:my_team/my_awesome_target_repo.git&lt;br&gt;
 \$ git push targetrepo my_branch_to_create_off_of:master&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;That'll create the master branch off of the branch
-"my_branch_to_create_off_of" from your local repo.&lt;/p&gt;</content></entry><entry><title>Add user to existing group</title><link href="https://andrewelkins.com/add-user-to-existing-group.html" rel="alternate"></link><published>2015-07-14T13:50:00-07:00</published><updated>2015-07-14T13:50:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2015-07-14:/add-user-to-existing-group.html</id><summary type="html">&lt;p&gt;This is dead simple. I often need to add a new user to the sudoer group,
+"my_branch_to_create_off_of" from your local repo.&lt;/p&gt;</content></entry><entry><title>Add user to existing group</title><link href="https://www.andrewelkins.com/blog/add-user-to-existing-group.html" rel="alternate"></link><published>2015-07-14T13:50:00-07:00</published><updated>2015-07-14T13:50:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-07-14:/blog/add-user-to-existing-group.html</id><summary type="html">&lt;p&gt;This is dead simple. I often need to add a new user to the sudoer group,
 "sudo" by default.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;sudo usermod -a -G groupName userName&lt;/p&gt;
@@ -74,7 +74,7 @@ targetrepo git@bitbucket.org:my_team/my_awesome_target_repo.git&lt;br&gt;
 &lt;p&gt;So for adding a user to the sudoers group.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;sudo usermod -a -G sudo {username}&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Linux add user</title><link href="https://andrewelkins.com/linux-add-user.html" rel="alternate"></link><published>2015-07-14T13:48:00-07:00</published><updated>2015-07-14T13:48:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2015-07-14:/linux-add-user.html</id><summary type="html">&lt;p&gt;The simple way to add a user is to use the linux interactive mode.&lt;/p&gt;
+&lt;/blockquote&gt;</content></entry><entry><title>Linux add user</title><link href="https://www.andrewelkins.com/blog/linux-add-user.html" rel="alternate"></link><published>2015-07-14T13:48:00-07:00</published><updated>2015-07-14T13:48:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-07-14:/blog/linux-add-user.html</id><summary type="html">&lt;p&gt;The simple way to add a user is to use the linux interactive mode.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;sudo adduser {username}&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -82,7 +82,7 @@ targetrepo git@bitbucket.org:my_team/my_awesome_target_repo.git&lt;br&gt;
 &lt;blockquote&gt;
 &lt;p&gt;sudo adduser {username}&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Then let it guide you through the setup.&lt;/p&gt;</content></entry><entry><title>Under PHP's Hood</title><link href="https://andrewelkins.com/under-phps-hood.html" rel="alternate"></link><published>2013-04-10T11:46:00-07:00</published><updated>2013-04-10T11:46:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-04-10:/under-phps-hood.html</id><summary type="html">&lt;p&gt;Recently watched/listened to Sebastian Bergmann presentation on
+&lt;p&gt;Then let it guide you through the setup.&lt;/p&gt;</content></entry><entry><title>Under PHP's Hood</title><link href="https://www.andrewelkins.com/blog/under-phps-hood.html" rel="alternate"></link><published>2013-04-10T11:46:00-07:00</published><updated>2013-04-10T11:46:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-04-10:/blog/under-phps-hood.html</id><summary type="html">&lt;p&gt;Recently watched/listened to Sebastian Bergmann presentation on
 PHP interpreter. Very useful way to brush up on how php processes a
 request.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://techportal.inviqa.com/?powerpress_pinw=1439-podcast"&gt;Audio&lt;/a&gt; From
@@ -102,7 +102,7 @@ request.&lt;/p&gt;
 Internals&lt;/a&gt;
 by
 &lt;a href="http://www.scribd.com/kaplumb_aga" title="View kaplumb_aga's profile on Scribd"&gt;kaplumb_aga&lt;/a&gt;&lt;/p&gt;
-&lt;iframe class="scribd_iframe_embed" src="http://www.scribd.com/embeds/18171982/content?start_page=1&amp;amp;view_mode=scroll&amp;amp;access_key=key-23i6tufb87wwqnn30z7s" data-auto-height="false" data-aspect-ratio="1.33333333333333" scrolling="no" id="doc_30924" width="100%" height="600" frameborder="0"&gt;&lt;/iframe&gt;</content></entry><entry><title>Laravel 4 Documentation</title><link href="https://andrewelkins.com/laravel-4-documentation.html" rel="alternate"></link><published>2013-01-22T15:58:00-08:00</published><updated>2013-01-22T15:58:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:andrewelkins.com,2013-01-22:/laravel-4-documentation.html</id><summary type="html">&lt;p&gt;Yesterday I was in search of Laravel 4 documentation. I couldn't figure
+&lt;iframe class="scribd_iframe_embed" src="http://www.scribd.com/embeds/18171982/content?start_page=1&amp;amp;view_mode=scroll&amp;amp;access_key=key-23i6tufb87wwqnn30z7s" data-auto-height="false" data-aspect-ratio="1.33333333333333" scrolling="no" id="doc_30924" width="100%" height="600" frameborder="0"&gt;&lt;/iframe&gt;</content></entry><entry><title>Laravel 4 Documentation</title><link href="https://www.andrewelkins.com/blog/laravel-4-documentation.html" rel="alternate"></link><published>2013-01-22T15:58:00-08:00</published><updated>2013-01-22T15:58:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-01-22:/blog/laravel-4-documentation.html</id><summary type="html">&lt;p&gt;Yesterday I was in search of Laravel 4 documentation. I couldn't figure
 our where to find Laravel 4 documentation. I found the committed files
 on GitHub but I couldn't find the actual site that hosted it. Turns out
 it was in a now obvious place. &lt;a href="http://four.laravel.com/"&gt;http://four.laravel.com/&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Yesterday I was in search of Laravel 4 documentation. I couldn't figure

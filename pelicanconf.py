@@ -36,86 +36,35 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 # Theme
-THEME = '/home/andrew/pelican-themes/nest'
+THEME = '/home/andrew/Sites/andrew/andrewelkins.github.io/themes/MinimalXY'
 
-SITESUBTITLE = u'Andrew Elkins Blog'
-# Minified CSS
-NEST_CSS_MINIFY = True
-# Add items to top menu before pages
-MENUITEMS = [('Homepage', '/'),('Categories','/categories.html')]
-# Add header background image from content/images : 'background.jpg'
-NEST_HEADER_IMAGES = ''
-NEST_HEADER_LOGO = '/image/logo.png'
-# Footer
-NEST_SITEMAP_COLUMN_TITLE = u'Sitemap'
-NEST_SITEMAP_MENU = [('Archives', '/archives.html'),('Tags','/tags.html'), ('Authors','/authors.html')]
-NEST_SITEMAP_ATOM_LINK = u'Atom Feed'
-NEST_SITEMAP_RSS_LINK = u'RSS Feed'
-NEST_SOCIAL_COLUMN_TITLE = u'Social'
-NEST_LINKS_COLUMN_TITLE = u'Links'
-NEST_COPYRIGHT = u'&copy; Andrew Elkins 2008-' + str(datetime.datetime.now().year)
-# Footer optional
-NEST_FOOTER_HTML = ''
-# index.html
-NEST_INDEX_HEAD_TITLE = u'Homepage'
-NEST_INDEX_HEADER_TITLE = u'Andrew Elkins Blog'
-NEST_INDEX_HEADER_SUBTITLE = u'Explorations of data engineering'
-NEST_INDEX_CONTENT_TITLE = u'Last Posts'
-# archives.html
-NEST_ARCHIVES_HEAD_TITLE = u'Archives'
-NEST_ARCHIVES_HEAD_DESCRIPTION = u'Posts Archives'
-NEST_ARCHIVES_HEADER_TITLE = u'Archives'
-NEST_ARCHIVES_HEADER_SUBTITLE = u'Archives for all posts'
-NEST_ARCHIVES_CONTENT_TITLE = u'Archives'
-# article.html
-NEST_ARTICLE_HEADER_BY = u'By'
-NEST_ARTICLE_HEADER_MODIFIED = u'modified'
-NEST_ARTICLE_HEADER_IN = u'in category'
-# author.html
-NEST_AUTHOR_HEAD_TITLE = u'Posts by'
-NEST_AUTHOR_HEAD_DESCRIPTION = u'Posts by'
-NEST_AUTHOR_HEADER_SUBTITLE = u'Posts archives'
-NEST_AUTHOR_CONTENT_TITLE = u'Posts'
-# authors.html
-NEST_AUTHORS_HEAD_TITLE = u'Author list'
-NEST_AUTHORS_HEAD_DESCRIPTION = u'Author list'
-NEST_AUTHORS_HEADER_TITLE = u'Author list'
-NEST_AUTHORS_HEADER_SUBTITLE = u'Archives listed by author'
-# categories.html
-NEST_CATEGORIES_HEAD_TITLE = u'Categories'
-NEST_CATEGORIES_HEAD_DESCRIPTION = u'Archives listed by category'
-NEST_CATEGORIES_HEADER_TITLE = u'Categories'
-NEST_CATEGORIES_HEADER_SUBTITLE = u'Archives listed by category'
-# category.html
-NEST_CATEGORY_HEAD_TITLE = u'Category Archive'
-NEST_CATEGORY_HEAD_DESCRIPTION = u'Category Archive'
-NEST_CATEGORY_HEADER_TITLE = u'Category'
-NEST_CATEGORY_HEADER_SUBTITLE = u'Category Archive'
-# pagination.html
-NEST_PAGINATION_PREVIOUS = u'Previous'
-NEST_PAGINATION_NEXT = u'Next'
-# period_archives.html
-NEST_PERIOD_ARCHIVES_HEAD_TITLE = u'Archives for'
-NEST_PERIOD_ARCHIVES_HEAD_DESCRIPTION = u'Archives for'
-NEST_PERIOD_ARCHIVES_HEADER_TITLE = u'Archives'
-NEST_PERIOD_ARCHIVES_HEADER_SUBTITLE = u'Archives for'
-NEST_PERIOD_ARCHIVES_CONTENT_TITLE = u'Archives for'
-# tag.html
-NEST_TAG_HEAD_TITLE = u'Tag archives'
-NEST_TAG_HEAD_DESCRIPTION = u'Tag archives'
-NEST_TAG_HEADER_TITLE = u'Tag'
-NEST_TAG_HEADER_SUBTITLE = u'Tag archives'
-# tags.html
-NEST_TAGS_HEAD_TITLE = u'Tags'
-NEST_TAGS_HEAD_DESCRIPTION = u'Tags List'
-NEST_TAGS_HEADER_TITLE = u'Tags'
-NEST_TAGS_HEADER_SUBTITLE = u'Tags List'
-NEST_TAGS_CONTENT_TITLE = u'Tags List'
-NEST_TAGS_CONTENT_LIST = u'tagged'
-# Static files
-STATIC_PATHS = ['images', 'extra/robots.txt', 'extra/favicon.ico', 'extra/logo.svg']
-EXTRA_PATH_METADATA = {
-    'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/favicon.ico': {'path': 'favicon.ico'},
-    'extra/logo.svg': {'path': 'logo.svg'}
-}
+# Theme customizations
+MINIMALXY_CUSTOM_CSS = 'static/custom.css'
+MINIMALXY_FAVICON = 'favicon.ico'
+MINIMALXY_START_YEAR = 2008
+MINIMALXY_CURRENT_YEAR = datetime.datetime.now().year
+DISPLAY_CATEGORIES_ON_MENU = 0
+
+# Author
+AUTHOR_INTRO = u'Andrew Elkins'
+AUTHOR_DESCRIPTION = u'Exploring data engineering'
+AUTHOR_AVATAR = 'http://www.gravatar.com/avatar/9ce362310261da087478fb439d9002c2?s=240'
+AUTHOR_WEB = 'https://andrewelkins.com'
+
+# Services
+GOOGLE_ANALYTICS = 'UA-9318136-7'
+
+# Social
+SOCIAL = (
+        ('twitter', 'http://twitter.com/andrewelkins'),
+        ('github', 'https://github.com/andrewelkins'),
+        ('linkedin', 'http://www.linkedin.com/in/andrewelkins'),
+
+)
+
+# Menu
+MENUITEMS = (
+        ('Categories', '/categories.html'),
+        ('Archive', '/archives.html'),
+
+)
