@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Linux</title><link href="https://blog.andrewelkins.com/" rel="alternate"></link><link href="https://blog.andrewelkins.com/feeds/linux.atom.xml" rel="self"></link><id>https://blog.andrewelkins.com/</id><updated>2016-09-27T09:16:00-07:00</updated><entry><title>Vagrant error on up</title><link href="https://blog.andrewelkins.com/vagrant-error-on-up.html" rel="alternate"></link><published>2016-09-27T09:16:00-07:00</published><updated>2016-09-27T09:16:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2016-09-27:/vagrant-error-on-up.html</id><summary type="html">&lt;p&gt;I was executing a vagrant up on my machine. It was giving an nfs error.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins - Linux</title><link href="https://www.andrewelkins.com/blog/" rel="alternate"></link><link href="https://www.andrewelkins.com/blog/feeds/linux.atom.xml" rel="self"></link><id>https://www.andrewelkins.com/blog/</id><updated>2016-09-27T09:16:00-07:00</updated><entry><title>Vagrant error on up</title><link href="https://www.andrewelkins.com/blog/vagrant-error-on-up.html" rel="alternate"></link><published>2016-09-27T09:16:00-07:00</published><updated>2016-09-27T09:16:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2016-09-27:/blog/vagrant-error-on-up.html</id><summary type="html">&lt;p&gt;I was executing a vagrant up on my machine. It was giving an nfs error.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;mount&lt;/span&gt; &lt;span class="nt"&gt;-o&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;vers=3,udp&amp;#39;&lt;/span&gt; &lt;span class="nt"&gt;192&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;168&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;10&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/opt/&amp;amp;lt;snip&amp;amp;gt;/mozilla/kuma&amp;#39;&lt;/span&gt;
 &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;vagrant&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;src&lt;/span&gt;
 
@@ -26,7 +26,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Then it would boot.&lt;/p&gt;</content></entry><entry><title>How to watch nbc extra live on linux</title><link href="https://blog.andrewelkins.com/how-to-watch-nbc-extra-live-on-linux.html" rel="alternate"></link><published>2014-04-27T12:48:00-07:00</published><updated>2014-04-27T12:48:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-04-27:/how-to-watch-nbc-extra-live-on-linux.html</id><summary type="html">&lt;p&gt;How to watch nbc extra live on linux is simple. It just requires adding
+&lt;p&gt;Then it would boot.&lt;/p&gt;</content></entry><entry><title>How to watch nbc extra live on linux</title><link href="https://www.andrewelkins.com/blog/how-to-watch-nbc-extra-live-on-linux.html" rel="alternate"></link><published>2014-04-27T12:48:00-07:00</published><updated>2014-04-27T12:48:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-04-27:/blog/how-to-watch-nbc-extra-live-on-linux.html</id><summary type="html">&lt;p&gt;How to watch nbc extra live on linux is simple. It just requires adding
 a flash plugin.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt-get install adobe-flash  
 &lt;/pre&gt;&lt;/div&gt;
@@ -40,7 +40,7 @@ a flash plugin.&lt;/p&gt;
 
 
 &lt;p&gt;This can also be installed via the software manager. Just search for
-"flash".&lt;/p&gt;</content></entry><entry><title>Awesome vim setup</title><link href="https://blog.andrewelkins.com/awesome-vim-setup.html" rel="alternate"></link><published>2013-03-25T20:04:00-07:00</published><updated>2013-03-25T20:04:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-03-25:/awesome-vim-setup.html</id><summary type="html">&lt;p&gt;Among the editors and IDEs that I use the old stand by vim is always
+"flash".&lt;/p&gt;</content></entry><entry><title>Awesome vim setup</title><link href="https://www.andrewelkins.com/blog/awesome-vim-setup.html" rel="alternate"></link><published>2013-03-25T20:04:00-07:00</published><updated>2013-03-25T20:04:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-03-25:/blog/awesome-vim-setup.html</id><summary type="html">&lt;p&gt;Among the editors and IDEs that I use the old stand by vim is always
 there. It's literally the first thing I install on a server. One of the
 great features of vim is the vast plugin library. This becomes even
 better when someone wraps a lot of the extremely …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Among the editors and IDEs that I use the old stand by vim is always
@@ -54,7 +54,7 @@ Francia&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 know I loved until I installed this package.&lt;/p&gt;
 &lt;p&gt;This is an awesome vim setup!&lt;/p&gt;
 &lt;p&gt;One word of warning vim needs to be 7.4+ for the plugins installed with
-the installer to work.&lt;/p&gt;</content></entry><entry><title>Rsync over ssh between remote servers</title><link href="https://blog.andrewelkins.com/rsync-over-ssh-between-remote-servers.html" rel="alternate"></link><published>2013-03-20T18:18:00-07:00</published><updated>2013-03-20T18:18:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-03-20:/rsync-over-ssh-between-remote-servers.html</id><summary type="html">&lt;p&gt;In order to use rsync with a ssh key I used the -e flag on the rsync
+the installer to work.&lt;/p&gt;</content></entry><entry><title>Rsync over ssh between remote servers</title><link href="https://www.andrewelkins.com/blog/rsync-over-ssh-between-remote-servers.html" rel="alternate"></link><published>2013-03-20T18:18:00-07:00</published><updated>2013-03-20T18:18:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-03-20:/blog/rsync-over-ssh-between-remote-servers.html</id><summary type="html">&lt;p&gt;In order to use rsync with a ssh key I used the -e flag on the rsync
 command. It will allow rsync over ssh local to a remote server.&lt;/p&gt;
 &lt;p&gt;[ps]&lt;/p&gt;
 &lt;p&gt;[\$ \~] rsync -avz -e "ssh -i .ssh/id_key.pem" /opt/stuff/here/
@@ -64,7 +64,7 @@ command. It will allow rsync over ssh local to a remote server.&lt;/p&gt;
 &lt;p&gt;[ps]&lt;/p&gt;
 &lt;p&gt;[\$ \~] rsync -avz -e "ssh -i .ssh/id_key.pem" /opt/stuff/here/
 user@10.0.0.1:/opt/stuff/here/&lt;/p&gt;
-&lt;p&gt;[/ps]&lt;/p&gt;</content></entry><entry><title>Why I don't use AppFog</title><link href="https://blog.andrewelkins.com/why-i-dont-use-appfog.html" rel="alternate"></link><published>2013-03-15T20:31:00-07:00</published><updated>2013-03-15T20:31:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-03-15:/why-i-dont-use-appfog.html</id><summary type="html">&lt;p&gt;Simple no persistant storage. Starting up, setting up, etc are all
+&lt;p&gt;[/ps]&lt;/p&gt;</content></entry><entry><title>Why I don't use AppFog</title><link href="https://www.andrewelkins.com/blog/why-i-dont-use-appfog.html" rel="alternate"></link><published>2013-03-15T20:31:00-07:00</published><updated>2013-03-15T20:31:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-03-15:/blog/why-i-dont-use-appfog.html</id><summary type="html">&lt;p&gt;Simple no persistant storage. Starting up, setting up, etc are all
 great, but without persistance storage I'm forced to use S3 or the like.
 If I'm doing a very simple app or a WordPress install it's not worth the
 effort.&lt;/p&gt;
@@ -81,7 +81,7 @@ uploads, will be lost on the app's next start, stop, restart, deploy, or
 resource change. Because of this, you should make any changes to the
 file system on a local development environment and keep media assets and
 content uploads on an external storage system like Amazon's S3.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.appfog.com/faq#persistentfs"&gt;Source&lt;/a&gt;&lt;/p&gt;</content><category term="appfog"></category><category term="linux"></category><category term="server"></category></entry><entry><title>Find out what files are owned by apache</title><link href="https://blog.andrewelkins.com/find-out-what-files-are-owned-by-apache.html" rel="alternate"></link><published>2013-03-09T09:57:00-08:00</published><updated>2013-03-09T09:57:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-03-09:/find-out-what-files-are-owned-by-apache.html</id><summary type="html">&lt;p&gt;In an audit of my system I needed to find all the files owned by apache.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.appfog.com/faq#persistentfs"&gt;Source&lt;/a&gt;&lt;/p&gt;</content><category term="appfog"></category><category term="linux"></category><category term="server"></category></entry><entry><title>Find out what files are owned by apache</title><link href="https://www.andrewelkins.com/blog/find-out-what-files-are-owned-by-apache.html" rel="alternate"></link><published>2013-03-09T09:57:00-08:00</published><updated>2013-03-09T09:57:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-03-09:/blog/find-out-what-files-are-owned-by-apache.html</id><summary type="html">&lt;p&gt;In an audit of my system I needed to find all the files owned by apache.&lt;/p&gt;
 &lt;p&gt;[ps]&lt;br&gt;
 find ./ -name apache&lt;br&gt;
 [/ps]&lt;/p&gt;
@@ -97,7 +97,7 @@ find ./ -name apache&lt;br&gt;
 &lt;p&gt;Here's the group and user example:&lt;/p&gt;
 &lt;p&gt;[ps]&lt;br&gt;
 find ./ -group apache -name apache&lt;br&gt;
-[/ps]&lt;/p&gt;</content></entry><entry><title>How to close a linux screen session</title><link href="https://blog.andrewelkins.com/how-to-close-a-linux-screen-session.html" rel="alternate"></link><published>2013-02-20T14:24:00-08:00</published><updated>2013-02-20T14:24:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-02-20:/how-to-close-a-linux-screen-session.html</id><summary type="html">&lt;p&gt;After working within a screen session on a CentOS server I had forgotten
+[/ps]&lt;/p&gt;</content></entry><entry><title>How to close a linux screen session</title><link href="https://www.andrewelkins.com/blog/how-to-close-a-linux-screen-session.html" rel="alternate"></link><published>2013-02-20T14:24:00-08:00</published><updated>2013-02-20T14:24:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-02-20:/blog/how-to-close-a-linux-screen-session.html</id><summary type="html">&lt;p&gt;After working within a screen session on a CentOS server I had forgotten
 how to close the screen session that I was done with. It's a rather
 simple command.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -121,7 +121,7 @@ simple command.&lt;/p&gt;
 &lt;p&gt;ctrl+a&lt;/p&gt;
 &lt;p&gt;(press) d&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;That'll disconnect you from the screen session.&lt;/p&gt;</content><category term="cli"></category><category term="command"></category><category term="command line"></category><category term="linux"></category><category term="screen"></category></entry><entry><title>VMWare Fusion 5 Set Static IP Address</title><link href="https://blog.andrewelkins.com/vmware-fusion-5-set-static-ip-address.html" rel="alternate"></link><published>2013-02-18T14:50:00-08:00</published><updated>2013-02-18T14:50:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-02-18:/vmware-fusion-5-set-static-ip-address.html</id><summary type="html">&lt;p&gt;I previously posted on setting a static ip address in &lt;a href="http://andrewelkins.com/linux/vmware-fusion-4-set-static-ip-address/"&gt;vmware fusion
+&lt;p&gt;That'll disconnect you from the screen session.&lt;/p&gt;</content><category term="cli"></category><category term="command"></category><category term="command line"></category><category term="linux"></category><category term="screen"></category></entry><entry><title>VMWare Fusion 5 Set Static IP Address</title><link href="https://www.andrewelkins.com/blog/vmware-fusion-5-set-static-ip-address.html" rel="alternate"></link><published>2013-02-18T14:50:00-08:00</published><updated>2013-02-18T14:50:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-02-18:/blog/vmware-fusion-5-set-static-ip-address.html</id><summary type="html">&lt;p&gt;I previously posted on setting a static ip address in &lt;a href="http://andrewelkins.com/linux/vmware-fusion-4-set-static-ip-address/"&gt;vmware fusion
 4&lt;/a&gt;.
 This also still works for VMWare Fusion 5.&lt;/p&gt;
 &lt;p&gt;Steps are the same.&lt;/p&gt;
@@ -191,7 +191,7 @@ h.  Restart your Mac.
 i.  Turn on your virtual machine.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&amp;amp;externalId=1016466"&gt;From step
 12&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Setup an alias in Linux</title><link href="https://blog.andrewelkins.com/setup-an-alias-in-linux.html" rel="alternate"></link><published>2013-02-07T10:55:00-08:00</published><updated>2013-02-07T10:55:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-02-07:/setup-an-alias-in-linux.html</id><summary type="html">&lt;p&gt;Setting up an alias in linux is very easy and very helpful. It allows
+&lt;/blockquote&gt;</content></entry><entry><title>Setup an alias in Linux</title><link href="https://www.andrewelkins.com/blog/setup-an-alias-in-linux.html" rel="alternate"></link><published>2013-02-07T10:55:00-08:00</published><updated>2013-02-07T10:55:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-02-07:/blog/setup-an-alias-in-linux.html</id><summary type="html">&lt;p&gt;Setting up an alias in linux is very easy and very helpful. It allows
 you to determine a short phrase for running a longer command. Or change
 a common typo to the command you meant.&lt;/p&gt;
 &lt;p&gt;Here's an example alias:&lt;/p&gt;
@@ -211,7 +211,7 @@ that's a common command that'll help out.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;\$ alias h='history'&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;This shows the history of the terminal session.&lt;/p&gt;</content><category term="alias"></category><category term="cli"></category><category term="command line"></category></entry><entry><title>Create a new ssh key</title><link href="https://blog.andrewelkins.com/create-a-new-ssh-key.html" rel="alternate"></link><published>2013-02-03T11:18:00-08:00</published><updated>2013-02-03T11:18:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-02-03:/create-a-new-ssh-key.html</id><summary type="html">&lt;p&gt;I have to do this whenever setting up a new system. Makes the server
+&lt;p&gt;This shows the history of the terminal session.&lt;/p&gt;</content><category term="alias"></category><category term="cli"></category><category term="command line"></category></entry><entry><title>Create a new ssh key</title><link href="https://www.andrewelkins.com/blog/create-a-new-ssh-key.html" rel="alternate"></link><published>2013-02-03T11:18:00-08:00</published><updated>2013-02-03T11:18:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-02-03:/blog/create-a-new-ssh-key.html</id><summary type="html">&lt;p&gt;I have to do this whenever setting up a new system. Makes the server
 more secure to disable password based login and only allow ssh keys.&lt;/p&gt;
 &lt;p&gt;To create an ssh key it's as easy as running one of the two following
 commands.&lt;/p&gt;
@@ -235,7 +235,7 @@ commands.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;The rsa and dsa refer to different encryption methods. &lt;a href="http://superuser.com/questions/13164/what-is-better-for-gpg-keys-rsa-or-dsa"&gt;DSA is the
 preferred method at the
-moment.&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Linux Ubuntu 12.04 alt-tab not working</title><link href="https://blog.andrewelkins.com/linux-ubuntu-12-04-alt-tab-not-working.html" rel="alternate"></link><published>2013-01-09T10:10:00-08:00</published><updated>2013-01-09T10:10:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-01-09:/linux-ubuntu-12-04-alt-tab-not-working.html</id><summary type="html">&lt;p&gt;I’ve recently installed Ubuntu 12.04 Prestige Pangolin (I use Gnome
+moment.&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Linux Ubuntu 12.04 alt-tab not working</title><link href="https://www.andrewelkins.com/blog/linux-ubuntu-12-04-alt-tab-not-working.html" rel="alternate"></link><published>2013-01-09T10:10:00-08:00</published><updated>2013-01-09T10:10:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-01-09:/blog/linux-ubuntu-12-04-alt-tab-not-working.html</id><summary type="html">&lt;p&gt;I’ve recently installed Ubuntu 12.04 Prestige Pangolin (I use Gnome
 Classic), and immediately noticed that the alt+tab shortcut wasn’t
 working. I tried fixing it within Applications&amp;gt;Systems
 Tools&amp;gt;System Settings, but that did not work. I have compiz Config
@@ -263,7 +263,7 @@ If you need to install Compiz Config Manager:
 3.  Or search for **compizconfig-settings-manager** in the Software
     Center and install from there.
 
-&lt;/div&gt;</content></entry><entry><title>VMWare Fusion 4 - Set static IP address</title><link href="https://blog.andrewelkins.com/vmware-fusion-4-set-static-ip-address.html" rel="alternate"></link><published>2012-01-31T19:12:00-08:00</published><updated>2012-01-31T19:12:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2012-01-31:/vmware-fusion-4-set-static-ip-address.html</id><summary type="html">&lt;p&gt;In vmware Fusion 4 there is &lt;a href="kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;amp;cmd=displayKC&amp;amp;externalId=1004023"&gt;no
+&lt;/div&gt;</content></entry><entry><title>VMWare Fusion 4 - Set static IP address</title><link href="https://www.andrewelkins.com/blog/vmware-fusion-4-set-static-ip-address.html" rel="alternate"></link><published>2012-01-31T19:12:00-08:00</published><updated>2012-01-31T19:12:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2012-01-31:/blog/vmware-fusion-4-set-static-ip-address.html</id><summary type="html">&lt;p&gt;In vmware Fusion 4 there is &lt;a href="kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;amp;cmd=displayKC&amp;amp;externalId=1004023"&gt;no
 boot.sh&lt;/a&gt;that
 is found in previous versions&lt;/p&gt;
 &lt;blockquote&gt;
@@ -310,7 +310,7 @@ fixed-address 192.168.115.50;&lt;br&gt;
 &lt;p&gt;If that doesn't work, you may need to remove the network adapter and
 then re-add it. Make sure that your network adapter is connected to the
 virtual machine by removing and re-adding it. &lt;a href="http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&amp;amp;externalId=1016466"&gt;See Step
-12&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Recursively remove svn directories from a directory</title><link href="https://blog.andrewelkins.com/recursively-remove-svn-directories-from-a-directory.html" rel="alternate"></link><published>2012-01-13T11:47:00-08:00</published><updated>2012-01-13T11:47:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2012-01-13:/recursively-remove-svn-directories-from-a-directory.html</id><summary type="html">&lt;p&gt;Removing all .svn directories from a file structure in linux is as
+12&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Recursively remove svn directories from a directory</title><link href="https://www.andrewelkins.com/blog/recursively-remove-svn-directories-from-a-directory.html" rel="alternate"></link><published>2012-01-13T11:47:00-08:00</published><updated>2012-01-13T11:47:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2012-01-13:/blog/recursively-remove-svn-directories-from-a-directory.html</id><summary type="html">&lt;p&gt;Removing all .svn directories from a file structure in linux is as
 simple as running a one liner.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;find . -name .svn -print0 | xargs -0 rm -rf&lt;/p&gt;
@@ -318,7 +318,7 @@ simple as running a one liner.&lt;/p&gt;
 simple as running a one liner.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;find . -name .svn -print0 | xargs -0 rm -rf&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>How to add git to an amazon ami ec2 instance</title><link href="https://blog.andrewelkins.com/how-to-add-git-to-an-amazon-ami-ec2-instance.html" rel="alternate"></link><published>2012-01-08T11:58:00-08:00</published><updated>2012-01-08T11:58:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2012-01-08:/how-to-add-git-to-an-amazon-ami-ec2-instance.html</id><summary type="html">&lt;p&gt;To install git on amazon ami is really simple. Make sure you have sudo
+&lt;/blockquote&gt;</content></entry><entry><title>How to add git to an amazon ami ec2 instance</title><link href="https://www.andrewelkins.com/blog/how-to-add-git-to-an-amazon-ami-ec2-instance.html" rel="alternate"></link><published>2012-01-08T11:58:00-08:00</published><updated>2012-01-08T11:58:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2012-01-08:/blog/how-to-add-git-to-an-amazon-ami-ec2-instance.html</id><summary type="html">&lt;p&gt;To install git on amazon ami is really simple. Make sure you have sudo
 and then run yum to install it.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;sudo yum install git&lt;/p&gt;
@@ -382,7 +382,7 @@ git.i686 0:1.7.4.5-1.21.amzn1&lt;/p&gt;
 &lt;p&gt;Dependency Updated:&lt;br&gt;
 perl-Git.i686 0:1.7.4.5-1.21.amzn1&lt;/p&gt;
 &lt;p&gt;Complete!&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Find loaded modules in Apache 2.x</title><link href="https://blog.andrewelkins.com/find-loaded-modules-in-apache-2-x.html" rel="alternate"></link><published>2012-01-05T22:07:00-08:00</published><updated>2012-01-05T22:07:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2012-01-05:/find-loaded-modules-in-apache-2-x.html</id><summary type="html">&lt;p&gt;I was trying to figure out how to find the loaded modules in Apache and
+&lt;/blockquote&gt;</content></entry><entry><title>Find loaded modules in Apache 2.x</title><link href="https://www.andrewelkins.com/blog/find-loaded-modules-in-apache-2-x.html" rel="alternate"></link><published>2012-01-05T22:07:00-08:00</published><updated>2012-01-05T22:07:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2012-01-05:/blog/find-loaded-modules-in-apache-2-x.html</id><summary type="html">&lt;p&gt;I was trying to figure out how to find the loaded modules in Apache and
 came across this nice command.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;httpd -M&lt;/p&gt;
@@ -423,7 +423,7 @@ php5_module (shared)&lt;br&gt;
 extract_forwarded_module (shared)&lt;br&gt;
 geoip_module (shared)&lt;br&gt;
 Syntax OK&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Display phpinfo from the command line</title><link href="https://blog.andrewelkins.com/display-phpinfo-from-the-command-line.html" rel="alternate"></link><published>2011-12-02T11:37:00-08:00</published><updated>2011-12-02T11:37:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2011-12-02:/display-phpinfo-from-the-command-line.html</id><summary type="html">&lt;p&gt;This afternoon I was wanting to get a couple things from phpinfo but
+&lt;/blockquote&gt;</content></entry><entry><title>Display phpinfo from the command line</title><link href="https://www.andrewelkins.com/blog/display-phpinfo-from-the-command-line.html" rel="alternate"></link><published>2011-12-02T11:37:00-08:00</published><updated>2011-12-02T11:37:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2011-12-02:/blog/display-phpinfo-from-the-command-line.html</id><summary type="html">&lt;p&gt;This afternoon I was wanting to get a couple things from phpinfo but
 didn't want to do the typical make a php file, put phpinfo, run it from
 a browser or command prompt. There's a better, quicker way if you know
 what you want. One will output it to a …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This afternoon I was wanting to get a couple things from phpinfo but

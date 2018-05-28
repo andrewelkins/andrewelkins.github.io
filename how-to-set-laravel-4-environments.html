@@ -19,38 +19,38 @@
     <meta property="og:title" content="How to set Laravel 4 environments"/>
     <meta property="og:description" content="The environment is based on url matches. You&#39;ll find that configuration in /bootstrap/start.php [ps] \$env = \$app-&gt;detectEnvironment(array( &#39;local&#39; =&gt; array(&#39;your-machine-name&#39;), )); [/ps] Now say you are developing locally and use the prefix/postfix local. E.g: my-new-site.local or local.my-new-site [ps] \$env = \$app-&gt;detectEnvironment(array( &#39;local&#39; =&gt; array …"/>
     <meta property="og:site_name" content="Andrew Elkins" />
-    <meta property="og:url" content="https://blog.andrewelkins.com/how-to-set-laravel-4-environments.html"/>
+    <meta property="og:url" content="https://www.andrewelkins.com/blog/how-to-set-laravel-4-environments.html"/>
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="How to set Laravel 4 environments">
     <meta name="twitter:description" content="The environment is based on url matches. You&#39;ll find that configuration in /bootstrap/start.php [ps] \$env = \$app-&gt;detectEnvironment(array( &#39;local&#39; =&gt; array(&#39;your-machine-name&#39;), )); [/ps] Now say you are developing locally and use the prefix/postfix local. E.g: my-new-site.local or local.my-new-site [ps] \$env = \$app-&gt;detectEnvironment(array( &#39;local&#39; =&gt; array …">
-    <meta name="twitter:url" content="https://blog.andrewelkins.com/how-to-set-laravel-4-environments.html">
+    <meta name="twitter:url" content="https://www.andrewelkins.com/blog/how-to-set-laravel-4-environments.html">
 
     <!-- Feed -->
-    <link rel="alternate" type="application/atom+xml" href="https://blog.andrewelkins.com/feeds/all.atom.xml" title="Andrew Elkins Atom Feed" />
-    <link rel="alternate" type="application/atom+xml" href="https://blog.andrewelkins.com/feeds/php-programming.atom.xml" title="Andrew Elkins Categories Atom Feed" />
+    <link rel="alternate" type="application/atom+xml" href="https://www.andrewelkins.com/blog/feeds/all.atom.xml" title="Andrew Elkins Atom Feed" />
+    <link rel="alternate" type="application/atom+xml" href="https://www.andrewelkins.com/blog/feeds/php-programming.atom.xml" title="Andrew Elkins Categories Atom Feed" />
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
-    <link rel="stylesheet" type="text/css" href="https://blog.andrewelkins.com/theme/css/w3.css">
-    <link rel="stylesheet" type="text/css" href="https://blog.andrewelkins.com/theme/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://blog.andrewelkins.com/theme/css/jqcloud.css">
-    <link rel="stylesheet" type="text/css" href="https://blog.andrewelkins.com/theme/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://blog.andrewelkins.com/theme/css/pygments-highlight-github.css">
-    <link rel="stylesheet" type="text/css" href="https://blog.andrewelkins.com/static/custom.css">
+    <link rel="stylesheet" type="text/css" href="https://www.andrewelkins.com/blog/theme/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="https://www.andrewelkins.com/blog/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://www.andrewelkins.com/blog/theme/css/jqcloud.css">
+    <link rel="stylesheet" type="text/css" href="https://www.andrewelkins.com/blog/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://www.andrewelkins.com/blog/theme/css/pygments-highlight-github.css">
+    <link rel="stylesheet" type="text/css" href="https://www.andrewelkins.com/blog/static/custom.css">
 
     <!-- Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="https://blog.andrewelkins.com/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.andrewelkins.com/blog/favicon.ico">
 
     <!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://blog.andrewelkins.com/theme/js/jqcloud.min.js"></script>
+    <script src="https://www.andrewelkins.com/blog/theme/js/jqcloud.min.js"></script>
   </head>
 
   <body>
     <div class="w3-row w3-card w3-white">
       <header id="header">
-        <a href="https://blog.andrewelkins.com" id="header-logo" title="Home">AE</a>
+        <a href="https://www.andrewelkins.com/blog" id="header-logo" title="Home">AE</a>
         <nav id="header-menu">
           <ul>
             <li class="w3-bottombar w3-border-white w3-hover-border-green"><a href="/categories.html">Categories</a></li>
@@ -69,11 +69,11 @@
         <h1>How to set Laravel 4 environments</h1>
         <div class="post-info">
           <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
-            <span><time datetime="2013-03-17T20:35:00-07:00">Sun 17 March 2013</time> in <a href="https://blog.andrewelkins.com/category/php-programming.html" title="All articles in category PHP, Programming">PHP, Programming</a></span>
+            <span><time datetime="2013-03-17T20:35:00-07:00">Sun 17 March 2013</time> in <a href="https://www.andrewelkins.com/blog/category/php-programming.html" title="All articles in category PHP, Programming">PHP, Programming</a></span>
           </div>
           <div>
             <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
-              <a href="https://blog.andrewelkins.com/tag/laravel.html" title="All articles with Laravel tag">#laravel</a>
+              <a href="https://www.andrewelkins.com/blog/tag/laravel.html" title="All articles with Laravel tag">#laravel</a>
             </span>
           </div>
         </div>
@@ -130,13 +130,13 @@ cp app/config/database.php app/config/local/database.php<br>
 
           <p style="font-size:10pt; font-style: italic;">Did you like this article? Share it with your friends!</p>
           <div id="share" class="share">
-            <a href="http://www.facebook.com/sharer.php?u=https%3A//blog.andrewelkins.com/how-to-set-laravel-4-environments.html&amp;t=Andrew%20Elkins%3A%20How%20to%20set%20Laravel%204%20environments" target="_blank" class="w3-btn w3-indigo">
+            <a href="http://www.facebook.com/sharer.php?u=https%3A//www.andrewelkins.com/blog/how-to-set-laravel-4-environments.html&amp;t=Andrew%20Elkins%3A%20How%20to%20set%20Laravel%204%20environments" target="_blank" class="w3-btn w3-indigo">
               <i class="fa fa-facebook"></i> <span>Facebook</span>
             </a>
-            <a href="http://twitter.com/share?url=https%3A//blog.andrewelkins.com/how-to-set-laravel-4-environments.html&amp;text=Andrew%20Elkins%3A%20How%20to%20set%20Laravel%204%20environments" target="_blank" class="w3-btn w3-blue">
+            <a href="http://twitter.com/share?url=https%3A//www.andrewelkins.com/blog/how-to-set-laravel-4-environments.html&amp;text=Andrew%20Elkins%3A%20How%20to%20set%20Laravel%204%20environments" target="_blank" class="w3-btn w3-blue">
               <i class="fa fa-twitter"></i> <span>Twitter</span>
             </a>
-            <a href="https://plus.google.com/share?url=https%3A//blog.andrewelkins.com/how-to-set-laravel-4-environments.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
+            <a href="https://plus.google.com/share?url=https%3A//www.andrewelkins.com/blog/how-to-set-laravel-4-environments.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
               <i class="fa fa-google-plus"></i> <span>Google</span>
             </a>
           </div>
@@ -152,7 +152,7 @@ cp app/config/database.php app/config/local/database.php<br>
 
     <footer id="footer">
       <div id="footer-copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
-        <span>&copy; 2008-2018 Andrew Elkins  | <a href="https://blog.andrewelkins.com/feeds/all.atom.xml">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a></span>
+        <span>&copy; 2008-2018 Andrew Elkins  | <a href="https://www.andrewelkins.com/blog/feeds/all.atom.xml">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a></span>
       </div>
     </footer>
 

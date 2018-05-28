@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins</title><link href="https://blog.andrewelkins.com/" rel="alternate"></link><link href="https://blog.andrewelkins.com/feeds/all.atom.xml" rel="self"></link><id>https://blog.andrewelkins.com/</id><updated>2017-03-23T07:30:00-07:00</updated><entry><title>Laravel queue environment</title><link href="https://blog.andrewelkins.com/laravel-queue-environment.html" rel="alternate"></link><published>2017-03-23T07:30:00-07:00</published><updated>2017-03-23T07:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2017-03-23:/laravel-queue-environment.html</id><summary type="html">&lt;p&gt;Ran in to an issue running queue through supervisor. I'll give a quick
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andrew Elkins</title><link href="https://www.andrewelkins.com/blog/" rel="alternate"></link><link href="https://www.andrewelkins.com/blog/feeds/all.atom.xml" rel="self"></link><id>https://www.andrewelkins.com/blog/</id><updated>2017-03-23T07:30:00-07:00</updated><entry><title>Laravel queue environment</title><link href="https://www.andrewelkins.com/blog/laravel-queue-environment.html" rel="alternate"></link><published>2017-03-23T07:30:00-07:00</published><updated>2017-03-23T07:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2017-03-23:/blog/laravel-queue-environment.html</id><summary type="html">&lt;p&gt;Ran in to an issue running queue through supervisor. I'll give a quick
 rundown of my setup, the issue and solution.&lt;/p&gt;
 &lt;p&gt;I have supervisor running the queue daemon.  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\[program:laravel\_queue\]  
@@ -30,7 +30,7 @@ stdout\_logfile=/var/log/laraqueue.out.log
 
 
 &lt;p&gt;That's what I was missing. Once I `sudo supervisorctl restart
-laravel_queue` all was well with the queue.&lt;/p&gt;</content></entry><entry><title>Docker remove ALL volumes not attached</title><link href="https://blog.andrewelkins.com/docker-remove-volumes-not-attached.html" rel="alternate"></link><published>2016-11-15T12:51:00-08:00</published><updated>2016-11-15T12:51:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2016-11-15:/docker-remove-volumes-not-attached.html</id><summary type="html">&lt;p&gt;Docker can be tricky to debug. There's instances where after upgrading a
+laravel_queue` all was well with the queue.&lt;/p&gt;</content></entry><entry><title>Docker remove ALL volumes not attached</title><link href="https://www.andrewelkins.com/blog/docker-remove-volumes-not-attached.html" rel="alternate"></link><published>2016-11-15T12:51:00-08:00</published><updated>2016-11-15T12:51:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2016-11-15:/blog/docker-remove-volumes-not-attached.html</id><summary type="html">&lt;p&gt;Docker can be tricky to debug. There's instances where after upgrading a
 container the volume that was previously attached fails to work.&lt;/p&gt;
 &lt;p&gt;In this case it was a dev image and the quickest, and dirtiest, option
 was to clear out and rebuild. I could go one by one to delete …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Docker can be tricky to debug. There's instances where after upgrading a
@@ -47,7 +47,7 @@ docker volume rm {specific\_docker\_container}
 for my use case as I only have two dockers setups, left the one I wanted
 to keep running while executing the following commands.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker volume rm \`docker volume ls -q -f dangling=true\`  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>grep without filenames</title><link href="https://blog.andrewelkins.com/grep-without-filenames.html" rel="alternate"></link><published>2016-11-01T11:26:00-07:00</published><updated>2016-11-01T11:26:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2016-11-01:/grep-without-filenames.html</id><summary type="html">&lt;p&gt;I needed to grep a directory, and sub directories, and not displaying
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>grep without filenames</title><link href="https://www.andrewelkins.com/blog/grep-without-filenames.html" rel="alternate"></link><published>2016-11-01T11:26:00-07:00</published><updated>2016-11-01T11:26:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2016-11-01:/blog/grep-without-filenames.html</id><summary type="html">&lt;p&gt;I needed to grep a directory, and sub directories, and not displaying
 the filenames in the output. This is when the man page came to the
 rescue.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;man grep | grep filename  
@@ -77,7 +77,7 @@ rescue.&lt;/p&gt;
 &lt;p&gt;There we go, &lt;strong&gt;-h, --no-filename&lt;/strong&gt;, is what I needed.&lt;/p&gt;
 &lt;p&gt;Example with output to a file:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;grep -r &amp;quot;searching-for-this&amp;quot; . --no-filename &amp;amp;gt; /tmp/test.txt  
-&lt;/pre&gt;&lt;/div&gt;</content><category term="cli"></category><category term="command"></category><category term="file"></category><category term="grep"></category><category term="linux"></category></entry><entry><title>Vagrant error on up</title><link href="https://blog.andrewelkins.com/vagrant-error-on-up.html" rel="alternate"></link><published>2016-09-27T09:16:00-07:00</published><updated>2016-09-27T09:16:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2016-09-27:/vagrant-error-on-up.html</id><summary type="html">&lt;p&gt;I was executing a vagrant up on my machine. It was giving an nfs error.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="cli"></category><category term="command"></category><category term="file"></category><category term="grep"></category><category term="linux"></category></entry><entry><title>Vagrant error on up</title><link href="https://www.andrewelkins.com/blog/vagrant-error-on-up.html" rel="alternate"></link><published>2016-09-27T09:16:00-07:00</published><updated>2016-09-27T09:16:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2016-09-27:/blog/vagrant-error-on-up.html</id><summary type="html">&lt;p&gt;I was executing a vagrant up on my machine. It was giving an nfs error.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;mount&lt;/span&gt; &lt;span class="nt"&gt;-o&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;vers=3,udp&amp;#39;&lt;/span&gt; &lt;span class="nt"&gt;192&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;168&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;10&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/opt/&amp;amp;lt;snip&amp;amp;gt;/mozilla/kuma&amp;#39;&lt;/span&gt;
 &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;vagrant&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;src&lt;/span&gt;
 
@@ -104,7 +104,7 @@ rescue.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Then it would boot.&lt;/p&gt;</content></entry><entry><title>Head all files in directory</title><link href="https://blog.andrewelkins.com/head-all-files-in-directory.html" rel="alternate"></link><published>2016-06-06T13:30:00-07:00</published><updated>2016-06-06T13:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2016-06-06:/head-all-files-in-directory.html</id><summary type="html">&lt;p&gt;Needed to head all files in a directory.&lt;/p&gt;
+&lt;p&gt;Then it would boot.&lt;/p&gt;</content></entry><entry><title>Head all files in directory</title><link href="https://www.andrewelkins.com/blog/head-all-files-in-directory.html" rel="alternate"></link><published>2016-06-06T13:30:00-07:00</published><updated>2016-06-06T13:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2016-06-06:/blog/head-all-files-in-directory.html</id><summary type="html">&lt;p&gt;Needed to head all files in a directory.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\#!/usr/bin/env bash  
 DEST=/tmp  
 for i in /files/to/head/\*  
@@ -118,7 +118,7 @@ for i in /files/to/head/\*
 do  
 head -10 &amp;quot;\&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;&amp;quot; &lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt; \&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;DEST&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;/\$(basename \&lt;span class="nv"&gt;$i&lt;/span&gt;)  
 done  
-&lt;/pre&gt;&lt;/div&gt;</content><category term="bash"></category><category term="head"></category><category term="loop"></category></entry><entry><title>Simple Python Web Scraper</title><link href="https://blog.andrewelkins.com/simple-python-web-scraper.html" rel="alternate"></link><published>2016-02-22T10:52:00-08:00</published><updated>2016-02-22T10:52:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2016-02-22:/simple-python-web-scraper.html</id><summary type="html">&lt;p&gt;I needed a simple html only scraper. (This doesn't use js, won't pull
+&lt;/pre&gt;&lt;/div&gt;</content><category term="bash"></category><category term="head"></category><category term="loop"></category></entry><entry><title>Simple Python Web Scraper</title><link href="https://www.andrewelkins.com/blog/simple-python-web-scraper.html" rel="alternate"></link><published>2016-02-22T10:52:00-08:00</published><updated>2016-02-22T10:52:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2016-02-22:/blog/simple-python-web-scraper.html</id><summary type="html">&lt;p&gt;I needed a simple html only scraper. (This doesn't use js, won't pull
 down data via AJAX). I found an example on another site,
 &lt;a href="http://www.thetaranights.com/web-mining-login-to-any-website-using-mechanize-module-in-python/"&gt;thetaranights.com&lt;/a&gt;,
 but it wasn't exactly what I needed. It only pulled the data and printed
@@ -170,7 +170,7 @@ to a html file.&lt;/p&gt;
 
 &lt;p&gt;Which produces 2 files:&lt;br&gt;
 page.html&lt;br&gt;
-page2.html&lt;/p&gt;</content></entry><entry><title>How to check cp progress after cp has started</title><link href="https://blog.andrewelkins.com/how-to-check-cp-progress-after-cp-has-started.html" rel="alternate"></link><published>2015-11-02T11:02:00-08:00</published><updated>2015-11-02T11:02:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-11-02:/how-to-check-cp-progress-after-cp-has-started.html</id><summary type="html">&lt;p&gt;First, the easier way to do this is to use rsync in the first place.&lt;/p&gt;
+page2.html&lt;/p&gt;</content></entry><entry><title>How to check cp progress after cp has started</title><link href="https://www.andrewelkins.com/blog/how-to-check-cp-progress-after-cp-has-started.html" rel="alternate"></link><published>2015-11-02T11:02:00-08:00</published><updated>2015-11-02T11:02:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-11-02:/blog/how-to-check-cp-progress-after-cp-has-started.html</id><summary type="html">&lt;p&gt;First, the easier way to do this is to use rsync in the first place.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;rsync -avh --progress sourceDirectory destinationDirectory&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -193,7 +193,7 @@ copy comand.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://unix.stackexchange.com/questions/66795/how-to-check-progress-of-running-cp"&gt;Check
 progress&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://unix.stackexchange.com/questions/65077/is-it-possible-to-see-cp-speed-and-copied"&gt;CP Command
-Help&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Ubuntu Command line Display Driver Change</title><link href="https://blog.andrewelkins.com/ubuntu-command-line-display-driver-change.html" rel="alternate"></link><published>2015-10-30T08:24:00-07:00</published><updated>2015-10-30T08:24:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-10-30:/ubuntu-command-line-display-driver-change.html</id><summary type="html">&lt;p&gt;Recently upgraded to 15.10 and that looked okay at first. However, the
+Help&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Ubuntu Command line Display Driver Change</title><link href="https://www.andrewelkins.com/blog/ubuntu-command-line-display-driver-change.html" rel="alternate"></link><published>2015-10-30T08:24:00-07:00</published><updated>2015-10-30T08:24:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-10-30:/blog/ubuntu-command-line-display-driver-change.html</id><summary type="html">&lt;p&gt;Recently upgraded to 15.10 and that looked okay at first. However, the
 displa driver that it installed, NVIDIA, was causing issues. So I
 defaulted back to the open source driver and reboot. MISTAKE! Ended up
 causing the system to crash and couldn't do anything about it.&lt;/p&gt;
@@ -210,7 +210,7 @@ available drivers.&lt;/p&gt;
 nvidia driver.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;apt-get install nvidia-352-updates&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Failed to spawn command gulp</title><link href="https://blog.andrewelkins.com/failed-to-spawn-command-gulp.html" rel="alternate"></link><published>2015-10-20T21:00:00-07:00</published><updated>2015-10-20T21:00:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-10-20:/failed-to-spawn-command-gulp.html</id><summary type="html">&lt;p&gt;I ran in to the error with Atom, Failed to spawn command gulp. The
+&lt;/blockquote&gt;</content></entry><entry><title>Failed to spawn command gulp</title><link href="https://www.andrewelkins.com/blog/failed-to-spawn-command-gulp.html" rel="alternate"></link><published>2015-10-20T21:00:00-07:00</published><updated>2015-10-20T21:00:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-10-20:/blog/failed-to-spawn-command-gulp.html</id><summary type="html">&lt;p&gt;I ran in to the error with Atom, Failed to spawn command gulp. The
 solution for me was to install the module globally.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;{.lang-js .prettyprint .prettyprinted}
 $ sudo npm install -g gulp
@@ -235,7 +235,7 @@ gulp@3.9.0 /usr/lib/node_modules/gulp
 ├── liftoff@2.2.0 (extend@2.0.1, rechoir@0.6.2, flagged-respawn@0.3.1, resolve@1.1.6, findup-sync@0.3.0)
 ├── vinyl-fs@0.3.14 (graceful-fs@3.0.8, strip-bom@1.0.0, vinyl@0.4.6, defaults@1.0.3, mkdirp@0.5.1, through2@0.6.5, glob-stream@3.1.18, glob-watcher@0.0.6)
 └── gulp-util@3.0.7 (object-assign@3.0.0, array-differ@1.0.0, array-uniq@1.0.2, lodash._reinterpolate@3.0.0, lodash._reescape@3.0.0, lodash._reevaluate@3.0.0, beeper@1.1.0, fancy-log@1.1.0, replace-ext@0.0.1, has-gulplog@0.1.0, vinyl@0.5.3, gulplog@1.0.0, lodash.template@3.6.2, multipipe@0.1.2, through2@2.0.0, dateformat@1.0.11)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Easy and done.&lt;/p&gt;</content></entry><entry><title>GIT push from one repo to another</title><link href="https://blog.andrewelkins.com/git-push-from-one-repo-to-another.html" rel="alternate"></link><published>2015-10-15T11:05:00-07:00</published><updated>2015-10-15T11:05:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-10-15:/git-push-from-one-repo-to-another.html</id><summary type="html">&lt;p&gt;Splitting off from a branch to another git repo seems like it would
+&lt;p&gt;Easy and done.&lt;/p&gt;</content></entry><entry><title>GIT push from one repo to another</title><link href="https://www.andrewelkins.com/blog/git-push-from-one-repo-to-another.html" rel="alternate"></link><published>2015-10-15T11:05:00-07:00</published><updated>2015-10-15T11:05:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-10-15:/blog/git-push-from-one-repo-to-another.html</id><summary type="html">&lt;p&gt;Splitting off from a branch to another git repo seems like it would
 suck. In reality it's simple. Two lines and you're set.&lt;/p&gt;
 &lt;p&gt;Things you'll need:&lt;/p&gt;
 &lt;ul&gt;
@@ -263,7 +263,7 @@ targetrepo git@bitbucket.org:my_team/my_awesome_target_repo.git&lt;br&gt;
 \$ git push targetrepo my_branch_to_create_off_of:master&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;That'll create the master branch off of the branch
-"my_branch_to_create_off_of" from your local repo.&lt;/p&gt;</content></entry><entry><title>Bash test if file exists</title><link href="https://blog.andrewelkins.com/bash-test-if-file-exists.html" rel="alternate"></link><published>2015-10-14T10:58:00-07:00</published><updated>2015-10-14T10:58:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-10-14:/bash-test-if-file-exists.html</id><summary type="html">&lt;p&gt;Using bash I needed to check that a file exists, then do something. This
+"my_branch_to_create_off_of" from your local repo.&lt;/p&gt;</content></entry><entry><title>Bash test if file exists</title><link href="https://www.andrewelkins.com/blog/bash-test-if-file-exists.html" rel="alternate"></link><published>2015-10-14T10:58:00-07:00</published><updated>2015-10-14T10:58:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-10-14:/blog/bash-test-if-file-exists.html</id><summary type="html">&lt;p&gt;Using bash I needed to check that a file exists, then do something. This
 one turns out to be super simple. I wanted to conditionally load a db
 file if it existed in this case.&lt;/p&gt;
 &lt;p&gt;What I needed was, a check for the file in bash. Then execute the
@@ -290,7 +290,7 @@ then
 else
     printf "No DB file found.\n";
 fi&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Add user to existing group</title><link href="https://blog.andrewelkins.com/add-user-to-existing-group.html" rel="alternate"></link><published>2015-07-14T13:50:00-07:00</published><updated>2015-07-14T13:50:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-07-14:/add-user-to-existing-group.html</id><summary type="html">&lt;p&gt;This is dead simple. I often need to add a new user to the sudoer group,
+&lt;/blockquote&gt;</content></entry><entry><title>Add user to existing group</title><link href="https://www.andrewelkins.com/blog/add-user-to-existing-group.html" rel="alternate"></link><published>2015-07-14T13:50:00-07:00</published><updated>2015-07-14T13:50:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-07-14:/blog/add-user-to-existing-group.html</id><summary type="html">&lt;p&gt;This is dead simple. I often need to add a new user to the sudoer group,
 "sudo" by default.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;sudo usermod -a -G groupName userName&lt;/p&gt;
@@ -306,7 +306,7 @@ fi&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;So for adding a user to the sudoers group.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;sudo usermod -a -G sudo {username}&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Linux add user</title><link href="https://blog.andrewelkins.com/linux-add-user.html" rel="alternate"></link><published>2015-07-14T13:48:00-07:00</published><updated>2015-07-14T13:48:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-07-14:/linux-add-user.html</id><summary type="html">&lt;p&gt;The simple way to add a user is to use the linux interactive mode.&lt;/p&gt;
+&lt;/blockquote&gt;</content></entry><entry><title>Linux add user</title><link href="https://www.andrewelkins.com/blog/linux-add-user.html" rel="alternate"></link><published>2015-07-14T13:48:00-07:00</published><updated>2015-07-14T13:48:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-07-14:/blog/linux-add-user.html</id><summary type="html">&lt;p&gt;The simple way to add a user is to use the linux interactive mode.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;sudo adduser {username}&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -314,7 +314,7 @@ fi&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;sudo adduser {username}&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Then let it guide you through the setup.&lt;/p&gt;</content></entry><entry><title>How to find large volumes on linux</title><link href="https://blog.andrewelkins.com/how-to-find-large-volumes-on-linux.html" rel="alternate"></link><published>2015-04-26T12:16:00-07:00</published><updated>2015-04-26T12:16:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-04-26:/how-to-find-large-volumes-on-linux.html</id><summary type="html">&lt;p&gt;Running linux machines sometimes it's needed to figure out what is
+&lt;p&gt;Then let it guide you through the setup.&lt;/p&gt;</content></entry><entry><title>How to find large volumes on linux</title><link href="https://www.andrewelkins.com/blog/how-to-find-large-volumes-on-linux.html" rel="alternate"></link><published>2015-04-26T12:16:00-07:00</published><updated>2015-04-26T12:16:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-04-26:/blog/how-to-find-large-volumes-on-linux.html</id><summary type="html">&lt;p&gt;Running linux machines sometimes it's needed to figure out what is
 taking up a large amount of room on a server. Here's an easy way to
 investigate large directories.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;du -h &amp;amp;lt;dir&amp;amp;gt; | grep &amp;#39;\[0-9:::.\]+G&amp;#39;  
@@ -322,7 +322,7 @@ investigate large directories.&lt;/p&gt;
 taking up a large amount of room on a server. Here's an easy way to
 investigate large directories.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;du -h &amp;amp;lt;dir&amp;amp;gt; | grep &amp;#39;\[0-9:::.\]+G&amp;#39;  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>7z file encryption with password</title><link href="https://blog.andrewelkins.com/7z-file-encryption-with-password.html" rel="alternate"></link><published>2015-04-19T16:47:00-07:00</published><updated>2015-04-19T16:47:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-04-19:/7z-file-encryption-with-password.html</id><summary type="html">&lt;p&gt;Previously I've transferred file with a pgp key, but this is an ok
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>7z file encryption with password</title><link href="https://www.andrewelkins.com/blog/7z-file-encryption-with-password.html" rel="alternate"></link><published>2015-04-19T16:47:00-07:00</published><updated>2015-04-19T16:47:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-04-19:/blog/7z-file-encryption-with-password.html</id><summary type="html">&lt;p&gt;Previously I've transferred file with a pgp key, but this is an ok
 alternative.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;7za a -tzip -psuperSecurePassword -mem=AES256 filename.zip file.doc
 file1.doc file2.doc  
@@ -338,7 +338,7 @@ file1.doc file2.doc
 
 
 &lt;p&gt;You can also checkout the easier and more supported &lt;a href="http://andrewelkins.com/linux/password-protect-a-zip-file/" title="Password protect a zip file"&gt;zip
-method&lt;/a&gt;.&lt;/p&gt;</content></entry><entry><title>Password protect a zip file</title><link href="https://blog.andrewelkins.com/password-protect-a-zip-file.html" rel="alternate"></link><published>2015-04-19T16:42:00-07:00</published><updated>2015-04-19T16:42:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-04-19:/password-protect-a-zip-file.html</id><summary type="html">&lt;p&gt;Sometime a simple encrypt with a password is needed. This isn't the
+method&lt;/a&gt;.&lt;/p&gt;</content></entry><entry><title>Password protect a zip file</title><link href="https://www.andrewelkins.com/blog/password-protect-a-zip-file.html" rel="alternate"></link><published>2015-04-19T16:42:00-07:00</published><updated>2015-04-19T16:42:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-04-19:/blog/password-protect-a-zip-file.html</id><summary type="html">&lt;p&gt;Sometime a simple encrypt with a password is needed. This isn't the
 &lt;a href="http://andrewelkins.com/linux/7z-file-encryption-with-password/" title="7z file encryption with password"&gt;most secure method (7z provides more secure
 methods)&lt;/a&gt;,
 but is better than nothing. I simple way to do it is to create a zip
@@ -354,7 +354,7 @@ password protected with all the files.&lt;/p&gt;
 
 &lt;p&gt;Often it's easier to just zip a whole directory.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;zip --password yourpassword -r filename.zip files-to-be-zipped/  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to set a password on pdf in Ubuntu</title><link href="https://blog.andrewelkins.com/how-to-set-a-password-on-pdf-in-ubuntu.html" rel="alternate"></link><published>2015-04-10T14:32:00-07:00</published><updated>2015-04-10T14:32:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-04-10:/how-to-set-a-password-on-pdf-in-ubuntu.html</id><summary type="html">&lt;p&gt;This one is super simple.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to set a password on pdf in Ubuntu</title><link href="https://www.andrewelkins.com/blog/how-to-set-a-password-on-pdf-in-ubuntu.html" rel="alternate"></link><published>2015-04-10T14:32:00-07:00</published><updated>2015-04-10T14:32:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-04-10:/blog/how-to-set-a-password-on-pdf-in-ubuntu.html</id><summary type="html">&lt;p&gt;This one is super simple.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install pdftk  
 pdftk input-file.pdf output output-file.pdf userpw
 mysupersecretpassword  
@@ -362,7 +362,7 @@ mysupersecretpassword
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install pdftk  
 pdftk input-file.pdf output output-file.pdf userpw
 mysupersecretpassword  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Move files while preserving timestamps</title><link href="https://blog.andrewelkins.com/move-files-while-preserving-timestamps.html" rel="alternate"></link><published>2015-04-02T16:30:00-07:00</published><updated>2015-04-02T16:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-04-02:/move-files-while-preserving-timestamps.html</id><summary type="html">&lt;p&gt;A quick way to move files in linux while keeping their timestamps. In
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Move files while preserving timestamps</title><link href="https://www.andrewelkins.com/blog/move-files-while-preserving-timestamps.html" rel="alternate"></link><published>2015-04-02T16:30:00-07:00</published><updated>2015-04-02T16:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-04-02:/blog/move-files-while-preserving-timestamps.html</id><summary type="html">&lt;p&gt;A quick way to move files in linux while keeping their timestamps. In
 short mv doesn't support this. The work around is to copy instead.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cp -p -r -l source/date target/  
 rm -rf source/data  
@@ -370,7 +370,7 @@ rm -rf source/data
 short mv doesn't support this. The work around is to copy instead.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cp -p -r -l source/date target/  
 rm -rf source/data  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to call a python function by using a variable python</title><link href="https://blog.andrewelkins.com/how-to-call-a-python-function-by-using-a-variable-python.html" rel="alternate"></link><published>2015-01-23T11:07:00-08:00</published><updated>2015-01-23T11:07:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2015-01-23:/how-to-call-a-python-function-by-using-a-variable-python.html</id><summary type="html">&lt;p&gt;I needed to, in a programmatic way, determine the function name and then
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to call a python function by using a variable python</title><link href="https://www.andrewelkins.com/blog/how-to-call-a-python-function-by-using-a-variable-python.html" rel="alternate"></link><published>2015-01-23T11:07:00-08:00</published><updated>2015-01-23T11:07:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2015-01-23:/blog/how-to-call-a-python-function-by-using-a-variable-python.html</id><summary type="html">&lt;p&gt;I needed to, in a programmatic way, determine the function name and then
 call the function.&lt;/p&gt;
 &lt;p&gt;Here's an example use case. I have a bunch of functions called,
 ["function1", "function2", "function3", "function4", etc] Then I have
@@ -398,7 +398,7 @@ function.&lt;/p&gt;
 &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;t&lt;/span&gt;  
 &lt;span class="nx"&gt;except&lt;/span&gt; &lt;span class="nx"&gt;AttributeError&lt;/span&gt;:  
 &lt;span class="kt"&gt;print&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;function not found &amp;quot;%s&amp;quot; (%s)&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="nx"&gt;_string&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Mozilla Developer Edition</title><link href="https://blog.andrewelkins.com/mozilla-developer-edition.html" rel="alternate"></link><published>2014-11-23T12:31:00-08:00</published><updated>2014-11-23T12:31:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-11-23:/mozilla-developer-edition.html</id><summary type="html">&lt;p&gt;I recently discovered &lt;a href="https://www.mozilla.org/en-US/firefox/developer/?utm_source=firefox-com&amp;amp;utm_medium=referral&amp;amp;utm_campaign=FX10&amp;amp;utm_content=fxdev-stackoverflow"&gt;Mozilla Developer
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Mozilla Developer Edition</title><link href="https://www.andrewelkins.com/blog/mozilla-developer-edition.html" rel="alternate"></link><published>2014-11-23T12:31:00-08:00</published><updated>2014-11-23T12:31:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-11-23:/blog/mozilla-developer-edition.html</id><summary type="html">&lt;p&gt;I recently discovered &lt;a href="https://www.mozilla.org/en-US/firefox/developer/?utm_source=firefox-com&amp;amp;utm_medium=referral&amp;amp;utm_campaign=FX10&amp;amp;utm_content=fxdev-stackoverflow"&gt;Mozilla Developer
 Edition&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://mozorg.cdn.mozilla.net/media/img/firefox/developer/screenshot.jpg"&gt;{.alignnone
 width="832" height="456"}&lt;/p&gt;
@@ -408,7 +408,7 @@ Edition&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://mozorg.cdn.mozilla.net/media/img/firefox/developer/screenshot.jpg"&gt;{.alignnone
 width="832" height="456"}&lt;/p&gt;
 &lt;p&gt;So far I've love it's inline ability to edit css. It's an entirely
-natural way to tweak the css on the fly.&lt;/p&gt;</content></entry><entry><title>Convert pdf to png easily</title><link href="https://blog.andrewelkins.com/convert-pdf-to-png-easily.html" rel="alternate"></link><published>2014-11-23T12:29:00-08:00</published><updated>2014-11-23T12:29:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-11-23:/convert-pdf-to-png-easily.html</id><summary type="html">&lt;p&gt;I need to quickly convert odfs to image for both online processing and
+natural way to tweak the css on the fly.&lt;/p&gt;</content></entry><entry><title>Convert pdf to png easily</title><link href="https://www.andrewelkins.com/blog/convert-pdf-to-png-easily.html" rel="alternate"></link><published>2014-11-23T12:29:00-08:00</published><updated>2014-11-23T12:29:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-11-23:/blog/convert-pdf-to-png-easily.html</id><summary type="html">&lt;p&gt;I need to quickly convert odfs to image for both online processing and
 one off processing. Luckily imagemagick had me covered for both.&lt;/p&gt;
 &lt;p&gt;First install imagemagick:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install imagemagick  
@@ -434,7 +434,7 @@ one off processing. Luckily imagemagick had me covered for both.&lt;/p&gt;
 
 &lt;p&gt;This will append ## to the file name if the pdf is multiple pages.
 convert also has a few options that effect the quality, size, trimming,
-etc.&lt;/p&gt;</content></entry><entry><title>October CMS How to replace component templates from plugins</title><link href="https://blog.andrewelkins.com/october-cms-how-to-replace-component-templates-from-plugins.html" rel="alternate"></link><published>2014-10-07T10:34:00-07:00</published><updated>2014-10-07T10:34:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-10-07:/october-cms-how-to-replace-component-templates-from-plugins.html</id><summary type="html">&lt;p&gt;How can you replace component templates from plugins? IE I want to
+etc.&lt;/p&gt;</content></entry><entry><title>October CMS How to replace component templates from plugins</title><link href="https://www.andrewelkins.com/blog/october-cms-how-to-replace-component-templates-from-plugins.html" rel="alternate"></link><published>2014-10-07T10:34:00-07:00</published><updated>2014-10-07T10:34:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-10-07:/blog/october-cms-how-to-replace-component-templates-from-plugins.html</id><summary type="html">&lt;p&gt;How can you replace component templates from plugins? IE I want to
 replace the posts default template in the blog plugin with my own
 markup. &lt;a href="https://github.com/rainlab/blog-plugin/blob/master/components/posts/default.htm"&gt;Post List from the blog
 plugin&lt;/a&gt;&lt;/p&gt;
@@ -466,7 +466,7 @@ typically name mine prefixed with the plug-in.
 
 &lt;p&gt;See the comments below for other solutions. In the
 &lt;a href="https://octobercms.com/docs/cms/components#overriding-partials"&gt;docs&lt;/a&gt;
-it notes that you can override the partial that is used.&lt;/p&gt;</content></entry><entry><title>October CMS set preview post length</title><link href="https://blog.andrewelkins.com/october-cms-set-preview-post-length.html" rel="alternate"></link><published>2014-10-07T09:05:00-07:00</published><updated>2014-10-07T09:05:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-10-07:/october-cms-set-preview-post-length.html</id><summary type="html">&lt;p&gt;October CMS is a brilliant new developer focused CMS. It reminds me of
+it notes that you can override the partial that is used.&lt;/p&gt;</content></entry><entry><title>October CMS set preview post length</title><link href="https://www.andrewelkins.com/blog/october-cms-set-preview-post-length.html" rel="alternate"></link><published>2014-10-07T09:05:00-07:00</published><updated>2014-10-07T09:05:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-10-07:/blog/october-cms-set-preview-post-length.html</id><summary type="html">&lt;p&gt;October CMS is a brilliant new developer focused CMS. It reminds me of
 working on XenForo in it's ease of creating add-ons. A very nice system.&lt;/p&gt;
 &lt;p&gt;After configuring the blog I needed to limit the post except size for
 post that didn't have an except. This meant shrinking the normal …&lt;/p&gt;</summary><content type="html">&lt;p&gt;October CMS is a brilliant new developer focused CMS. It reminds me of
@@ -491,7 +491,7 @@ the code tab and click it.&lt;/p&gt;
 
 &lt;p&gt;Before is display it'll be parsed and limited. The code is a bit of code
 that I modified from SO. I'd link back but can't find the source thread
-anymore.&lt;/p&gt;</content></entry><entry><title>How to format hdfs in AWS Elastic Map Reduce</title><link href="https://blog.andrewelkins.com/how-to-format-hdfs-in-aws-elastic-map-reduce.html" rel="alternate"></link><published>2014-07-08T07:57:00-07:00</published><updated>2014-07-08T07:57:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-07-08:/how-to-format-hdfs-in-aws-elastic-map-reduce.html</id><summary type="html">&lt;p&gt;It's insanely simple. Connect to your master node within AWS Elastic Map
+anymore.&lt;/p&gt;</content></entry><entry><title>How to format hdfs in AWS Elastic Map Reduce</title><link href="https://www.andrewelkins.com/blog/how-to-format-hdfs-in-aws-elastic-map-reduce.html" rel="alternate"></link><published>2014-07-08T07:57:00-07:00</published><updated>2014-07-08T07:57:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-07-08:/blog/how-to-format-hdfs-in-aws-elastic-map-reduce.html</id><summary type="html">&lt;p&gt;It's insanely simple. Connect to your master node within AWS Elastic Map
 Reduce. Then you'll want to connect to the hadoop cluster and reset the
 NameNode file handlers.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hadoop namenode -format  
@@ -505,7 +505,7 @@ NameNode file handlers.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;That's it. That's how you format the hdfs file system.&lt;/p&gt;</content></entry><entry><title>How to use load data from s3 in to elastic map reduce</title><link href="https://blog.andrewelkins.com/how-to-use-load-data-from-s3-in-to-elastic-map-reduce.html" rel="alternate"></link><published>2014-05-14T17:48:00-07:00</published><updated>2014-05-14T17:48:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-05-14:/how-to-use-load-data-from-s3-in-to-elastic-map-reduce.html</id><summary type="html">&lt;p&gt;How to load data from s3 in to Amazon Elastic Map Reduce is fairly easy.
+&lt;p&gt;That's it. That's how you format the hdfs file system.&lt;/p&gt;</content></entry><entry><title>How to use load data from s3 in to elastic map reduce</title><link href="https://www.andrewelkins.com/blog/how-to-use-load-data-from-s3-in-to-elastic-map-reduce.html" rel="alternate"></link><published>2014-05-14T17:48:00-07:00</published><updated>2014-05-14T17:48:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-05-14:/blog/how-to-use-load-data-from-s3-in-to-elastic-map-reduce.html</id><summary type="html">&lt;p&gt;How to load data from s3 in to Amazon Elastic Map Reduce is fairly easy.
 The trick is to use s3n or s3 at the data source.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;A&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;LOAD&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;s3n://AWSKEY:AWSTOKEN@your-s3-bucket/file-name\*&amp;#39;&lt;/span&gt; &lt;span class="nt"&gt;as&lt;/span&gt;
 &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;col1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;chararray&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;col12&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;chararray&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;col3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;chararray&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;...&lt;/span&gt;&lt;span class="o"&gt;\&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;  
@@ -513,7 +513,7 @@ The trick is to use s3n or s3 at the data source.&lt;/p&gt;
 The trick is to use s3n or s3 at the data source.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;A&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;LOAD&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;s3n://AWSKEY:AWSTOKEN@your-s3-bucket/file-name\*&amp;#39;&lt;/span&gt; &lt;span class="nt"&gt;as&lt;/span&gt;
 &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;col1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;chararray&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;col12&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;chararray&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;col3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;chararray&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;...&lt;/span&gt;&lt;span class="o"&gt;\&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to watch nbc extra live on linux</title><link href="https://blog.andrewelkins.com/how-to-watch-nbc-extra-live-on-linux.html" rel="alternate"></link><published>2014-04-27T12:48:00-07:00</published><updated>2014-04-27T12:48:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-04-27:/how-to-watch-nbc-extra-live-on-linux.html</id><summary type="html">&lt;p&gt;How to watch nbc extra live on linux is simple. It just requires adding
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to watch nbc extra live on linux</title><link href="https://www.andrewelkins.com/blog/how-to-watch-nbc-extra-live-on-linux.html" rel="alternate"></link><published>2014-04-27T12:48:00-07:00</published><updated>2014-04-27T12:48:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-04-27:/blog/how-to-watch-nbc-extra-live-on-linux.html</id><summary type="html">&lt;p&gt;How to watch nbc extra live on linux is simple. It just requires adding
 a flash plugin.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt-get install adobe-flash  
 &lt;/pre&gt;&lt;/div&gt;
@@ -527,7 +527,7 @@ a flash plugin.&lt;/p&gt;
 
 
 &lt;p&gt;This can also be installed via the software manager. Just search for
-"flash".&lt;/p&gt;</content></entry><entry><title>How to do decrypt a pgp message</title><link href="https://blog.andrewelkins.com/how-to-do-decrypt-a-pgp-message.html" rel="alternate"></link><published>2014-04-25T08:59:00-07:00</published><updated>2014-04-25T08:59:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-04-25:/how-to-do-decrypt-a-pgp-message.html</id><summary type="html">&lt;p&gt;After sending my public pgp key and getting an encoded message back. I
+"flash".&lt;/p&gt;</content></entry><entry><title>How to do decrypt a pgp message</title><link href="https://www.andrewelkins.com/blog/how-to-do-decrypt-a-pgp-message.html" rel="alternate"></link><published>2014-04-25T08:59:00-07:00</published><updated>2014-04-25T08:59:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-04-25:/blog/how-to-do-decrypt-a-pgp-message.html</id><summary type="html">&lt;p&gt;After sending my public pgp key and getting an encoded message back. I
 need to decrypt a pgp message.&lt;/p&gt;
 &lt;p&gt;I made a pgp file by opening a text editor and saving it as
 "mypgpfile.pgp"&lt;/p&gt;
@@ -549,7 +549,7 @@ gpg - the command to encode/decode pgp on linux. Package may need to be
 installed.&lt;br&gt;
 -o - specifies the output file&lt;br&gt;
 output.txt - the output filename&lt;br&gt;
-mypgpfile.pgp - the input encoded message&lt;/p&gt;</content></entry><entry><title>How to create a PGP key on linux</title><link href="https://blog.andrewelkins.com/how-to-create-a-pgp-key-on-linux.html" rel="alternate"></link><published>2014-04-23T08:26:00-07:00</published><updated>2014-04-23T08:26:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-04-23:/how-to-create-a-pgp-key-on-linux.html</id><summary type="html">&lt;p&gt;First you'll want to create your key.&lt;/p&gt;
+mypgpfile.pgp - the input encoded message&lt;/p&gt;</content></entry><entry><title>How to create a PGP key on linux</title><link href="https://www.andrewelkins.com/blog/how-to-create-a-pgp-key-on-linux.html" rel="alternate"></link><published>2014-04-23T08:26:00-07:00</published><updated>2014-04-23T08:26:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-04-23:/blog/how-to-create-a-pgp-key-on-linux.html</id><summary type="html">&lt;p&gt;First you'll want to create your key.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gpg --gen-key  
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -573,7 +573,7 @@ mypgpfile.pgp - the input encoded message&lt;/p&gt;</content></entry><entry><tit
 
 &lt;p&gt;You can view your keys by using the list command.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gpg --list-keys  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to check number of mysql connections on linux</title><link href="https://blog.andrewelkins.com/how-to-check-number-of-mysql-connections-on-linux.html" rel="alternate"></link><published>2014-04-14T08:54:00-07:00</published><updated>2014-04-14T08:54:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-04-14:/how-to-check-number-of-mysql-connections-on-linux.html</id><summary type="html">&lt;p&gt;I needed to check how many mysql connections my application currently
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to check number of mysql connections on linux</title><link href="https://www.andrewelkins.com/blog/how-to-check-number-of-mysql-connections-on-linux.html" rel="alternate"></link><published>2014-04-14T08:54:00-07:00</published><updated>2014-04-14T08:54:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-04-14:/blog/how-to-check-number-of-mysql-connections-on-linux.html</id><summary type="html">&lt;p&gt;I needed to check how many mysql connections my application currently
 had. Not from the mysql side but from the application linux server. To
 do so I checked how many connections where on the mysql port (3306).&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;netstat -antp | grep :3306 | wc -l  
@@ -581,7 +581,7 @@ do so I checked how many connections where on the mysql port (3306).&lt;/p&gt;
 had. Not from the mysql side but from the application linux server. To
 do so I checked how many connections where on the mysql port (3306).&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;netstat -antp | grep :3306 | wc -l  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Asus boot usb</title><link href="https://blog.andrewelkins.com/asus-boot-usb.html" rel="alternate"></link><published>2014-04-10T09:50:00-07:00</published><updated>2014-04-10T09:50:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-04-10:/asus-boot-usb.html</id><summary type="html">&lt;p&gt;I needed to reinstall Lint Mint on my Asus Laptop. I couldn't figure out
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Asus boot usb</title><link href="https://www.andrewelkins.com/blog/asus-boot-usb.html" rel="alternate"></link><published>2014-04-10T09:50:00-07:00</published><updated>2014-04-10T09:50:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-04-10:/blog/asus-boot-usb.html</id><summary type="html">&lt;p&gt;I needed to reinstall Lint Mint on my Asus Laptop. I couldn't figure out
 how to boot to usb. Turns out it's a tricky procedure.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Have your USB drive plugged in&lt;/li&gt;
@@ -599,7 +599,7 @@ how to boot to usb. Turns out it's a tricky procedure.&lt;/p&gt;
 &lt;li&gt;Arrow over to the "Boot" tab. USB drive should be listed. Switch
     order if needed.&lt;/li&gt;
 &lt;li&gt;Press F10, choose "save &amp;amp; exit"&lt;/li&gt;
-&lt;/ul&gt;</content></entry><entry><title>How to run ghost in the background</title><link href="https://blog.andrewelkins.com/how-to-run-ghost-in-the-background.html" rel="alternate"></link><published>2014-04-03T17:21:00-07:00</published><updated>2014-04-03T17:21:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-04-03:/how-to-run-ghost-in-the-background.html</id><summary type="html">&lt;p&gt;For running ghost blog in the background manually, execute the following
+&lt;/ul&gt;</content></entry><entry><title>How to run ghost in the background</title><link href="https://www.andrewelkins.com/blog/how-to-run-ghost-in-the-background.html" rel="alternate"></link><published>2014-04-03T17:21:00-07:00</published><updated>2014-04-03T17:21:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-04-03:/blog/how-to-run-ghost-in-the-background.html</id><summary type="html">&lt;p&gt;For running ghost blog in the background manually, execute the following
 within your blog directory.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd /path/to/your/install/  
 nohup npm start &amp;amp;lt;/dev/null 1&amp;amp;gt;/path/to/your/install/logs/stdout.log
@@ -660,13 +660,13 @@ To check if Ghost is currently running type&lt;br&gt;
 :::forever list&lt;/p&gt;
 &lt;p&gt;Sources:&lt;br&gt;
 Supervisor information from &lt;a href="http://docs.ghost.org/installation/deploy/"&gt;ghost
-documentation&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>How to change a users shell to bash</title><link href="https://blog.andrewelkins.com/how-to-change-a-users-shell-to-bash.html" rel="alternate"></link><published>2014-03-29T20:42:00-07:00</published><updated>2014-03-29T20:42:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-03-29:/how-to-change-a-users-shell-to-bash.html</id><summary type="html">&lt;p&gt;How to change a user's shell to bash is a simple one liner. This is how
+documentation&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>How to change a users shell to bash</title><link href="https://www.andrewelkins.com/blog/how-to-change-a-users-shell-to-bash.html" rel="alternate"></link><published>2014-03-29T20:42:00-07:00</published><updated>2014-03-29T20:42:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-03-29:/blog/how-to-change-a-users-shell-to-bash.html</id><summary type="html">&lt;p&gt;How to change a user's shell to bash is a simple one liner. This is how
 you can do it in debian or ubuntu.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;chsh -s /bin/bash username  
 &lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;How to change a user's shell to bash is a simple one liner. This is how
 you can do it in debian or ubuntu.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;chsh -s /bin/bash username  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Add swap file in linux on debian</title><link href="https://blog.andrewelkins.com/add-swap-file-in-linux-on-debian.html" rel="alternate"></link><published>2014-03-11T09:02:00-07:00</published><updated>2014-03-11T09:02:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-03-11:/add-swap-file-in-linux-on-debian.html</id><summary type="html">&lt;p&gt;How to add a swap file to an existing file system is almost trivial.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Add swap file in linux on debian</title><link href="https://www.andrewelkins.com/blog/add-swap-file-in-linux-on-debian.html" rel="alternate"></link><published>2014-03-11T09:02:00-07:00</published><updated>2014-03-11T09:02:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-03-11:/blog/add-swap-file-in-linux-on-debian.html</id><summary type="html">&lt;p&gt;How to add a swap file to an existing file system is almost trivial.&lt;/p&gt;
 &lt;p&gt;First decide how big you want it. I choose 1GB w/ a 1GB RAM machine.&lt;/p&gt;
 &lt;p&gt;Second create the file.  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;dd if=/dev/zero of=/swapfile bs=1024 count=1048576  
@@ -703,7 +703,7 @@ you can do it in debian or ubuntu.&lt;/p&gt;
 
 &lt;p&gt;Save and verify output  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/swapfile none swap sw 0 0  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to mount an additional Elastic Block Store Linux</title><link href="https://blog.andrewelkins.com/how-to-mount-an-additional-elastic-block-store-linux.html" rel="alternate"></link><published>2014-03-10T10:58:00-07:00</published><updated>2014-03-10T10:58:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-03-10:/how-to-mount-an-additional-elastic-block-store-linux.html</id><summary type="html">&lt;p&gt;I needed to add an elastic block store to a Ubuntu Linux Server. I
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to mount an additional Elastic Block Store Linux</title><link href="https://www.andrewelkins.com/blog/how-to-mount-an-additional-elastic-block-store-linux.html" rel="alternate"></link><published>2014-03-10T10:58:00-07:00</published><updated>2014-03-10T10:58:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-03-10:/blog/how-to-mount-an-additional-elastic-block-store-linux.html</id><summary type="html">&lt;p&gt;I needed to add an elastic block store to a Ubuntu Linux Server. I
 created the instance from with the &lt;a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html"&gt;AWS admin
 console&lt;/a&gt;.
 What was missing was how to have the Ubuntu instance recognize it. Turns
@@ -775,7 +775,7 @@ Writing superblocks and filesystem accounting information: done
 &lt;p&gt;Now to mount it&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\$ mkdir /mnt/ebs-volume-1  
 \$ mount /dev/xvdf /mnt/ebs-volume-1/  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Install VirtualBox Guest Additions Command Line</title><link href="https://blog.andrewelkins.com/install-virtualbox-guest-additions-command-line.html" rel="alternate"></link><published>2014-03-08T13:46:00-08:00</published><updated>2014-03-08T13:46:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-03-08:/install-virtualbox-guest-additions-command-line.html</id><summary type="html">&lt;p&gt;I was digging around searching on how to install the VirtualBox Guest
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Install VirtualBox Guest Additions Command Line</title><link href="https://www.andrewelkins.com/blog/install-virtualbox-guest-additions-command-line.html" rel="alternate"></link><published>2014-03-08T13:46:00-08:00</published><updated>2014-03-08T13:46:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-03-08:/blog/install-virtualbox-guest-additions-command-line.html</id><summary type="html">&lt;p&gt;I was digging around searching on how to install the VirtualBox Guest
 additions without the GUI using the command line. Most of the tutorials
 out there were of no help. Either with bad or outdated information. I
 found one article on
@@ -814,7 +814,7 @@ cd /mnt
 
 &lt;p&gt;Visit the
 &lt;a href="http://xmodulo.com/2013/07/how-to-install-virtualbox-guest-additions-for-linux.html"&gt;Source&lt;/a&gt;
-for additional information and how to on other distros.&lt;/p&gt;</content></entry><entry><title>How to specify a different git port</title><link href="https://blog.andrewelkins.com/how-to-specify-a-different-git-port.html" rel="alternate"></link><published>2014-01-03T11:09:00-08:00</published><updated>2014-01-03T11:09:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2014-01-03:/how-to-specify-a-different-git-port.html</id><summary type="html">&lt;p&gt;I needed to figure out how to specify a different ssh port for git.
+for additional information and how to on other distros.&lt;/p&gt;</content></entry><entry><title>How to specify a different git port</title><link href="https://www.andrewelkins.com/blog/how-to-specify-a-different-git-port.html" rel="alternate"></link><published>2014-01-03T11:09:00-08:00</published><updated>2014-01-03T11:09:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2014-01-03:/blog/how-to-specify-a-different-git-port.html</id><summary type="html">&lt;p&gt;I needed to figure out how to specify a different ssh port for git.
 Turns out it's very easy.&lt;/p&gt;
 &lt;p&gt;Open up your ssh config file.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vim /home/your-user-name/.ssh/config  
@@ -843,7 +843,7 @@ Port 22222
 
 
 &lt;p&gt;Save the new config and try that git clone again. It should work this
-time.&lt;/p&gt;</content></entry><entry><title>Design and Implementation of a Flexible Application Architecture</title><link href="https://blog.andrewelkins.com/design-and-implementation-of-a-flexible-application-architecture.html" rel="alternate"></link><published>2013-12-11T11:20:00-08:00</published><updated>2013-12-11T11:20:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-12-11:/design-and-implementation-of-a-flexible-application-architecture.html</id><summary type="html">&lt;p&gt;Here's a link to the talk I gave at LAPHP meetup on creating a flexible
+time.&lt;/p&gt;</content></entry><entry><title>Design and Implementation of a Flexible Application Architecture</title><link href="https://www.andrewelkins.com/blog/design-and-implementation-of-a-flexible-application-architecture.html" rel="alternate"></link><published>2013-12-11T11:20:00-08:00</published><updated>2013-12-11T11:20:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-12-11:/blog/design-and-implementation-of-a-flexible-application-architecture.html</id><summary type="html">&lt;p&gt;Here's a link to the talk I gave at LAPHP meetup on creating a flexible
 application architecture using Laravel 4.&lt;/p&gt;
 &lt;p&gt;The talk was based around principles of a SOLID architecture. Then going
 through how it might be applied to a Laravel 4 application.&lt;/p&gt;
@@ -855,7 +855,7 @@ application architecture using Laravel 4.&lt;/p&gt;
 through how it might be applied to a Laravel 4 application.&lt;/p&gt;
 &lt;p&gt;&lt;iframe src="http://prezi.com/embed/mfcjjrngoi8h/?bgcolor=ffffff&amp;amp;lock_to_path=1&amp;amp;autoplay=0&amp;amp;autohide_ctrls=0&amp;amp;features=undefined&amp;amp;disabled_features=undefined" width="550" height="400" frameborder="0"&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://prezi.com/mfcjjrngoi8h/?utm_campaign=share&amp;amp;utm_medium=copy"&gt;Here's the
-talk&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Array list of all timezones</title><link href="https://blog.andrewelkins.com/array-list-of-all-timezones.html" rel="alternate"></link><published>2013-11-07T19:33:00-08:00</published><updated>2013-11-07T19:33:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-11-07:/array-list-of-all-timezones.html</id><summary type="html">&lt;p&gt;I needed an array of all the timezones so I could insert it in to a
+talk&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Array list of all timezones</title><link href="https://www.andrewelkins.com/blog/array-list-of-all-timezones.html" rel="alternate"></link><published>2013-11-07T19:33:00-08:00</published><updated>2013-11-07T19:33:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-11-07:/blog/array-list-of-all-timezones.html</id><summary type="html">&lt;p&gt;I needed an array of all the timezones so I could insert it in to a
 database seeder. So I created one off a list from
 &lt;a href="http://en.wikipedia.org/wiki/List_of_time_zone_abbreviations"&gt;wikipedia&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\$timezones = array(  
@@ -1241,7 +1241,7 @@ array(&amp;#39;abbr&amp;#39;=&amp;amp;gt;&amp;#39;TKT&amp;#39;, &amp;#39;name&am
 &lt;p&gt;Excel:
 &lt;a href="http://andrewelkins.com/wp-content/uploads/2013/11/Timezone.xlsx"&gt;(Download)&lt;/a&gt;&lt;br&gt;
 TXT Flat File:
-&lt;a href="http://andrewelkins.com/wp-content/uploads/2013/11/timezones.txt"&gt;(Download)&lt;/a&gt;&lt;/p&gt;</content><category term="array"></category><category term="laravel"></category><category term="php"></category><category term="timezones"></category></entry><entry><title>How to install Tomcat7 on Linux Mint</title><link href="https://blog.andrewelkins.com/how-to-install-tomcat7-on-linux-mint.html" rel="alternate"></link><published>2013-10-24T17:36:00-07:00</published><updated>2013-10-24T17:36:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-10-24:/how-to-install-tomcat7-on-linux-mint.html</id><summary type="html">&lt;p&gt;How to install tomcat7 on linux mint is simple.&lt;/p&gt;
+&lt;a href="http://andrewelkins.com/wp-content/uploads/2013/11/timezones.txt"&gt;(Download)&lt;/a&gt;&lt;/p&gt;</content><category term="array"></category><category term="laravel"></category><category term="php"></category><category term="timezones"></category></entry><entry><title>How to install Tomcat7 on Linux Mint</title><link href="https://www.andrewelkins.com/blog/how-to-install-tomcat7-on-linux-mint.html" rel="alternate"></link><published>2013-10-24T17:36:00-07:00</published><updated>2013-10-24T17:36:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-10-24:/blog/how-to-install-tomcat7-on-linux-mint.html</id><summary type="html">&lt;p&gt;How to install tomcat7 on linux mint is simple.&lt;/p&gt;
 &lt;p&gt;Run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install tomcat7 tomcat7-admin tomcat7-common  
 &lt;/pre&gt;&lt;/div&gt;
@@ -1289,7 +1289,7 @@ roles=&amp;quot;manager-gui,admin-gui,manager,admin,manager-script,admin-script&
 
 &lt;p&gt;Then restart tomcat&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo service tomcat7 restart  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Nagios ping fails</title><link href="https://blog.andrewelkins.com/nagios-ping-fails.html" rel="alternate"></link><published>2013-08-28T07:59:00-07:00</published><updated>2013-08-28T07:59:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-08-28:/nagios-ping-fails.html</id><summary type="html">&lt;p&gt;I recently setup NagiosXI with their provided amazon ami. It was very
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Nagios ping fails</title><link href="https://www.andrewelkins.com/blog/nagios-ping-fails.html" rel="alternate"></link><published>2013-08-28T07:59:00-07:00</published><updated>2013-08-28T07:59:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-08-28:/blog/nagios-ping-fails.html</id><summary type="html">&lt;p&gt;I recently setup NagiosXI with their provided amazon ami. It was very
 simple to setup and everything looked good. Added a couple servers and
 they all could not be pinged from Nagios. I couldn't ping them from
 Nagios' ping tool. I could ping them from the command line so I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I recently setup NagiosXI with their provided amazon ami. It was very
@@ -1322,7 +1322,7 @@ command\_line \$USER1\$/check\_ping -4 -H \$HOSTADDRESS\$ -w \$ARG1\$ -c
 
 &lt;p&gt;Then you'll need to restart Nagios.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\$ sudo service nagios restart  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Error starting Tomcat7 “no JDK found – please set JAVA_HOME”</title><link href="https://blog.andrewelkins.com/error-starting-tomcat7-no-jdk-found-please-set-java_home.html" rel="alternate"></link><published>2013-08-26T17:30:00-07:00</published><updated>2013-08-26T17:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-08-26:/error-starting-tomcat7-no-jdk-found-please-set-java_home.html</id><summary type="html">&lt;p&gt;After I had set JAVA_HOME in the /etc/profile&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Error starting Tomcat7 “no JDK found – please set JAVA_HOME”</title><link href="https://www.andrewelkins.com/blog/error-starting-tomcat7-no-jdk-found-please-set-java_home.html" rel="alternate"></link><published>2013-08-26T17:30:00-07:00</published><updated>2013-08-26T17:30:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-08-26:/blog/error-starting-tomcat7-no-jdk-found-please-set-java_home.html</id><summary type="html">&lt;p&gt;After I had set JAVA_HOME in the /etc/profile&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;export JAVA\_HOME=/usr/lib/jvm/java-7-oracle/bin/java  
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -1357,7 +1357,7 @@ for
 JAVA\_HOME=/usr/lib/jvm/java-7-oracle
 
 ...  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to install java 7 on debian</title><link href="https://blog.andrewelkins.com/how-to-install-java-7-on-debian-oracle-sucks.html" rel="alternate"></link><published>2013-08-26T16:55:00-07:00</published><updated>2013-08-26T16:55:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-08-26:/how-to-install-java-7-on-debian-oracle-sucks.html</id><summary type="html">&lt;p&gt;HOW TO INSTALL JAVA 7 ON DEBIAN 7&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>How to install java 7 on debian</title><link href="https://www.andrewelkins.com/blog/how-to-install-java-7-on-debian-oracle-sucks.html" rel="alternate"></link><published>2013-08-26T16:55:00-07:00</published><updated>2013-08-26T16:55:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-08-26:/blog/how-to-install-java-7-on-debian-oracle-sucks.html</id><summary type="html">&lt;p&gt;HOW TO INSTALL JAVA 7 ON DEBIAN 7&lt;/p&gt;
 &lt;p&gt;Debian is my distro of choice for servers, but due to licencing issues
 it cannot provide Oracle Java 7+ in the repos. Personally Oracle needs
 to undo their restrictive licensing on a VERY popular language.&lt;/p&gt;
@@ -1401,7 +1401,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 23.7-b01, mixed mode)
 &lt;a href="http://blog.retep.org/2013/04/13/installing-java-7-on-debian-squeeze/"&gt;blog&lt;/a&gt;
 that had this information originally. Please visit them and give them a
 little link juice.
-&lt;a href="http://blog.retep.org/2013/04/13/installing-java-7-on-debian-squeeze/"&gt;SOURCE&lt;/a&gt;&lt;/p&gt;</content><category term="java"></category><category term="nginx"></category><category term="server"></category></entry><entry><title>How to install cacti on Debian 7</title><link href="https://blog.andrewelkins.com/how-to-install-cacti-on-debian-7.html" rel="alternate"></link><published>2013-07-30T10:10:00-07:00</published><updated>2013-07-30T10:10:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-07-30:/how-to-install-cacti-on-debian-7.html</id><summary type="html">&lt;p&gt;Installing cacti on Debian 7 is very easy.&lt;/p&gt;
+&lt;a href="http://blog.retep.org/2013/04/13/installing-java-7-on-debian-squeeze/"&gt;SOURCE&lt;/a&gt;&lt;/p&gt;</content><category term="java"></category><category term="nginx"></category><category term="server"></category></entry><entry><title>How to install cacti on Debian 7</title><link href="https://www.andrewelkins.com/blog/how-to-install-cacti-on-debian-7.html" rel="alternate"></link><published>2013-07-30T10:10:00-07:00</published><updated>2013-07-30T10:10:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-07-30:/blog/how-to-install-cacti-on-debian-7.html</id><summary type="html">&lt;p&gt;Installing cacti on Debian 7 is very easy.&lt;/p&gt;
 &lt;p&gt;Issue an apt-get install cacti&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt-get install cacti  
 &lt;/pre&gt;&lt;/div&gt;
@@ -1423,7 +1423,7 @@ It will …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Installing cacti on
 &lt;p&gt;Then go to http://localhost/cacti&lt;/p&gt;
 &lt;p&gt;Click next and confirm a few options.&lt;/p&gt;
 &lt;p&gt;Login with admin/admin&lt;br&gt;
-It will then ask you to change the default password.&lt;/p&gt;</content></entry><entry><title>Install Jenkins on Debian 7</title><link href="https://blog.andrewelkins.com/install-jenkins-on-debian-7.html" rel="alternate"></link><published>2013-07-29T21:42:00-07:00</published><updated>2013-07-29T21:42:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-07-29:/install-jenkins-on-debian-7.html</id><summary type="html">&lt;p&gt;Here's how I installed Jenkins on Debian 7.  &lt;/p&gt;
+It will then ask you to change the default password.&lt;/p&gt;</content></entry><entry><title>Install Jenkins on Debian 7</title><link href="https://www.andrewelkins.com/blog/install-jenkins-on-debian-7.html" rel="alternate"></link><published>2013-07-29T21:42:00-07:00</published><updated>2013-07-29T21:42:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-07-29:/blog/install-jenkins-on-debian-7.html</id><summary type="html">&lt;p&gt;Here's how I installed Jenkins on Debian 7.  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;wget&lt;/span&gt; &lt;span class="nt"&gt;-q&lt;/span&gt; &lt;span class="nt"&gt;-O&lt;/span&gt; &lt;span class="nt"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;http&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="nt"&gt;pkg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;jenkins-ci&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;debian&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;jenkins-ci&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;org&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;key&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;
 &lt;span class="nt"&gt;sudo&lt;/span&gt; &lt;span class="nt"&gt;apt-key&lt;/span&gt; &lt;span class="nt"&gt;add&lt;/span&gt; &lt;span class="nt"&gt;-&lt;/span&gt;  
 &lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;sudo&lt;/span&gt; &lt;span class="nt"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;deb http://pkg.jenkins-ci.org/debian binary/&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;gt&lt;/span&gt;&lt;span class="o"&gt;;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;gt&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
@@ -1437,7 +1437,7 @@ It will then ask you to change the default password.&lt;/p&gt;</content></entry>
 &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;sources&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;list&lt;/span&gt;  
 &lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;sudo&lt;/span&gt; &lt;span class="nt"&gt;apt-get&lt;/span&gt; &lt;span class="nt"&gt;update&lt;/span&gt;  
 &lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt; &lt;span class="nt"&gt;sudo&lt;/span&gt; &lt;span class="nt"&gt;apt-get&lt;/span&gt; &lt;span class="nt"&gt;install&lt;/span&gt; &lt;span class="nt"&gt;jenkins&lt;/span&gt;  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>BaseRepositoryInterface Base Eloquent Repository</title><link href="https://blog.andrewelkins.com/baserepositoryinterface.html" rel="alternate"></link><published>2013-07-04T10:54:00-07:00</published><updated>2013-07-04T10:54:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-07-04:/baserepositoryinterface.html</id><summary type="html">&lt;p&gt;Here's a base Eloquent Repository.  &lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>BaseRepositoryInterface Base Eloquent Repository</title><link href="https://www.andrewelkins.com/blog/baserepositoryinterface.html" rel="alternate"></link><published>2013-07-04T10:54:00-07:00</published><updated>2013-07-04T10:54:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-07-04:/blog/baserepositoryinterface.html</id><summary type="html">&lt;p&gt;Here's a base Eloquent Repository.  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;interface&lt;/span&gt; &lt;span class="nx"&gt;BaseRepositoryInterface&lt;/span&gt;  
 &lt;span class="p"&gt;{&lt;/span&gt;  
 &lt;span class="err"&gt;/\*\*  &lt;/span&gt;
@@ -2221,7 +2221,7 @@ It will then ask you to change the default password.&lt;/p&gt;</content></entry>
 &lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="err"&gt;/  &lt;/span&gt;
 &lt;span class="kr"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;getGrammar&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;  
 &lt;span class="p"&gt;}&lt;/span&gt;  
-&lt;/pre&gt;&lt;/div&gt;</content><category term="laravel"></category></entry><entry><title>Depends: libssl0.9.8 (&gt;= 0.9.8m-1) but it is not installable</title><link href="https://blog.andrewelkins.com/depends-libssl0-9-8-0-9-8m-1-but-it-is-not-installable.html" rel="alternate"></link><published>2013-07-03T08:48:00-07:00</published><updated>2013-07-03T08:48:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-07-03:/depends-libssl0-9-8-0-9-8m-1-but-it-is-not-installable.html</id><summary type="html">&lt;p&gt;I was setting up a webserver on Debian 7 but ran in to a dependency
+&lt;/pre&gt;&lt;/div&gt;</content><category term="laravel"></category></entry><entry><title>Depends: libssl0.9.8 (&gt;= 0.9.8m-1) but it is not installable</title><link href="https://www.andrewelkins.com/blog/depends-libssl0-9-8-0-9-8m-1-but-it-is-not-installable.html" rel="alternate"></link><published>2013-07-03T08:48:00-07:00</published><updated>2013-07-03T08:48:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-07-03:/blog/depends-libssl0-9-8-0-9-8m-1-but-it-is-not-installable.html</id><summary type="html">&lt;p&gt;I was setting up a webserver on Debian 7 but ran in to a dependency
 issue for nginx. It said I needed libssl0.9.8. Well I had libssl1.0.x
 which left me wondering was it in compatible. Yes it is. I needed to
 download the deb and install …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was setting up a webserver on Debian 7 but ran in to a dependency
@@ -2256,7 +2256,7 @@ http://snapshot.debian.org/archive/debian/20110406T213352Z/pool/main/o/openssl09
 
 &lt;p&gt;Then install it.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo dpkg -i libssl0.9.8\_0.9.8o-7\_i386.deb  
-&lt;/pre&gt;&lt;/div&gt;</content><category term="debian"></category><category term="server"></category></entry><entry><title>How to checkout a remote branch in git</title><link href="https://blog.andrewelkins.com/how-to-checkout-a-remote-branch-in-git.html" rel="alternate"></link><published>2013-07-02T07:58:00-07:00</published><updated>2013-07-02T07:58:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-07-02:/how-to-checkout-a-remote-branch-in-git.html</id><summary type="html">&lt;p&gt;In order to avoid conflicts when checking out a branch from a remote
+&lt;/pre&gt;&lt;/div&gt;</content><category term="debian"></category><category term="server"></category></entry><entry><title>How to checkout a remote branch in git</title><link href="https://www.andrewelkins.com/blog/how-to-checkout-a-remote-branch-in-git.html" rel="alternate"></link><published>2013-07-02T07:58:00-07:00</published><updated>2013-07-02T07:58:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-07-02:/blog/how-to-checkout-a-remote-branch-in-git.html</id><summary type="html">&lt;p&gt;In order to avoid conflicts when checking out a branch from a remote
 repo you need to check it out directly.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git fetch origin  
 git branch -f remote\_branch\_name origin/remote\_branch\_name  
@@ -2280,7 +2280,7 @@ git checkout remote\_branch name
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Simple.&lt;/p&gt;</content></entry><entry><title>How to get laravel database prefix</title><link href="https://blog.andrewelkins.com/how-to-get-laravel-database-prefix.html" rel="alternate"></link><published>2013-06-14T12:39:00-07:00</published><updated>2013-06-14T12:39:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-06-14:/how-to-get-laravel-database-prefix.html</id><summary type="html">&lt;p&gt;I needed to get the db prefix for a raw insert query I was running. It's
+&lt;p&gt;Simple.&lt;/p&gt;</content></entry><entry><title>How to get laravel database prefix</title><link href="https://www.andrewelkins.com/blog/how-to-get-laravel-database-prefix.html" rel="alternate"></link><published>2013-06-14T12:39:00-07:00</published><updated>2013-06-14T12:39:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-06-14:/blog/how-to-get-laravel-database-prefix.html</id><summary type="html">&lt;p&gt;I needed to get the db prefix for a raw insert query I was running. It's
 an easy function call to get the current database prefix.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;DB&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="nd"&gt;getTablePrefix&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -2294,13 +2294,13 @@ an easy function call to get the current database prefix.&lt;/p&gt;
 
 
 &lt;p&gt;Will output the prefix for the current database. This will work in
-laravel 4.&lt;/p&gt;</content><category term="db"></category><category term="laravel"></category><category term="php"></category><category term="prefix"></category></entry><entry><title>How to get the base directory of a laravel 4 installation.</title><link href="https://blog.andrewelkins.com/how-to-get-the-base-directory-of-a-laravel-4-installation.html" rel="alternate"></link><published>2013-06-01T17:33:00-07:00</published><updated>2013-06-01T17:33:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-06-01:/how-to-get-the-base-directory-of-a-laravel-4-installation.html</id><summary type="html">&lt;p&gt;In order to get the base directory of a laravel 4 install you'll just
+laravel 4.&lt;/p&gt;</content><category term="db"></category><category term="laravel"></category><category term="php"></category><category term="prefix"></category></entry><entry><title>How to get the base directory of a laravel 4 installation.</title><link href="https://www.andrewelkins.com/blog/how-to-get-the-base-directory-of-a-laravel-4-installation.html" rel="alternate"></link><published>2013-06-01T17:33:00-07:00</published><updated>2013-06-01T17:33:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-06-01:/blog/how-to-get-the-base-directory-of-a-laravel-4-installation.html</id><summary type="html">&lt;p&gt;In order to get the base directory of a laravel 4 install you'll just
 need to do one command. It's fairly simple.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;app()-&amp;amp;gt;make(&amp;#39;path.base&amp;#39;)
 &lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;In order to get the base directory of a laravel 4 install you'll just
 need to do one command. It's fairly simple.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;app()-&amp;amp;gt;make(&amp;#39;path.base&amp;#39;)
-&lt;/pre&gt;&lt;/div&gt;</content><category term="laravel"></category></entry><entry><title>How to get logitech m705 working in linux mint</title><link href="https://blog.andrewelkins.com/how-to-get-logitech-m705-working-in-linux-mint.html" rel="alternate"></link><published>2013-05-28T17:29:00-07:00</published><updated>2013-05-28T17:29:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-05-28:/how-to-get-logitech-m705-working-in-linux-mint.html</id><summary type="html">&lt;p&gt;I am using a new laptop, ASUS Zenbook, running linux mint cinnamon. My
+&lt;/pre&gt;&lt;/div&gt;</content><category term="laravel"></category></entry><entry><title>How to get logitech m705 working in linux mint</title><link href="https://www.andrewelkins.com/blog/how-to-get-logitech-m705-working-in-linux-mint.html" rel="alternate"></link><published>2013-05-28T17:29:00-07:00</published><updated>2013-05-28T17:29:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-05-28:/blog/how-to-get-logitech-m705-working-in-linux-mint.html</id><summary type="html">&lt;p&gt;I am using a new laptop, ASUS Zenbook, running linux mint cinnamon. My
 preferred mouse is a logitech m705 for use on the go. I needed to get it
 working since it wasn't out of the box. There's several ways to get the
 unifying receiver working. The easiest for me …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am using a new laptop, ASUS Zenbook, running linux mint cinnamon. My
@@ -2322,7 +2322,7 @@ cd logitech\_unifier-master
 
 
 &lt;p&gt;Then followed the prompts, turned it on and it worked. Much simpler than
-the other options I considered.&lt;/p&gt;</content></entry><entry><title>Find the collation of all tables within a mysql database</title><link href="https://blog.andrewelkins.com/find-the-collation-all-tables-mysql.html" rel="alternate"></link><published>2013-04-29T10:32:00-07:00</published><updated>2013-04-29T10:32:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-04-29:/find-the-collation-all-tables-mysql.html</id><summary type="html">&lt;p&gt;Needing to find a collation of a mysql database for a migration I went
+the other options I considered.&lt;/p&gt;</content></entry><entry><title>Find the collation of all tables within a mysql database</title><link href="https://www.andrewelkins.com/blog/find-the-collation-all-tables-mysql.html" rel="alternate"></link><published>2013-04-29T10:32:00-07:00</published><updated>2013-04-29T10:32:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-04-29:/blog/find-the-collation-all-tables-mysql.html</id><summary type="html">&lt;p&gt;Needing to find a collation of a mysql database for a migration I went
 to google. Found several options, but the best was one from &lt;a href="http://stackoverflow.com/questions/4948356/query-to-show-all-tables-and-their-collation"&gt;stack
 overflow&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;SELECT TABLE\_CATALOG, TABLE\_SCHEMA, TABLE\_NAME, COLUMN\_NAME,
@@ -2442,7 +2442,7 @@ case, it is utf8_general_ci.&lt;/p&gt;
 &lt;p&gt;Then the second part shows the collation per column with each table
 within the database. In this case they are all the same as the default.
 However, it should be noted that this isn't always the case. It can be
-different then the default.&lt;/p&gt;</content></entry><entry><title>How to find mysql variables with a query, specifically data directory</title><link href="https://blog.andrewelkins.com/how-to-find-mysql-variables-with-a-query-data-directory.html" rel="alternate"></link><published>2013-04-28T13:34:00-07:00</published><updated>2013-04-28T13:34:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-04-28:/how-to-find-mysql-variables-with-a-query-data-directory.html</id><summary type="html">&lt;p&gt;I needed to find out the data directory for mysql. A quick way to do
+different then the default.&lt;/p&gt;</content></entry><entry><title>How to find mysql variables with a query, specifically data directory</title><link href="https://www.andrewelkins.com/blog/how-to-find-mysql-variables-with-a-query-data-directory.html" rel="alternate"></link><published>2013-04-28T13:34:00-07:00</published><updated>2013-04-28T13:34:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-04-28:/blog/how-to-find-mysql-variables-with-a-query-data-directory.html</id><summary type="html">&lt;p&gt;I needed to find out the data directory for mysql. A quick way to do
 this within mysql is to use the &lt;em&gt;show variables&lt;/em&gt; command.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mysql&amp;amp;gt; show variables;
 &lt;/pre&gt;&lt;/div&gt;
@@ -2511,7 +2511,7 @@ this within mysql is to use the &lt;em&gt;show variables&lt;/em&gt; command.&lt
 
 
 &lt;p&gt;You'll see on this development server the data directory was
-in &lt;em&gt;/var/lib/mysql/&lt;/em&gt;&lt;/p&gt;</content></entry><entry><title>Laravel 4 release date</title><link href="https://blog.andrewelkins.com/laravel-4-release-date.html" rel="alternate"></link><published>2013-04-25T21:59:00-07:00</published><updated>2013-04-25T21:59:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-04-25:/laravel-4-release-date.html</id><summary type="html">&lt;h3&gt;When will Laravel 4 be released?&lt;/h3&gt;
+in &lt;em&gt;/var/lib/mysql/&lt;/em&gt;&lt;/p&gt;</content></entry><entry><title>Laravel 4 release date</title><link href="https://www.andrewelkins.com/blog/laravel-4-release-date.html" rel="alternate"></link><published>2013-04-25T21:59:00-07:00</published><updated>2013-04-25T21:59:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-04-25:/blog/laravel-4-release-date.html</id><summary type="html">&lt;h3&gt;When will Laravel 4 be released?&lt;/h3&gt;
 &lt;p&gt;Per Taylor's announcement at Laracon it will be released in May of 2013.
 Further on the &lt;a href="http://wiki.laravel.io/Laravel_4"&gt;wiki&lt;/a&gt; there is a time
 table for the next 4 releases.&lt;/p&gt;
@@ -2529,7 +2529,7 @@ Laravel 4 today. In fact, if you need a start in Laravel 4, check out
 the&lt;a href="https://github.com/andrew13/Laravel-4-Bootstrap-Starter-Site"&gt;starter site on
 github&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;*Update*&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Release date is May 27th 2013!&lt;/p&gt;</content></entry><entry><title>How to specify specific engine in Laravel 4 migration</title><link href="https://blog.andrewelkins.com/how-to-specify-specific-engine-in-laravel-4-migration.html" rel="alternate"></link><published>2013-04-24T20:54:00-07:00</published><updated>2013-04-24T20:54:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-04-24:/how-to-specify-specific-engine-in-laravel-4-migration.html</id><summary type="html">&lt;p&gt;Earlier today I needed to set up a specific database engine for a mysql
+&lt;p&gt;Release date is May 27th 2013!&lt;/p&gt;</content></entry><entry><title>How to specify specific engine in Laravel 4 migration</title><link href="https://www.andrewelkins.com/blog/how-to-specify-specific-engine-in-laravel-4-migration.html" rel="alternate"></link><published>2013-04-24T20:54:00-07:00</published><updated>2013-04-24T20:54:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-04-24:/blog/how-to-specify-specific-engine-in-laravel-4-migration.html</id><summary type="html">&lt;p&gt;Earlier today I needed to set up a specific database engine for a mysql
 table that wasn't the databases's default. In this instance, the default
 was INNODB and I needed it to be MyISAM. We could discuss the reasons
 why I shouldn't use MyISAM but in this instance that's what …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Earlier today I needed to set up a specific database engine for a mysql
@@ -2601,7 +2601,7 @@ Schema::create(&amp;#39;posts&amp;#39;, function(\$table)
 \$table-&amp;amp;gt;timestamps();  
 });  
 }  
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Using xargs to parallel a process in the command line</title><link href="https://blog.andrewelkins.com/using-xargs-to-parallel-a-process-in-the-command-line.html" rel="alternate"></link><published>2013-04-15T09:38:00-07:00</published><updated>2013-04-15T09:38:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-04-15:/using-xargs-to-parallel-a-process-in-the-command-line.html</id><summary type="html">&lt;p&gt;Most of us have multiple CPUs in our personal machines. I would also
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Using xargs to parallel a process in the command line</title><link href="https://www.andrewelkins.com/blog/using-xargs-to-parallel-a-process-in-the-command-line.html" rel="alternate"></link><published>2013-04-15T09:38:00-07:00</published><updated>2013-04-15T09:38:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-04-15:/blog/using-xargs-to-parallel-a-process-in-the-command-line.html</id><summary type="html">&lt;p&gt;Most of us have multiple CPUs in our personal machines. I would also
 hope that your servers do too. If you're running an intensive command
 line process, running them in parallel will speed it up by paralleling
 the process.&lt;/p&gt;
@@ -2618,7 +2618,7 @@ though. Here's an example:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://blog.labrat.info/20100429/using-xargs-to-do-parallel-processing/"&gt;Read more on
 xargs&lt;/a&gt;&lt;br&gt;
-and &lt;a href="http://sidvind.com/wiki/Xargs_by_example"&gt;even more examples&lt;/a&gt;&lt;/p&gt;</content><category term="cli"></category><category term="grep"></category><category term="parallel"></category><category term="xargs"></category></entry><entry><title>Under PHP's Hood</title><link href="https://blog.andrewelkins.com/under-phps-hood.html" rel="alternate"></link><published>2013-04-10T11:46:00-07:00</published><updated>2013-04-10T11:46:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-04-10:/under-phps-hood.html</id><summary type="html">&lt;p&gt;Recently watched/listened to Sebastian Bergmann presentation on
+and &lt;a href="http://sidvind.com/wiki/Xargs_by_example"&gt;even more examples&lt;/a&gt;&lt;/p&gt;</content><category term="cli"></category><category term="grep"></category><category term="parallel"></category><category term="xargs"></category></entry><entry><title>Under PHP's Hood</title><link href="https://www.andrewelkins.com/blog/under-phps-hood.html" rel="alternate"></link><published>2013-04-10T11:46:00-07:00</published><updated>2013-04-10T11:46:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-04-10:/blog/under-phps-hood.html</id><summary type="html">&lt;p&gt;Recently watched/listened to Sebastian Bergmann presentation on
 PHP interpreter. Very useful way to brush up on how php processes a
 request.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://techportal.inviqa.com/?powerpress_pinw=1439-podcast"&gt;Audio&lt;/a&gt; From
@@ -2638,7 +2638,7 @@ request.&lt;/p&gt;
 Internals&lt;/a&gt;
 by
 &lt;a href="http://www.scribd.com/kaplumb_aga" title="View kaplumb_aga's profile on Scribd"&gt;kaplumb_aga&lt;/a&gt;&lt;/p&gt;
-&lt;iframe class="scribd_iframe_embed" src="http://www.scribd.com/embeds/18171982/content?start_page=1&amp;amp;view_mode=scroll&amp;amp;access_key=key-23i6tufb87wwqnn30z7s" data-auto-height="false" data-aspect-ratio="1.33333333333333" scrolling="no" id="doc_30924" width="100%" height="600" frameborder="0"&gt;&lt;/iframe&gt;</content></entry><entry><title>Awesome vim setup</title><link href="https://blog.andrewelkins.com/awesome-vim-setup.html" rel="alternate"></link><published>2013-03-25T20:04:00-07:00</published><updated>2013-03-25T20:04:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-03-25:/awesome-vim-setup.html</id><summary type="html">&lt;p&gt;Among the editors and IDEs that I use the old stand by vim is always
+&lt;iframe class="scribd_iframe_embed" src="http://www.scribd.com/embeds/18171982/content?start_page=1&amp;amp;view_mode=scroll&amp;amp;access_key=key-23i6tufb87wwqnn30z7s" data-auto-height="false" data-aspect-ratio="1.33333333333333" scrolling="no" id="doc_30924" width="100%" height="600" frameborder="0"&gt;&lt;/iframe&gt;</content></entry><entry><title>Awesome vim setup</title><link href="https://www.andrewelkins.com/blog/awesome-vim-setup.html" rel="alternate"></link><published>2013-03-25T20:04:00-07:00</published><updated>2013-03-25T20:04:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-03-25:/blog/awesome-vim-setup.html</id><summary type="html">&lt;p&gt;Among the editors and IDEs that I use the old stand by vim is always
 there. It's literally the first thing I install on a server. One of the
 great features of vim is the vast plugin library. This becomes even
 better when someone wraps a lot of the extremely …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Among the editors and IDEs that I use the old stand by vim is always
@@ -2652,7 +2652,7 @@ Francia&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 know I loved until I installed this package.&lt;/p&gt;
 &lt;p&gt;This is an awesome vim setup!&lt;/p&gt;
 &lt;p&gt;One word of warning vim needs to be 7.4+ for the plugins installed with
-the installer to work.&lt;/p&gt;</content></entry><entry><title>Rsync over ssh between remote servers</title><link href="https://blog.andrewelkins.com/rsync-over-ssh-between-remote-servers.html" rel="alternate"></link><published>2013-03-20T18:18:00-07:00</published><updated>2013-03-20T18:18:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-03-20:/rsync-over-ssh-between-remote-servers.html</id><summary type="html">&lt;p&gt;In order to use rsync with a ssh key I used the -e flag on the rsync
+the installer to work.&lt;/p&gt;</content></entry><entry><title>Rsync over ssh between remote servers</title><link href="https://www.andrewelkins.com/blog/rsync-over-ssh-between-remote-servers.html" rel="alternate"></link><published>2013-03-20T18:18:00-07:00</published><updated>2013-03-20T18:18:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-03-20:/blog/rsync-over-ssh-between-remote-servers.html</id><summary type="html">&lt;p&gt;In order to use rsync with a ssh key I used the -e flag on the rsync
 command. It will allow rsync over ssh local to a remote server.&lt;/p&gt;
 &lt;p&gt;[ps]&lt;/p&gt;
 &lt;p&gt;[\$ \~] rsync -avz -e "ssh -i .ssh/id_key.pem" /opt/stuff/here/
@@ -2662,7 +2662,7 @@ command. It will allow rsync over ssh local to a remote server.&lt;/p&gt;
 &lt;p&gt;[ps]&lt;/p&gt;
 &lt;p&gt;[\$ \~] rsync -avz -e "ssh -i .ssh/id_key.pem" /opt/stuff/here/
 user@10.0.0.1:/opt/stuff/here/&lt;/p&gt;
-&lt;p&gt;[/ps]&lt;/p&gt;</content></entry><entry><title>How to set Laravel 4 environments</title><link href="https://blog.andrewelkins.com/how-to-set-laravel-4-environments.html" rel="alternate"></link><published>2013-03-17T20:35:00-07:00</published><updated>2013-03-17T20:35:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-03-17:/how-to-set-laravel-4-environments.html</id><summary type="html">&lt;p&gt;The environment is based on url matches.&lt;/p&gt;
+&lt;p&gt;[/ps]&lt;/p&gt;</content></entry><entry><title>How to set Laravel 4 environments</title><link href="https://www.andrewelkins.com/blog/how-to-set-laravel-4-environments.html" rel="alternate"></link><published>2013-03-17T20:35:00-07:00</published><updated>2013-03-17T20:35:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-03-17:/blog/how-to-set-laravel-4-environments.html</id><summary type="html">&lt;p&gt;The environment is based on url matches.&lt;/p&gt;
 &lt;p&gt;You'll find that configuration in /bootstrap/start.php&lt;/p&gt;
 &lt;p&gt;[ps]&lt;br&gt;
 \$env = \$app-&amp;gt;detectEnvironment(array(&lt;/p&gt;
@@ -2697,7 +2697,7 @@ Just copy the database config file in to the local directory and modify
 it.&lt;/p&gt;
 &lt;p&gt;[ps]&lt;br&gt;
 cp app/config/database.php app/config/local/database.php&lt;br&gt;
-[/ps]&lt;/p&gt;</content><category term="laravel"></category></entry><entry><title>Why I don't use AppFog</title><link href="https://blog.andrewelkins.com/why-i-dont-use-appfog.html" rel="alternate"></link><published>2013-03-15T20:31:00-07:00</published><updated>2013-03-15T20:31:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-03-15:/why-i-dont-use-appfog.html</id><summary type="html">&lt;p&gt;Simple no persistant storage. Starting up, setting up, etc are all
+[/ps]&lt;/p&gt;</content><category term="laravel"></category></entry><entry><title>Why I don't use AppFog</title><link href="https://www.andrewelkins.com/blog/why-i-dont-use-appfog.html" rel="alternate"></link><published>2013-03-15T20:31:00-07:00</published><updated>2013-03-15T20:31:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-03-15:/blog/why-i-dont-use-appfog.html</id><summary type="html">&lt;p&gt;Simple no persistant storage. Starting up, setting up, etc are all
 great, but without persistance storage I'm forced to use S3 or the like.
 If I'm doing a very simple app or a WordPress install it's not worth the
 effort.&lt;/p&gt;
@@ -2714,7 +2714,7 @@ uploads, will be lost on the app's next start, stop, restart, deploy, or
 resource change. Because of this, you should make any changes to the
 file system on a local development environment and keep media assets and
 content uploads on an external storage system like Amazon's S3.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.appfog.com/faq#persistentfs"&gt;Source&lt;/a&gt;&lt;/p&gt;</content><category term="appfog"></category><category term="linux"></category><category term="server"></category></entry><entry><title>Find out what files are owned by apache</title><link href="https://blog.andrewelkins.com/find-out-what-files-are-owned-by-apache.html" rel="alternate"></link><published>2013-03-09T09:57:00-08:00</published><updated>2013-03-09T09:57:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-03-09:/find-out-what-files-are-owned-by-apache.html</id><summary type="html">&lt;p&gt;In an audit of my system I needed to find all the files owned by apache.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.appfog.com/faq#persistentfs"&gt;Source&lt;/a&gt;&lt;/p&gt;</content><category term="appfog"></category><category term="linux"></category><category term="server"></category></entry><entry><title>Find out what files are owned by apache</title><link href="https://www.andrewelkins.com/blog/find-out-what-files-are-owned-by-apache.html" rel="alternate"></link><published>2013-03-09T09:57:00-08:00</published><updated>2013-03-09T09:57:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-03-09:/blog/find-out-what-files-are-owned-by-apache.html</id><summary type="html">&lt;p&gt;In an audit of my system I needed to find all the files owned by apache.&lt;/p&gt;
 &lt;p&gt;[ps]&lt;br&gt;
 find ./ -name apache&lt;br&gt;
 [/ps]&lt;/p&gt;
@@ -2730,7 +2730,7 @@ find ./ -name apache&lt;br&gt;
 &lt;p&gt;Here's the group and user example:&lt;/p&gt;
 &lt;p&gt;[ps]&lt;br&gt;
 find ./ -group apache -name apache&lt;br&gt;
-[/ps]&lt;/p&gt;</content></entry><entry><title>Add a command file to Laravel artisan</title><link href="https://blog.andrewelkins.com/add-a-command-file-to-laravel-artisan.html" rel="alternate"></link><published>2013-02-26T13:15:00-08:00</published><updated>2013-02-26T13:15:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-02-26:/add-a-command-file-to-laravel-artisan.html</id><summary type="html">&lt;p&gt;In order to run a custom command from the command line utility called
+[/ps]&lt;/p&gt;</content></entry><entry><title>Add a command file to Laravel artisan</title><link href="https://www.andrewelkins.com/blog/add-a-command-file-to-laravel-artisan.html" rel="alternate"></link><published>2013-02-26T13:15:00-08:00</published><updated>2013-02-26T13:15:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-02-26:/blog/add-a-command-file-to-laravel-artisan.html</id><summary type="html">&lt;p&gt;In order to run a custom command from the command line utility called
 artisan you need to do two things:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Create a new CustomCommand file&lt;/li&gt;
@@ -2800,7 +2800,7 @@ public function fire()&lt;br&gt;
 &lt;p&gt;Artisan::add(new FooCommand);&lt;br&gt;
 [/php]&lt;/p&gt;
 &lt;p&gt;Now you can run your command&lt;/p&gt;
-&lt;p&gt;[ps]php artisan foo:migrate[/ps]&lt;/p&gt;</content><category term="artisan"></category><category term="cli"></category><category term="command line"></category><category term="l4"></category><category term="laravel"></category></entry><entry><title>How to set local environment as default in command line (CLI) for Larvel 4 artisan</title><link href="https://blog.andrewelkins.com/how-to-set-local-environment-as-default-in-cli.html" rel="alternate"></link><published>2013-02-25T10:36:00-08:00</published><updated>2013-02-25T10:36:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-02-25:/how-to-set-local-environment-as-default-in-cli.html</id><summary type="html">&lt;p&gt;Typically when Laravel 4 artisan is run from the command line (cli) it
+&lt;p&gt;[ps]php artisan foo:migrate[/ps]&lt;/p&gt;</content><category term="artisan"></category><category term="cli"></category><category term="command line"></category><category term="l4"></category><category term="laravel"></category></entry><entry><title>How to set local environment as default in command line (CLI) for Larvel 4 artisan</title><link href="https://www.andrewelkins.com/blog/how-to-set-local-environment-as-default-in-cli.html" rel="alternate"></link><published>2013-02-25T10:36:00-08:00</published><updated>2013-02-25T10:36:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-02-25:/blog/how-to-set-local-environment-as-default-in-cli.html</id><summary type="html">&lt;p&gt;Typically when Laravel 4 artisan is run from the command line (cli) it
 uses the production configuration files. This can be changed by using a
 flag when running the command.&lt;/p&gt;
 &lt;p&gt;[ps]php artisan migrate --env=local[/ps]&lt;/p&gt;
@@ -2830,7 +2830,7 @@ environment array in &lt;strong&gt;bootstrap/start.php&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;));&lt;br&gt;
 [/php]&lt;/p&gt;
 &lt;p&gt;Now artisan should run with the local environment as default when run on
-that machine.&lt;/p&gt;</content><category term="cli"></category><category term="framework"></category><category term="l4"></category><category term="laravel"></category></entry><entry><title>How to add a library folder to Laravel 4</title><link href="https://blog.andrewelkins.com/how-to-add-a-helper-folder-to-laravel-4.html" rel="alternate"></link><published>2013-02-22T14:26:00-08:00</published><updated>2013-02-22T14:26:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-02-22:/how-to-add-a-helper-folder-to-laravel-4.html</id><summary type="html">&lt;p&gt;I typically use a library folder in my projects to group of files that
+that machine.&lt;/p&gt;</content><category term="cli"></category><category term="framework"></category><category term="l4"></category><category term="laravel"></category></entry><entry><title>How to add a library folder to Laravel 4</title><link href="https://www.andrewelkins.com/blog/how-to-add-a-helper-folder-to-laravel-4.html" rel="alternate"></link><published>2013-02-22T14:26:00-08:00</published><updated>2013-02-22T14:26:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-02-22:/blog/how-to-add-a-helper-folder-to-laravel-4.html</id><summary type="html">&lt;p&gt;I typically use a library folder in my projects to group of files that
 you want to use in different projects but don't want to use
 &lt;a href="http://getcomposer.org/doc/articles/handling-private-packages-with-satis.md"&gt;Satis&lt;/a&gt;
 to manage the contained files. This folder could also be a helper folder
@@ -2887,7 +2887,7 @@ laravel project root and view the composer file.&lt;/p&gt;
 &lt;p&gt;Let's reload the autoload. (Assuming &lt;a href="http://andrewelkins.com/programming/php/setting-up-composer-globally-for-laravel-4/" title="Setting up Composer globally for Laravel 4"&gt;composer is an
 alias.&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;[ps]composer dump-autoload[/ps]&lt;/p&gt;
-&lt;p&gt;Now you can use the library folder.&lt;/p&gt;</content><category term="framework"></category><category term="helper"></category><category term="laravel"></category><category term="php"></category></entry><entry><title>How to close a linux screen session</title><link href="https://blog.andrewelkins.com/how-to-close-a-linux-screen-session.html" rel="alternate"></link><published>2013-02-20T14:24:00-08:00</published><updated>2013-02-20T14:24:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-02-20:/how-to-close-a-linux-screen-session.html</id><summary type="html">&lt;p&gt;After working within a screen session on a CentOS server I had forgotten
+&lt;p&gt;Now you can use the library folder.&lt;/p&gt;</content><category term="framework"></category><category term="helper"></category><category term="laravel"></category><category term="php"></category></entry><entry><title>How to close a linux screen session</title><link href="https://www.andrewelkins.com/blog/how-to-close-a-linux-screen-session.html" rel="alternate"></link><published>2013-02-20T14:24:00-08:00</published><updated>2013-02-20T14:24:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-02-20:/blog/how-to-close-a-linux-screen-session.html</id><summary type="html">&lt;p&gt;After working within a screen session on a CentOS server I had forgotten
 how to close the screen session that I was done with. It's a rather
 simple command.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -2911,7 +2911,7 @@ simple command.&lt;/p&gt;
 &lt;p&gt;ctrl+a&lt;/p&gt;
 &lt;p&gt;(press) d&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;That'll disconnect you from the screen session.&lt;/p&gt;</content><category term="cli"></category><category term="command"></category><category term="command line"></category><category term="linux"></category><category term="screen"></category></entry><entry><title>VMWare Fusion 5 Set Static IP Address</title><link href="https://blog.andrewelkins.com/vmware-fusion-5-set-static-ip-address.html" rel="alternate"></link><published>2013-02-18T14:50:00-08:00</published><updated>2013-02-18T14:50:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-02-18:/vmware-fusion-5-set-static-ip-address.html</id><summary type="html">&lt;p&gt;I previously posted on setting a static ip address in &lt;a href="http://andrewelkins.com/linux/vmware-fusion-4-set-static-ip-address/"&gt;vmware fusion
+&lt;p&gt;That'll disconnect you from the screen session.&lt;/p&gt;</content><category term="cli"></category><category term="command"></category><category term="command line"></category><category term="linux"></category><category term="screen"></category></entry><entry><title>VMWare Fusion 5 Set Static IP Address</title><link href="https://www.andrewelkins.com/blog/vmware-fusion-5-set-static-ip-address.html" rel="alternate"></link><published>2013-02-18T14:50:00-08:00</published><updated>2013-02-18T14:50:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-02-18:/blog/vmware-fusion-5-set-static-ip-address.html</id><summary type="html">&lt;p&gt;I previously posted on setting a static ip address in &lt;a href="http://andrewelkins.com/linux/vmware-fusion-4-set-static-ip-address/"&gt;vmware fusion
 4&lt;/a&gt;.
 This also still works for VMWare Fusion 5.&lt;/p&gt;
 &lt;p&gt;Steps are the same.&lt;/p&gt;
@@ -2981,7 +2981,7 @@ h.  Restart your Mac.
 i.  Turn on your virtual machine.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&amp;amp;externalId=1016466"&gt;From step
 12&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Setup an alias in Linux</title><link href="https://blog.andrewelkins.com/setup-an-alias-in-linux.html" rel="alternate"></link><published>2013-02-07T10:55:00-08:00</published><updated>2013-02-07T10:55:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-02-07:/setup-an-alias-in-linux.html</id><summary type="html">&lt;p&gt;Setting up an alias in linux is very easy and very helpful. It allows
+&lt;/blockquote&gt;</content></entry><entry><title>Setup an alias in Linux</title><link href="https://www.andrewelkins.com/blog/setup-an-alias-in-linux.html" rel="alternate"></link><published>2013-02-07T10:55:00-08:00</published><updated>2013-02-07T10:55:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-02-07:/blog/setup-an-alias-in-linux.html</id><summary type="html">&lt;p&gt;Setting up an alias in linux is very easy and very helpful. It allows
 you to determine a short phrase for running a longer command. Or change
 a common typo to the command you meant.&lt;/p&gt;
 &lt;p&gt;Here's an example alias:&lt;/p&gt;
@@ -3001,7 +3001,7 @@ that's a common command that'll help out.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;\$ alias h='history'&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;This shows the history of the terminal session.&lt;/p&gt;</content><category term="alias"></category><category term="cli"></category><category term="command line"></category></entry><entry><title>Create a new ssh key</title><link href="https://blog.andrewelkins.com/create-a-new-ssh-key.html" rel="alternate"></link><published>2013-02-03T11:18:00-08:00</published><updated>2013-02-03T11:18:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-02-03:/create-a-new-ssh-key.html</id><summary type="html">&lt;p&gt;I have to do this whenever setting up a new system. Makes the server
+&lt;p&gt;This shows the history of the terminal session.&lt;/p&gt;</content><category term="alias"></category><category term="cli"></category><category term="command line"></category></entry><entry><title>Create a new ssh key</title><link href="https://www.andrewelkins.com/blog/create-a-new-ssh-key.html" rel="alternate"></link><published>2013-02-03T11:18:00-08:00</published><updated>2013-02-03T11:18:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-02-03:/blog/create-a-new-ssh-key.html</id><summary type="html">&lt;p&gt;I have to do this whenever setting up a new system. Makes the server
 more secure to disable password based login and only allow ssh keys.&lt;/p&gt;
 &lt;p&gt;To create an ssh key it's as easy as running one of the two following
 commands.&lt;/p&gt;
@@ -3025,13 +3025,13 @@ commands.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;The rsa and dsa refer to different encryption methods. &lt;a href="http://superuser.com/questions/13164/what-is-better-for-gpg-keys-rsa-or-dsa"&gt;DSA is the
 preferred method at the
-moment.&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Laravel 4 Documentation</title><link href="https://blog.andrewelkins.com/laravel-4-documentation.html" rel="alternate"></link><published>2013-01-22T15:58:00-08:00</published><updated>2013-01-22T15:58:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-01-22:/laravel-4-documentation.html</id><summary type="html">&lt;p&gt;Yesterday I was in search of Laravel 4 documentation. I couldn't figure
+moment.&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Laravel 4 Documentation</title><link href="https://www.andrewelkins.com/blog/laravel-4-documentation.html" rel="alternate"></link><published>2013-01-22T15:58:00-08:00</published><updated>2013-01-22T15:58:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-01-22:/blog/laravel-4-documentation.html</id><summary type="html">&lt;p&gt;Yesterday I was in search of Laravel 4 documentation. I couldn't figure
 our where to find Laravel 4 documentation. I found the committed files
 on GitHub but I couldn't find the actual site that hosted it. Turns out
 it was in a now obvious place. &lt;a href="http://four.laravel.com/"&gt;http://four.laravel.com/&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Yesterday I was in search of Laravel 4 documentation. I couldn't figure
 our where to find Laravel 4 documentation. I found the committed files
 on GitHub but I couldn't find the actual site that hosted it. Turns out
-it was in a now obvious place. &lt;a href="http://four.laravel.com/"&gt;http://four.laravel.com/&lt;/a&gt;&lt;/p&gt;</content><category term="docs"></category><category term="github"></category><category term="laravel"></category><category term="php"></category></entry><entry><title>Change url without a page refresh</title><link href="https://blog.andrewelkins.com/change-url-without-a-page-refresh.html" rel="alternate"></link><published>2013-01-22T01:33:00-08:00</published><updated>2013-01-22T01:33:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-01-22:/change-url-without-a-page-refresh.html</id><summary type="html">&lt;p&gt;I wanted the url to change but there to be no redirect/refresh of the
+it was in a now obvious place. &lt;a href="http://four.laravel.com/"&gt;http://four.laravel.com/&lt;/a&gt;&lt;/p&gt;</content><category term="docs"></category><category term="github"></category><category term="laravel"></category><category term="php"></category></entry><entry><title>Change url without a page refresh</title><link href="https://www.andrewelkins.com/blog/change-url-without-a-page-refresh.html" rel="alternate"></link><published>2013-01-22T01:33:00-08:00</published><updated>2013-01-22T01:33:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-01-22:/blog/change-url-without-a-page-refresh.html</id><summary type="html">&lt;p&gt;I wanted the url to change but there to be no redirect/refresh of the
 page. I was able to do this by a little js.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;history.pushState('data', '', 'http://' + window.location.host +
@@ -3041,7 +3041,7 @@ page. I was able to do this by a little js.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;history.pushState('data', '', 'http://' + window.location.host +
 '/month/' + month );&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Clear Laravel 4 Autoload</title><link href="https://blog.andrewelkins.com/clear-laravel-4-autoload.html" rel="alternate"></link><published>2013-01-21T21:02:00-08:00</published><updated>2013-01-21T21:02:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-01-21:/clear-laravel-4-autoload.html</id><summary type="html">&lt;p&gt;Laravel 4 currently has a very frustrating issue. If you add a model it
+&lt;/blockquote&gt;</content></entry><entry><title>Clear Laravel 4 Autoload</title><link href="https://www.andrewelkins.com/blog/clear-laravel-4-autoload.html" rel="alternate"></link><published>2013-01-21T21:02:00-08:00</published><updated>2013-01-21T21:02:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-01-21:/blog/clear-laravel-4-autoload.html</id><summary type="html">&lt;p&gt;Laravel 4 currently has a very frustrating issue. If you add a model it
 will not know of it until you clear the autoload.&lt;/p&gt;
 &lt;p&gt;[ps]composer dump-autoload[/ps]&lt;/p&gt;
 &lt;p&gt;Make sure you have &lt;a href="http://andrewelkins.com/programming/php/setting-up-composer-globally-for-laravel-4/"&gt;setup composer to be accessed
@@ -3063,7 +3063,7 @@ following.&lt;/p&gt;
 &lt;p&gt;Open &lt;em&gt;app/starts/global.php&lt;/em&gt; and add:&lt;/p&gt;
 &lt;p&gt;[ps]ClassLoader::addDirectories(array( app_path().'/libraries',
 ));[/ps]&lt;/p&gt;
-&lt;p&gt;Thanks for the tip!&lt;/p&gt;</content><category term="composer"></category><category term="lavarel"></category><category term="php"></category></entry><entry><title>Linux rename a bunch of file's extensions</title><link href="https://blog.andrewelkins.com/linux-rename-a-bunch-of-files-extensions.html" rel="alternate"></link><published>2013-01-20T18:52:00-08:00</published><updated>2013-01-20T18:52:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-01-20:/linux-rename-a-bunch-of-files-extensions.html</id><summary type="html">&lt;p&gt;In order to rename a whole folders file extensions from jpeg to jpg I
+&lt;p&gt;Thanks for the tip!&lt;/p&gt;</content><category term="composer"></category><category term="lavarel"></category><category term="php"></category></entry><entry><title>Linux rename a bunch of file's extensions</title><link href="https://www.andrewelkins.com/blog/linux-rename-a-bunch-of-files-extensions.html" rel="alternate"></link><published>2013-01-20T18:52:00-08:00</published><updated>2013-01-20T18:52:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-01-20:/blog/linux-rename-a-bunch-of-files-extensions.html</id><summary type="html">&lt;p&gt;In order to rename a whole folders file extensions from jpeg to jpg I
 wrote this script called rename.sh in bash.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;#!/bin/bash&lt;/p&gt;
@@ -3094,7 +3094,7 @@ done&lt;/p&gt;
 &lt;p&gt;Then ran it in the directory I needed to rename files in.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;./rename.sh&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Query to insert all countries into database</title><link href="https://blog.andrewelkins.com/query-to-insert-all-countries-into-database.html" rel="alternate"></link><published>2013-01-17T11:07:00-08:00</published><updated>2013-01-17T11:07:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-01-17:/query-to-insert-all-countries-into-database.html</id><summary type="html">&lt;p&gt;I needed to insert all of the countries in the world into a database. I
+&lt;/blockquote&gt;</content></entry><entry><title>Query to insert all countries into database</title><link href="https://www.andrewelkins.com/blog/query-to-insert-all-countries-into-database.html" rel="alternate"></link><published>2013-01-17T11:07:00-08:00</published><updated>2013-01-17T11:07:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-01-17:/blog/query-to-insert-all-countries-into-database.html</id><summary type="html">&lt;p&gt;I needed to insert all of the countries in the world into a database. I
 couldn't find the query to run, so I created my own. Here it is.
 'country' is the table name and 'name' is the column name.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -3313,7 +3313,7 @@ couldn't find the query to run, so I created my own. Here it is.
 ('Yemen'),&lt;br&gt;
 ('Zambia'),&lt;br&gt;
 ('Zimbabwe');&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Linux Ubuntu 12.04 alt-tab not working</title><link href="https://blog.andrewelkins.com/linux-ubuntu-12-04-alt-tab-not-working.html" rel="alternate"></link><published>2013-01-09T10:10:00-08:00</published><updated>2013-01-09T10:10:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-01-09:/linux-ubuntu-12-04-alt-tab-not-working.html</id><summary type="html">&lt;p&gt;I’ve recently installed Ubuntu 12.04 Prestige Pangolin (I use Gnome
+&lt;/blockquote&gt;</content></entry><entry><title>Linux Ubuntu 12.04 alt-tab not working</title><link href="https://www.andrewelkins.com/blog/linux-ubuntu-12-04-alt-tab-not-working.html" rel="alternate"></link><published>2013-01-09T10:10:00-08:00</published><updated>2013-01-09T10:10:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-01-09:/blog/linux-ubuntu-12-04-alt-tab-not-working.html</id><summary type="html">&lt;p&gt;I’ve recently installed Ubuntu 12.04 Prestige Pangolin (I use Gnome
 Classic), and immediately noticed that the alt+tab shortcut wasn’t
 working. I tried fixing it within Applications&amp;gt;Systems
 Tools&amp;gt;System Settings, but that did not work. I have compiz Config
@@ -3341,7 +3341,7 @@ If you need to install Compiz Config Manager:
 3.  Or search for **compizconfig-settings-manager** in the Software
     Center and install from there.
 
-&lt;/div&gt;</content></entry><entry><title>Setting up Composer globally for Laravel 4</title><link href="https://blog.andrewelkins.com/setting-up-composer-globally-for-laravel-4.html" rel="alternate"></link><published>2013-01-06T18:03:00-08:00</published><updated>2013-01-06T18:03:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2013-01-06:/setting-up-composer-globally-for-laravel-4.html</id><summary type="html">&lt;p&gt;An easy way to set up composer globally is to follow the instructions on
+&lt;/div&gt;</content></entry><entry><title>Setting up Composer globally for Laravel 4</title><link href="https://www.andrewelkins.com/blog/setting-up-composer-globally-for-laravel-4.html" rel="alternate"></link><published>2013-01-06T18:03:00-08:00</published><updated>2013-01-06T18:03:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2013-01-06:/blog/setting-up-composer-globally-for-laravel-4.html</id><summary type="html">&lt;p&gt;An easy way to set up composer globally is to follow the instructions on
 getcomposer.org site:&lt;/p&gt;
 &lt;p&gt;[ps]&lt;br&gt;
 \$ curl -s http://getcomposer.org/installer | php&lt;br&gt;
@@ -3358,7 +3358,7 @@ getcomposer.org site:&lt;/p&gt;
 &lt;p&gt;Optional way to do it, is to set up an alias:&lt;/p&gt;
 &lt;p&gt;[ps]&lt;br&gt;
 alias composer='/location/of/the/composer.phar'&lt;br&gt;
-[/ps]&lt;/p&gt;</content><category term="composer"></category><category term="laravel"></category><category term="php"></category></entry><entry><title>LessPHP</title><link href="https://blog.andrewelkins.com/lessphp.html" rel="alternate"></link><published>2012-12-09T19:59:00-08:00</published><updated>2012-12-09T19:59:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2012-12-09:/lessphp.html</id><summary type="html">&lt;p&gt;Why would I want to use the php version of a native node.js project?
+[/ps]&lt;/p&gt;</content><category term="composer"></category><category term="laravel"></category><category term="php"></category></entry><entry><title>LessPHP</title><link href="https://www.andrewelkins.com/blog/lessphp.html" rel="alternate"></link><published>2012-12-09T19:59:00-08:00</published><updated>2012-12-09T19:59:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2012-12-09:/blog/lessphp.html</id><summary type="html">&lt;p&gt;Why would I want to use the php version of a native node.js project?
 Well, for starters not all projects are deployed on servers that have
 node.js installed. Second, well, the first one is pretty much the only
 reason.&lt;/p&gt;
@@ -3403,7 +3403,7 @@ escaped strings&lt;br&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Which basically hard codes 5 gradient positions. Which could be bad if
 your code uses more than that. However, I don't believe bootstrap does
-so it should be fine.&lt;/p&gt;</content></entry><entry><title>Using Zend to retrive wikipedia api content</title><link href="https://blog.andrewelkins.com/using-zend-to-retrive-wikipedia-api-content.html" rel="alternate"></link><published>2012-05-22T08:15:00-07:00</published><updated>2012-05-22T08:15:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2012-05-22:/using-zend-to-retrive-wikipedia-api-content.html</id><summary type="html">&lt;blockquote&gt;
+so it should be fine.&lt;/p&gt;</content></entry><entry><title>Using Zend to retrive wikipedia api content</title><link href="https://www.andrewelkins.com/blog/using-zend-to-retrive-wikipedia-api-content.html" rel="alternate"></link><published>2012-05-22T08:15:00-07:00</published><updated>2012-05-22T08:15:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2012-05-22:/blog/using-zend-to-retrive-wikipedia-api-content.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;function getWikipediaContent( \$wikiUrl )&lt;/p&gt;
 &lt;p&gt;{&lt;/p&gt;
 &lt;p&gt;// initialize HTTP client&lt;br&gt;
@@ -3444,7 +3444,7 @@ return false;&lt;br&gt;
 return (string)
 \$wikiXml-&amp;gt;query-&amp;gt;pages-&amp;gt;page-&amp;gt;revisions-&amp;gt;rev;&lt;/p&gt;
 &lt;p&gt;}&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>JS logging</title><link href="https://blog.andrewelkins.com/js-logging.html" rel="alternate"></link><published>2012-05-14T11:27:00-07:00</published><updated>2012-05-14T11:27:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2012-05-14:/js-logging.html</id><summary type="html">&lt;p&gt;I've been doing a fair about of js development lately and console.log
+&lt;/blockquote&gt;</content></entry><entry><title>JS logging</title><link href="https://www.andrewelkins.com/blog/js-logging.html" rel="alternate"></link><published>2012-05-14T11:27:00-07:00</published><updated>2012-05-14T11:27:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2012-05-14:/blog/js-logging.html</id><summary type="html">&lt;p&gt;I've been doing a fair about of js development lately and console.log
 has been my friend. However, writing console.log() is a bit heavy. So
 instead I've been adding this to my files as  a quick way to log in
 javascipt.&lt;/p&gt;
@@ -3461,7 +3461,7 @@ if (window.console &amp;amp;&amp;amp; console.log)&lt;br&gt;
 console.log('{product or sitename} ::  ' +
 Array.prototype.join.call(arguments,' '));&lt;br&gt;
 }&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Remove empty values from an array.</title><link href="https://blog.andrewelkins.com/remove-empty-values-from-an-array.html" rel="alternate"></link><published>2012-04-04T08:01:00-07:00</published><updated>2012-04-04T08:01:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2012-04-04:/remove-empty-values-from-an-array.html</id><summary type="html">&lt;p&gt;I developed this little one liner to remove empty values from an array
+&lt;/blockquote&gt;</content></entry><entry><title>Remove empty values from an array.</title><link href="https://www.andrewelkins.com/blog/remove-empty-values-from-an-array.html" rel="alternate"></link><published>2012-04-04T08:01:00-07:00</published><updated>2012-04-04T08:01:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2012-04-04:/blog/remove-empty-values-from-an-array.html</id><summary type="html">&lt;p&gt;I developed this little one liner to remove empty values from an array
 in php.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;\$tags = array( 'testtag', 'testtag2', ' ' );&lt;/p&gt;
@@ -3507,7 +3507,7 @@ print_r(\$tagsCleaned);&lt;/p&gt;
 [0] =&amp;gt; testtag&lt;br&gt;
 [1] =&amp;gt; testtag2&lt;br&gt;
 )&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Using the + sign to merge arrays in php</title><link href="https://blog.andrewelkins.com/using-the-sign-to-merge-arrays-in-php.html" rel="alternate"></link><published>2012-02-13T17:15:00-08:00</published><updated>2012-02-13T17:15:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2012-02-13:/using-the-sign-to-merge-arrays-in-php.html</id><summary type="html">&lt;p&gt;Today came across code that used the + sign to merge two associative php
+&lt;/blockquote&gt;</content></entry><entry><title>Using the + sign to merge arrays in php</title><link href="https://www.andrewelkins.com/blog/using-the-sign-to-merge-arrays-in-php.html" rel="alternate"></link><published>2012-02-13T17:15:00-08:00</published><updated>2012-02-13T17:15:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2012-02-13:/blog/using-the-sign-to-merge-arrays-in-php.html</id><summary type="html">&lt;p&gt;Today came across code that used the + sign to merge two associative php
 arrays. At first I thought it was broken but turns out you can indeed
 merge two arrays with the + sign.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -3601,7 +3601,7 @@ array(&lt;br&gt;
 'upc' =&amp;gt; '486898161589',&lt;br&gt;
 'price' = '11.98'&lt;br&gt;
 )&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>VMWare Fusion 4 - Set static IP address</title><link href="https://blog.andrewelkins.com/vmware-fusion-4-set-static-ip-address.html" rel="alternate"></link><published>2012-01-31T19:12:00-08:00</published><updated>2012-01-31T19:12:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2012-01-31:/vmware-fusion-4-set-static-ip-address.html</id><summary type="html">&lt;p&gt;In vmware Fusion 4 there is &lt;a href="kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;amp;cmd=displayKC&amp;amp;externalId=1004023"&gt;no
+&lt;/blockquote&gt;</content></entry><entry><title>VMWare Fusion 4 - Set static IP address</title><link href="https://www.andrewelkins.com/blog/vmware-fusion-4-set-static-ip-address.html" rel="alternate"></link><published>2012-01-31T19:12:00-08:00</published><updated>2012-01-31T19:12:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2012-01-31:/blog/vmware-fusion-4-set-static-ip-address.html</id><summary type="html">&lt;p&gt;In vmware Fusion 4 there is &lt;a href="kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;amp;cmd=displayKC&amp;amp;externalId=1004023"&gt;no
 boot.sh&lt;/a&gt;that
 is found in previous versions&lt;/p&gt;
 &lt;blockquote&gt;
@@ -3648,7 +3648,7 @@ fixed-address 192.168.115.50;&lt;br&gt;
 &lt;p&gt;If that doesn't work, you may need to remove the network adapter and
 then re-add it. Make sure that your network adapter is connected to the
 virtual machine by removing and re-adding it. &lt;a href="http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&amp;amp;externalId=1016466"&gt;See Step
-12&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Recursively remove svn directories from a directory</title><link href="https://blog.andrewelkins.com/recursively-remove-svn-directories-from-a-directory.html" rel="alternate"></link><published>2012-01-13T11:47:00-08:00</published><updated>2012-01-13T11:47:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2012-01-13:/recursively-remove-svn-directories-from-a-directory.html</id><summary type="html">&lt;p&gt;Removing all .svn directories from a file structure in linux is as
+12&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Recursively remove svn directories from a directory</title><link href="https://www.andrewelkins.com/blog/recursively-remove-svn-directories-from-a-directory.html" rel="alternate"></link><published>2012-01-13T11:47:00-08:00</published><updated>2012-01-13T11:47:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2012-01-13:/blog/recursively-remove-svn-directories-from-a-directory.html</id><summary type="html">&lt;p&gt;Removing all .svn directories from a file structure in linux is as
 simple as running a one liner.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;find . -name .svn -print0 | xargs -0 rm -rf&lt;/p&gt;
@@ -3656,7 +3656,7 @@ simple as running a one liner.&lt;/p&gt;
 simple as running a one liner.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;find . -name .svn -print0 | xargs -0 rm -rf&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>How to add git to an amazon ami ec2 instance</title><link href="https://blog.andrewelkins.com/how-to-add-git-to-an-amazon-ami-ec2-instance.html" rel="alternate"></link><published>2012-01-08T11:58:00-08:00</published><updated>2012-01-08T11:58:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2012-01-08:/how-to-add-git-to-an-amazon-ami-ec2-instance.html</id><summary type="html">&lt;p&gt;To install git on amazon ami is really simple. Make sure you have sudo
+&lt;/blockquote&gt;</content></entry><entry><title>How to add git to an amazon ami ec2 instance</title><link href="https://www.andrewelkins.com/blog/how-to-add-git-to-an-amazon-ami-ec2-instance.html" rel="alternate"></link><published>2012-01-08T11:58:00-08:00</published><updated>2012-01-08T11:58:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2012-01-08:/blog/how-to-add-git-to-an-amazon-ami-ec2-instance.html</id><summary type="html">&lt;p&gt;To install git on amazon ami is really simple. Make sure you have sudo
 and then run yum to install it.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;sudo yum install git&lt;/p&gt;
@@ -3720,7 +3720,7 @@ git.i686 0:1.7.4.5-1.21.amzn1&lt;/p&gt;
 &lt;p&gt;Dependency Updated:&lt;br&gt;
 perl-Git.i686 0:1.7.4.5-1.21.amzn1&lt;/p&gt;
 &lt;p&gt;Complete!&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Find loaded modules in Apache 2.x</title><link href="https://blog.andrewelkins.com/find-loaded-modules-in-apache-2-x.html" rel="alternate"></link><published>2012-01-05T22:07:00-08:00</published><updated>2012-01-05T22:07:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2012-01-05:/find-loaded-modules-in-apache-2-x.html</id><summary type="html">&lt;p&gt;I was trying to figure out how to find the loaded modules in Apache and
+&lt;/blockquote&gt;</content></entry><entry><title>Find loaded modules in Apache 2.x</title><link href="https://www.andrewelkins.com/blog/find-loaded-modules-in-apache-2-x.html" rel="alternate"></link><published>2012-01-05T22:07:00-08:00</published><updated>2012-01-05T22:07:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2012-01-05:/blog/find-loaded-modules-in-apache-2-x.html</id><summary type="html">&lt;p&gt;I was trying to figure out how to find the loaded modules in Apache and
 came across this nice command.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;httpd -M&lt;/p&gt;
@@ -3761,7 +3761,7 @@ php5_module (shared)&lt;br&gt;
 extract_forwarded_module (shared)&lt;br&gt;
 geoip_module (shared)&lt;br&gt;
 Syntax OK&lt;/p&gt;
-&lt;/blockquote&gt;</content></entry><entry><title>Display phpinfo from the command line</title><link href="https://blog.andrewelkins.com/display-phpinfo-from-the-command-line.html" rel="alternate"></link><published>2011-12-02T11:37:00-08:00</published><updated>2011-12-02T11:37:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2011-12-02:/display-phpinfo-from-the-command-line.html</id><summary type="html">&lt;p&gt;This afternoon I was wanting to get a couple things from phpinfo but
+&lt;/blockquote&gt;</content></entry><entry><title>Display phpinfo from the command line</title><link href="https://www.andrewelkins.com/blog/display-phpinfo-from-the-command-line.html" rel="alternate"></link><published>2011-12-02T11:37:00-08:00</published><updated>2011-12-02T11:37:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2011-12-02:/blog/display-phpinfo-from-the-command-line.html</id><summary type="html">&lt;p&gt;This afternoon I was wanting to get a couple things from phpinfo but
 didn't want to do the typical make a php file, put phpinfo, run it from
 a browser or command prompt. There's a better, quicker way if you know
 what you want. One will output it to a …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This afternoon I was wanting to get a couple things from phpinfo but
@@ -3776,7 +3776,7 @@ information you need:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;php -i | grep 'version'&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Replace version with your own search query.&lt;/p&gt;</content></entry><entry><title>Scaling PHP Applications with Redis</title><link href="https://blog.andrewelkins.com/scaling-php-applications-with-redis.html" rel="alternate"></link><published>2011-11-24T12:00:00-08:00</published><updated>2011-11-24T12:00:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2011-11-24:/scaling-php-applications-with-redis.html</id><summary type="html">&lt;p&gt;Redis is an important technology when dealing with caching. This was one
+&lt;p&gt;Replace version with your own search query.&lt;/p&gt;</content></entry><entry><title>Scaling PHP Applications with Redis</title><link href="https://www.andrewelkins.com/blog/scaling-php-applications-with-redis.html" rel="alternate"></link><published>2011-11-24T12:00:00-08:00</published><updated>2011-11-24T12:00:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2011-11-24:/blog/scaling-php-applications-with-redis.html</id><summary type="html">&lt;p&gt;Redis is an important technology when dealing with caching. This was one
 of the talks that I really wanted to attend at ZendCon. It was given by
 &lt;a href="http://twitter.com/#!/jimbojsb"&gt;Josh Butts&lt;/a&gt; of Vertive LLC.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -3824,7 +3824,7 @@ and was thus more likely to be maintained in the future.&lt;/p&gt;
 more active project. It also looks as if it is looking forward and being
 developed for feature redis improvements. I haven't had an opportunity
 to actively  test between the two, so my decision is temporary until I
-have the opportunity to factually compare instead of going on hunches.&lt;/p&gt;</content></entry><entry><title>HTML5 WebSockets - Presented by Scott Mattocks</title><link href="https://blog.andrewelkins.com/html5-websockets-presented-by-scott-mattocks.html" rel="alternate"></link><published>2011-11-09T06:19:00-08:00</published><updated>2011-11-09T06:19:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2011-11-09:/html5-websockets-presented-by-scott-mattocks.html</id><summary type="html">&lt;p&gt;This was the first talk I went to at ZendCon. The provided description:&lt;/p&gt;
+have the opportunity to factually compare instead of going on hunches.&lt;/p&gt;</content></entry><entry><title>HTML5 WebSockets - Presented by Scott Mattocks</title><link href="https://www.andrewelkins.com/blog/html5-websockets-presented-by-scott-mattocks.html" rel="alternate"></link><published>2011-11-09T06:19:00-08:00</published><updated>2011-11-09T06:19:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2011-11-09:/blog/html5-websockets-presented-by-scott-mattocks.html</id><summary type="html">&lt;p&gt;This was the first talk I went to at ZendCon. The provided description:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The emergence of HTML 5 and related technologies opens up a new world
 of possibilities for web applications. Among those new technologies
@@ -3864,7 +3864,7 @@ with the web socket server.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://github.com/remy/html5demos/tree/master/server/"&gt;Nodejs Websocket Server
     Test&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://spoutserver.com/talks/websockets.html#slide1"&gt;Slides&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content></entry><entry><title>Overview of Zend Framework 2</title><link href="https://blog.andrewelkins.com/overview-of-zend-framework-2.html" rel="alternate"></link><published>2011-11-07T06:20:00-08:00</published><updated>2011-11-07T06:20:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2011-11-07:/overview-of-zend-framework-2.html</id><summary type="html">&lt;p&gt;The second talk that I attended of the conference was on an overview of
+&lt;/ul&gt;</content></entry><entry><title>Overview of Zend Framework 2</title><link href="https://www.andrewelkins.com/blog/overview-of-zend-framework-2.html" rel="alternate"></link><published>2011-11-07T06:20:00-08:00</published><updated>2011-11-07T06:20:00-08:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2011-11-07:/blog/overview-of-zend-framework-2.html</id><summary type="html">&lt;p&gt;The second talk that I attended of the conference was on an overview of
 Zend Framework 2 (ZF2). Although I thought it was going to go over the
 Event Driven Actions in ZF2, they changed it due to popular demand.&lt;/p&gt;
 &lt;p&gt;The ZendCon website gave this description:&lt;/p&gt;
@@ -3892,7 +3892,7 @@ start"&lt;/a&gt;
 page.&lt;/p&gt;
 &lt;p&gt;Overall it was a good overall presentation if you wanted an overview. If
 you were looking for a more in depth presentation, like I was, it
-wouldn't fit your needs.&lt;/p&gt;</content></entry><entry><title>MySQL 5.5+</title><link href="https://blog.andrewelkins.com/mysql-5-5.html" rel="alternate"></link><published>2011-11-03T22:27:00-07:00</published><updated>2011-11-03T22:27:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2011-11-03:/mysql-5-5.html</id><summary type="html">&lt;p&gt;The MySQL talk was given by Dave Stokes of Oracle. He's the MySQL
+wouldn't fit your needs.&lt;/p&gt;</content></entry><entry><title>MySQL 5.5+</title><link href="https://www.andrewelkins.com/blog/mysql-5-5.html" rel="alternate"></link><published>2011-11-03T22:27:00-07:00</published><updated>2011-11-03T22:27:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2011-11-03:/blog/mysql-5-5.html</id><summary type="html">&lt;p&gt;The MySQL talk was given by Dave Stokes of Oracle. He's the MySQL
 community manager. The ZendCon summary:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;MySQL had been evolving since the Oracle take over in 2010. This
@@ -3956,7 +3956,7 @@ data". As a developer, do not trust users. Simple as that.
 &lt;p&gt;I was able to connect with Dave and get the slides. You can download
 them below.&lt;/p&gt;
 &lt;p&gt;Download slides -&amp;gt; &lt;a href="http://localhost/andrewelkins/wp-content/uploads/2011/11/MySQLupdateZendcon.ppt"&gt;MySQL update
-Zendcon&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>The Contextual Experience of the Mobile Web</title><link href="https://blog.andrewelkins.com/the-contextual-experience-of-the-mobile-web.html" rel="alternate"></link><published>2011-10-29T22:29:00-07:00</published><updated>2011-10-29T22:29:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:blog.andrewelkins.com,2011-10-29:/the-contextual-experience-of-the-mobile-web.html</id><summary type="html">&lt;p&gt;The contextual experience on the web was a talk by Jeff Carouth of Texas
+Zendcon&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>The Contextual Experience of the Mobile Web</title><link href="https://www.andrewelkins.com/blog/the-contextual-experience-of-the-mobile-web.html" rel="alternate"></link><published>2011-10-29T22:29:00-07:00</published><updated>2011-10-29T22:29:00-07:00</updated><author><name>Andrew Elkins</name></author><id>tag:www.andrewelkins.com,2011-10-29:/blog/the-contextual-experience-of-the-mobile-web.html</id><summary type="html">&lt;p&gt;The contextual experience on the web was a talk by Jeff Carouth of Texas
 A&amp;amp;M University. The ZendCon summary:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The great native apps vs mobile web debate will live on for a little
