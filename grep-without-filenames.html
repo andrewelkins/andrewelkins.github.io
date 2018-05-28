@@ -19,38 +19,38 @@
     <meta property="og:title" content="grep without filenames"/>
     <meta property="og:description" content="I needed to grep a directory, and sub directories, and not displaying the filenames in the output. This is when the man page came to the rescue. man grep | grep filename Output -H, --with-filename -h, --no-filename There we go, -h, --no-filename, is what I needed. Example with output to a …"/>
     <meta property="og:site_name" content="Andrew Elkins" />
-    <meta property="og:url" content="https://www.andrewelkins.com/blog/grep-without-filenames.html"/>
+    <meta property="og:url" content="https://blog.andrewelkins.com/grep-without-filenames.html"/>
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="grep without filenames">
     <meta name="twitter:description" content="I needed to grep a directory, and sub directories, and not displaying the filenames in the output. This is when the man page came to the rescue. man grep | grep filename Output -H, --with-filename -h, --no-filename There we go, -h, --no-filename, is what I needed. Example with output to a …">
-    <meta name="twitter:url" content="https://www.andrewelkins.com/blog/grep-without-filenames.html">
+    <meta name="twitter:url" content="https://blog.andrewelkins.com/grep-without-filenames.html">
 
     <!-- Feed -->
-    <link rel="alternate" type="application/atom+xml" href="https://www.andrewelkins.com/blog/feeds/all.atom.xml" title="Andrew Elkins Atom Feed" />
-    <link rel="alternate" type="application/atom+xml" href="https://www.andrewelkins.com/blog/feeds/command-line-linux.atom.xml" title="Andrew Elkins Categories Atom Feed" />
+    <link rel="alternate" type="application/atom+xml" href="https://blog.andrewelkins.com/feeds/all.atom.xml" title="Andrew Elkins Atom Feed" />
+    <link rel="alternate" type="application/atom+xml" href="https://blog.andrewelkins.com/feeds/command-line-linux.atom.xml" title="Andrew Elkins Categories Atom Feed" />
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
-    <link rel="stylesheet" type="text/css" href="https://www.andrewelkins.com/blog/theme/css/w3.css">
-    <link rel="stylesheet" type="text/css" href="https://www.andrewelkins.com/blog/theme/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://www.andrewelkins.com/blog/theme/css/jqcloud.css">
-    <link rel="stylesheet" type="text/css" href="https://www.andrewelkins.com/blog/theme/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://www.andrewelkins.com/blog/theme/css/pygments-highlight-github.css">
-    <link rel="stylesheet" type="text/css" href="https://www.andrewelkins.com/blog/static/custom.css">
+    <link rel="stylesheet" type="text/css" href="https://blog.andrewelkins.com/theme/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="https://blog.andrewelkins.com/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://blog.andrewelkins.com/theme/css/jqcloud.css">
+    <link rel="stylesheet" type="text/css" href="https://blog.andrewelkins.com/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://blog.andrewelkins.com/theme/css/pygments-highlight-github.css">
+    <link rel="stylesheet" type="text/css" href="https://blog.andrewelkins.com/static/custom.css">
 
     <!-- Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="https://www.andrewelkins.com/blog/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://blog.andrewelkins.com/favicon.ico">
 
     <!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://www.andrewelkins.com/blog/theme/js/jqcloud.min.js"></script>
+    <script src="https://blog.andrewelkins.com/theme/js/jqcloud.min.js"></script>
   </head>
 
   <body>
     <div class="w3-row w3-card w3-white">
       <header id="header">
-        <a href="https://www.andrewelkins.com/blog" id="header-logo" title="Home">AE</a>
+        <a href="https://blog.andrewelkins.com" id="header-logo" title="Home">AE</a>
         <nav id="header-menu">
           <ul>
             <li class="w3-bottombar w3-border-white w3-hover-border-green"><a href="/categories.html">Categories</a></li>
@@ -69,23 +69,23 @@
         <h1>grep without filenames</h1>
         <div class="post-info">
           <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
-            <span><time datetime="2016-11-01T11:26:00-07:00">Tue 01 November 2016</time> in <a href="https://www.andrewelkins.com/blog/category/command-line-linux.html" title="All articles in category Command Line, Linux">Command Line, Linux</a></span>
+            <span><time datetime="2016-11-01T11:26:00-07:00">Tue 01 November 2016</time> in <a href="https://blog.andrewelkins.com/category/command-line-linux.html" title="All articles in category Command Line, Linux">Command Line, Linux</a></span>
           </div>
           <div>
             <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
-              <a href="https://www.andrewelkins.com/blog/tag/cli.html" title="All articles with Cli tag">#cli</a>
+              <a href="https://blog.andrewelkins.com/tag/cli.html" title="All articles with Cli tag">#cli</a>
             </span>
             <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
-              <a href="https://www.andrewelkins.com/blog/tag/command.html" title="All articles with Command tag">#command</a>
+              <a href="https://blog.andrewelkins.com/tag/command.html" title="All articles with Command tag">#command</a>
             </span>
             <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
-              <a href="https://www.andrewelkins.com/blog/tag/file.html" title="All articles with File tag">#file</a>
+              <a href="https://blog.andrewelkins.com/tag/file.html" title="All articles with File tag">#file</a>
             </span>
             <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
-              <a href="https://www.andrewelkins.com/blog/tag/grep.html" title="All articles with Grep tag">#grep</a>
+              <a href="https://blog.andrewelkins.com/tag/grep.html" title="All articles with Grep tag">#grep</a>
             </span>
             <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
-              <a href="https://www.andrewelkins.com/blog/tag/linux.html" title="All articles with Linux tag">#linux</a>
+              <a href="https://blog.andrewelkins.com/tag/linux.html" title="All articles with Linux tag">#linux</a>
             </span>
           </div>
         </div>
@@ -134,13 +134,13 @@ rescue.</p>
 
           <p style="font-size:10pt; font-style: italic;">Did you like this article? Share it with your friends!</p>
           <div id="share" class="share">
-            <a href="http://www.facebook.com/sharer.php?u=https%3A//www.andrewelkins.com/blog/grep-without-filenames.html&amp;t=Andrew%20Elkins%3A%20grep%20without%20filenames" target="_blank" class="w3-btn w3-indigo">
+            <a href="http://www.facebook.com/sharer.php?u=https%3A//blog.andrewelkins.com/grep-without-filenames.html&amp;t=Andrew%20Elkins%3A%20grep%20without%20filenames" target="_blank" class="w3-btn w3-indigo">
               <i class="fa fa-facebook"></i> <span>Facebook</span>
             </a>
-            <a href="http://twitter.com/share?url=https%3A//www.andrewelkins.com/blog/grep-without-filenames.html&amp;text=Andrew%20Elkins%3A%20grep%20without%20filenames" target="_blank" class="w3-btn w3-blue">
+            <a href="http://twitter.com/share?url=https%3A//blog.andrewelkins.com/grep-without-filenames.html&amp;text=Andrew%20Elkins%3A%20grep%20without%20filenames" target="_blank" class="w3-btn w3-blue">
               <i class="fa fa-twitter"></i> <span>Twitter</span>
             </a>
-            <a href="https://plus.google.com/share?url=https%3A//www.andrewelkins.com/blog/grep-without-filenames.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
+            <a href="https://plus.google.com/share?url=https%3A//blog.andrewelkins.com/grep-without-filenames.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
               <i class="fa fa-google-plus"></i> <span>Google</span>
             </a>
           </div>
@@ -156,7 +156,7 @@ rescue.</p>
 
     <footer id="footer">
       <div id="footer-copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
-        <span>&copy; 2008-2018 Andrew Elkins  | <a href="https://www.andrewelkins.com/blog/feeds/all.atom.xml">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a></span>
+        <span>&copy; 2008-2018 Andrew Elkins  | <a href="https://blog.andrewelkins.com/feeds/all.atom.xml">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a></span>
       </div>
     </footer>
 
