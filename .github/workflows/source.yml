@@ -10,8 +10,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install ghp and pelican
       run: |
-        pip install pelican
-        pip install ghp-import 
+        pip install wheel pelican ghp-import 
     - name: Run a one-line script
       run: echo "Prepping to process and push"
     - name: Run a make html
