@@ -8,8 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Install ghp tool
-      run: pip install ghp-import pelican
+    - name: Install ghp and pelican
+      run: |
+        pip install pelican
+        pip install ghp-import 
     - name: Run a one-line script
       run: echo "Prepping to run make html"
     - name: Run a make html
