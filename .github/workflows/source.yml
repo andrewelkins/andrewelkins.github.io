@@ -11,7 +11,10 @@ jobs:
     - name: Install ghp and pelican
       run: |
         pip install wheel 
-        pip install pelican ghp-import 
+        pip install pelican ghp-import  
+    - name: Run a make html
+      run: |
         pelican content -o output -s pelicanconf.py
         ghp-import output -b gh-pages
         git push git@github.com:andrewelkins/andrewelkins.github.io.git gh-pages:master
+        
