@@ -13,8 +13,9 @@ jobs:
         pip install pelican
         pip install ghp-import 
     - name: Run a one-line script
-      run: echo "Prepping to run make html"
+      run: echo "Prepping to process and push"
     - name: Run a make html
-      run: make html
-    - name: Publish site
-      run: make github
+      run: |
+        pelican content -o output -s pelicanconf.py
+        ghp-import output -b gh-pages
+        git push git@github.com:andrewelkins/andrewelkins.github.io.git gh-pages:master
