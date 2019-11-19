@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install ghp tool
-      run: pip install ghp-import
+      run: pip install ghp-import pelican
     - name: Run a one-line script
       run: echo "Prepping to run make html"
     - name: Run a make html
